@@ -15,7 +15,7 @@ This directory contains **production-ready code examples** for ML Ops, covering 
 | **Deployment** | **Monitoring** | **Maintenance** | **Governance** |
 | :--- | :--- | :--- | :--- |
 | [🚀 Model Serving](#-model-serving) | [📊 Observability](#-observability) | [🔄 Retraining](#-retraining) | [📋 Compliance](#-compliance) |
-| [🏗️ Infrastructure](#️-infrastructure) | [🔍 Drift Detection](#-drift-detection) | [📦 Versioning](#-versioning) | [💡 Explainability](#-explainability) |
+| [🏗️ Infrastructure](#🏗-infrastructure) | [🔍 Drift Detection](#-drift-detection) | [📦 Versioning](#-versioning) | [💡 Explainability](#-explainability) |
 
 ---
 
