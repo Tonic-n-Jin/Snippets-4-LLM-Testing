@@ -1,0 +1,38 @@
+# Requirements for Reinforcement Learning Notebooks
+# Data World - Reinforcement Learning Examples
+
+# Core Dependencies
+numpy>=1.24.0,<2.0.0
+matplotlib>=3.7.0,<4.0.0
+seaborn>=0.12.0,<1.0.0
+
+# RL Environment
+gymnasium>=0.29.0,<1.0.0
+
+# Deep Learning (for DQN, A2C, PPO, TRPO, REINFORCE, A3C)
+torch>=2.0.0,<3.0.0
+
+# Optimization (for MPC)
+scipy>=1.10.0,<2.0.0
+
+# Jupyter Support
+jupyter>=1.0.0
+ipykernel>=6.20.0
+ipywidgets>=8.0.0
+
+# Optional: Visualization
+plotly>=5.14.0
+
+# Installation Instructions:
+# -------------------------
+# 1. Create a virtual environment (recommended):
+#    python -m venv rl_env
+#    source rl_env/bin/activate  # On Windows: rl_env\Scripts\activate
+#
+# 2. Install requirements:
+#    pip install -r requirements.txt
+#
+# 3. Launch Jupyter:
+#    jupyter notebook
+#
+# 4. Open any notebook and run cells sequentially
