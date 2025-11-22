@@ -56,7 +56,12 @@ Educational Jupyter notebooks covering fundamental RL algorithms:
 - **Actor-Critic**: A2C, A3C-style implementations
 - **Model-Based**: Dyna-Q, Model Predictive Control (MPC)
 
-**Total: 74+ code snippets + 10 RL notebooks**
+### ⚙️ Workflows (2 n8n templates)
+Production-ready workflow automation templates for AI-powered systems:
+- **Prompt Generator**: AI-guided prompt creation with iterative refinement
+- **Semantic Cache**: Cost-optimized LLM caching with Redis vector search
+
+**Total: 74+ code snippets + 10 RL notebooks + 2 workflow templates**
 
 ## Repository Structure
 
@@ -74,20 +79,24 @@ Snippets-4-LLM-Testing/
 ├── ML-Ops/                   # 24 ML operations snippets
 │   └── README.md             # Full catalog of MLOps snippets
 │
-└── Notebooks/                # 10 RL Jupyter notebooks
-    ├── README.md             # Full RL notebook guide
-    └── requirements.txt      # RL-specific dependencies
+├── Notebooks/                # 10 RL Jupyter notebooks
+│   ├── README.md             # Full RL notebook guide
+│   └── requirements.txt      # RL-specific dependencies
+│
+└── Workflows/                # 2 n8n workflow templates
+    └── README.md             # Full workflow automation guide
 ```
 
 ## Quick Start
 
 ### For Humans
 
-1. **Browse by domain**: Navigate to `Data-Engineering/`, `Data-Science/`, `ML-Ops/`, or `Notebooks/`
-2. **Check the catalog**: Each directory has a README with a complete snippet listing
+1. **Browse by domain**: Navigate to `Data-Engineering/`, `Data-Science/`, `ML-Ops/`, `Notebooks/`, or `Workflows/`
+2. **Check the catalog**: Each directory has a README with a complete listing
 3. **Explore snippets**: Files follow the pattern `{domain}-{category}-{subcategory}-{number}-{description}.py`
 4. **Try notebooks**: Interactive RL tutorials in `Notebooks/` with step-by-step implementations
-5. **Adapt and learn**: Code is self-contained with comments explaining key concepts
+5. **Import workflows**: n8n automation templates in `Workflows/` for AI-powered systems
+6. **Adapt and learn**: Code is self-contained with comments explaining key concepts
 
 ### For AI Assistants
 
@@ -185,6 +194,7 @@ This repository demonstrates real-world usage of:
 - **[Data-Science/README.md](./Data-Science/README.md)** - Complete catalog of DS snippets
 - **[ML-Ops/README.md](./ML-Ops/README.md)** - Complete catalog of MLOps snippets
 - **[Notebooks/README.md](./Notebooks/README.md)** - Comprehensive guide to RL notebooks with learning paths
+- **[Workflows/README.md](./Workflows/README.md)** - Complete guide to n8n workflow automation templates
 
 ## Quick Find
 

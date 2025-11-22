@@ -2,14 +2,15 @@
 
 ## Repository Overview
 
-This repository contains **production-ready code snippets** and **educational Jupyter notebooks** organized for testing and training Large Language Models (LLMs). The codebase provides real-world examples across three critical domains in modern data and ML infrastructure, plus interactive reinforcement learning tutorials:
+This repository contains **production-ready code snippets**, **educational Jupyter notebooks**, and **workflow automation templates** organized for testing and training Large Language Models (LLMs). The codebase provides real-world examples across three critical domains in modern data and ML infrastructure, plus interactive reinforcement learning tutorials and n8n workflow automation:
 
 - **Data Engineering** (26 snippets)
 - **Data Science** (24 snippets)
 - **ML Ops** (24 snippets)
 - **Reinforcement Learning** (10 Jupyter notebooks)
+- **Workflows** (2 n8n automation templates)
 
-**Total**: 74+ code snippets + 10 interactive RL notebooks covering end-to-end workflows
+**Total**: 74+ code snippets + 10 interactive RL notebooks + 2 workflow templates covering end-to-end workflows
 
 ### Repository Purpose
 
@@ -52,13 +53,18 @@ Snippets-4-LLM-Testing/
 │   ├── mlops-maintain-*    # Versioning and retraining
 │   └── mlops-govern-*      # Compliance and explainability
 │
-└── Notebooks/               # 10 RL Jupyter notebooks
-    ├── README.md           # Comprehensive RL notebook guide
-    ├── requirements.txt    # RL-specific dependencies
-    ├── reinforcement__value_based__*.ipynb
-    ├── reinforcement__policy_based__*.ipynb
-    ├── reinforcement__actor_critic__*.ipynb
-    └── reinforcement__model_based__*.ipynb
+├── Notebooks/               # 10 RL Jupyter notebooks
+│   ├── README.md           # Comprehensive RL notebook guide
+│   ├── requirements.txt    # RL-specific dependencies
+│   ├── reinforcement__value_based__*.ipynb
+│   ├── reinforcement__policy_based__*.ipynb
+│   ├── reinforcement__actor_critic__*.ipynb
+│   └── reinforcement__model_based__*.ipynb
+│
+└── Workflows/               # 2 n8n workflow automation templates
+    ├── README.md           # Comprehensive workflow guide
+    ├── prompt-generator.json
+    └── semantic-cache-redis-vector-store.json
 ```
 
 ---
@@ -121,9 +127,40 @@ reinforcement__actor_critic__a2c.ipynb
 reinforcement__model_based__dyna_q.ipynb
 ```
 
+### Workflow Templates Naming Pattern
+
+Workflow automation templates follow a **descriptive, hyphen-separated naming pattern**:
+
+#### Pattern Structure
+```
+{workflow-type}-{descriptive-name}.json
+```
+
+#### Examples
+```
+prompt-generator.json
+│      │
+│      └─ Descriptive name
+└────────── Workflow type/purpose
+
+semantic-cache-redis-vector-store.json
+│         │     │     │
+│         │     │     └─ Technology detail (vector-store)
+│         │     └─────── Infrastructure (redis)
+│         └───────────── Feature (cache)
+└─────────────────────── Approach (semantic)
+```
+
+**Key Differences from Code Snippets**:
+- No hierarchical domain-category-subcategory pattern
+- More flexible, descriptive naming
+- Technology stack often included in name (e.g., `redis-vector-store`)
+- Focus on workflow purpose over categorization
+
 ### File Extensions
 - `.py` - Python code snippets (majority)
 - `.ipynb` - Jupyter notebooks (RL tutorials)
+- `.json` - Workflow automation templates (n8n)
 - `.yml` / `.yaml` - Configuration files (Kubernetes, alerts)
 - `.dockerfile` - Docker configurations
 - `.md` - Documentation
@@ -311,6 +348,51 @@ Each notebook follows a consistent educational format:
 - Educational: Extensive markdown cells explaining concepts
 - Visualizations: Matplotlib/Seaborn for learning curves and policy heatmaps
 
+### Workflows (`Workflows/`)
+
+**Focus**: Production-ready n8n workflow automation templates for AI-powered systems
+
+**Templates**:
+1. **Prompt Generator** (`prompt-generator.json`)
+   - AI-guided prompt creation using Google Gemini
+   - Multi-stage form collection with iterative refinement
+   - Generates structured prompts with 6 sections (Role, Inputs, Tools, Instructions, Constraints, Conclusions)
+   - 21 nodes including forms, AI chains, parsers, and merge operations
+
+2. **Semantic Cache** (`semantic-cache-redis-vector-store.json`)
+   - Cost-optimized LLM caching using Redis vector search
+   - Semantic similarity matching for query variations
+   - Dual-path processing: cache hit (instant) vs. cache miss (LLM call)
+   - 18 nodes including vector search, embeddings, and conversation memory
+
+**Key Technologies**: n8n, Google Gemini, OpenAI GPT, HuggingFace Inference, Redis, LangChain
+
+**Workflow Structure**:
+Unlike code snippets, these are JSON workflow definitions containing:
+1. **Nodes** - Individual workflow steps (triggers, AI models, data processing, logic)
+2. **Connections** - Data flow between nodes
+3. **Credentials** - References to API keys and service credentials (not actual secrets)
+4. **Configuration** - Parameters, settings, and customization options
+5. **Documentation** - In-workflow Sticky Notes explaining sections
+
+**Conventions**:
+- Importable: Can be imported directly into any n8n instance
+- Configurable: Credentials and parameters separated from workflow logic
+- Documented: Sticky Notes provide in-workflow documentation
+- Production-ready: Include error handling, validation, and robust patterns
+- Modular: Nodes can be added, removed, or modified independently
+
+**Key Patterns Demonstrated**:
+- **Multi-Stage Data Collection**: Progressive disclosure with AI-guided questions
+- **Semantic Caching**: Vector similarity search for cost optimization
+- **Structured Output Parsing**: Reliable JSON extraction from LLM responses
+- **Conversation Memory**: Redis-backed chat history preservation
+- **Dual-Path Processing**: Conditional branching based on cache hits/misses
+
+**Use Cases**:
+- **Prompt Generator**: Creating consistent AI prompts, building system prompts for agents, standardizing prompt engineering workflows
+- **Semantic Cache**: Reducing LLM costs for chat applications, improving response times, handling query variations
+
 ---
 
 ## Development Workflows
@@ -370,6 +452,42 @@ Each notebook follows a consistent educational format:
    - Include in appropriate category section
    - Update performance benchmarks table
    - Verify requirements.txt includes all dependencies
+
+### When Adding New Workflows
+
+1. **Determine Workflow Purpose**
+   - Identify the automation use case (prompt engineering, caching, data enrichment, etc.)
+   - Ensure it demonstrates a reusable pattern applicable to multiple scenarios
+   - Consider if it fits the AI/automation focus of the Workflows folder
+
+2. **Follow Naming Convention**
+   - Use pattern: `{workflow-type}-{descriptive-name}.json`
+   - Use hyphen-separated lowercase
+   - Include technology stack in name when relevant (e.g., `redis-vector-store`)
+   - Make names descriptive and self-explanatory
+
+3. **Workflow Quality Checklist**
+   - [ ] Uses credential references (never hardcoded API keys)
+   - [ ] Includes Sticky Notes documenting workflow sections
+   - [ ] Has clear node naming that explains each step's purpose
+   - [ ] Implements error handling where appropriate
+   - [ ] Uses structured output parsers for LLM responses
+   - [ ] Configurable parameters exposed (thresholds, models, etc.)
+   - [ ] Tested in n8n instance before committing
+   - [ ] Compatible with current n8n LangChain integration
+
+4. **Update Documentation**
+   - Add comprehensive entry to Workflows/README.md
+   - Include: Purpose, Key Features, Technology Stack, Workflow Flow, Use Cases
+   - Document required infrastructure (APIs, databases, services)
+   - Provide configuration guidance (similarity thresholds, model selection, etc.)
+   - Update performance considerations if applicable
+
+5. **Security & Best Practices**
+   - Remove all actual API keys and credentials before exporting
+   - Use credential references (e.g., `"id": "{{credentialId}}"`)
+   - Document required credential types in README
+   - Include setup instructions for required services
 
 ### When Modifying Existing Snippets
 
@@ -637,6 +755,8 @@ When using snippets:
 - Implement deep RL → `Notebooks/reinforcement__value_based__dqn.ipynb`
 - Understand policy gradients → `Notebooks/reinforcement__policy_based__ppo.ipynb`
 - Explore actor-critic methods → `Notebooks/reinforcement__actor_critic__a2c.ipynb`
+- Create AI prompts systematically → `Workflows/prompt-generator.json`
+- Reduce LLM costs with caching → `Workflows/semantic-cache-redis-vector-store.json`
 
 ### Common File Patterns
 
@@ -663,6 +783,9 @@ ls Notebooks/reinforcement__value_based__*.ipynb
 ls Notebooks/reinforcement__policy_based__*.ipynb
 ls Notebooks/reinforcement__actor_critic__*.ipynb
 ls Notebooks/reinforcement__model_based__*.ipynb
+
+# List all Workflows
+ls Workflows/*.json
 ```
 
 ---
@@ -701,6 +824,7 @@ ls Notebooks/reinforcement__model_based__*.ipynb
 - [Data-Science/README.md](Data-Science/README.md) - Complete DS catalog
 - [ML-Ops/README.md](ML-Ops/README.md) - Complete MLOps catalog
 - [Notebooks/README.md](Notebooks/README.md) - Complete RL notebooks guide with learning paths
+- [Workflows/README.md](Workflows/README.md) - Complete workflow automation guide
 
 ### External Documentation
 
@@ -710,29 +834,35 @@ Referenced technologies maintain their own documentation:
 - Orchestration: Airflow, Prefect, Dagster docs
 - ML frameworks: scikit-learn, XGBoost, MLflow docs
 - RL resources: Gymnasium docs, Sutton & Barto book, OpenAI Spinning Up
+- n8n documentation: n8n.io/docs (workflow automation)
+- LangChain integration: n8n LangChain nodes documentation
 
 ---
 
 ## Summary for AI Assistants
 
-This repository is a **curated collection of production-ready code snippets and educational Jupyter notebooks** designed to demonstrate best practices across Data Engineering, Data Science, ML Ops, and Reinforcement Learning domains.
+This repository is a **curated collection of production-ready code snippets, educational Jupyter notebooks, and workflow automation templates** designed to demonstrate best practices across Data Engineering, Data Science, ML Ops, Reinforcement Learning, and AI Automation domains.
 
 **Key Points**:
 1. **Code Snippets**: Strict naming convention `{domain}-{category}-{subcategory}-{number}-{description}`
 2. **Notebooks**: Double-underscore pattern `reinforcement__{category}__{algorithm}.ipynb`
-3. Self-contained, independent code with full error handling and logging
-4. Production-ready patterns (retries, validation, monitoring, etc.)
-5. Comprehensive README files in each domain directory
-6. Type hints, docstrings, and clear comments throughout
-7. No hardcoded secrets - all configuration via parameters
-8. Educational notebooks with step-by-step implementations and visualizations
+3. **Workflows**: Descriptive pattern `{workflow-type}-{descriptive-name}.json` for n8n templates
+4. Self-contained, independent code with full error handling and logging
+5. Production-ready patterns (retries, validation, monitoring, semantic caching, etc.)
+6. Comprehensive README files in each domain directory
+7. Type hints, docstrings, and clear comments throughout (code snippets and notebooks)
+8. In-workflow documentation with Sticky Notes (workflow templates)
+9. No hardcoded secrets - all configuration via parameters or credential references
+10. Educational notebooks with step-by-step implementations and visualizations
+11. Workflow templates demonstrate AI automation patterns (prompt engineering, cost optimization)
 
 **When working with this codebase**:
-- Respect both naming conventions (snippets vs. notebooks)
-- Maintain code quality standards for snippets and educational clarity for notebooks
-- Update README files when adding snippets or notebooks
+- Respect all three naming conventions (snippets vs. notebooks vs. workflows)
+- Maintain code quality standards for snippets, educational clarity for notebooks, and security for workflows
+- Update README files when adding snippets, notebooks, or workflows
 - Keep snippets independent and self-contained
 - Ensure notebooks follow the 6-section structure (intro, imports, implementation, training, visualization, evaluation)
+- Ensure workflows use credential references (never hardcoded API keys)
 - Follow the existing code style and patterns
 
-This repository serves as both a reference implementation and a testing ground for LLM understanding of production-grade data and ML code, plus educational RL implementations.
+This repository serves as both a reference implementation and a testing ground for LLM understanding of production-grade data and ML code, educational RL implementations, and AI-powered workflow automation.
