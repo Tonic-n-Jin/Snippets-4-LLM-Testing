@@ -15,7 +15,7 @@ This directory contains **production-ready code examples** for Data Engineering,
 | **Architecture & Infrastructure** | **Data Collection** | **Data Transformation** | **Data Delivery** |
 | :--- | :--- | :--- | :--- |
 | [🏛️ Design Patterns](#-design-patterns) | [📥 Ingestion Patterns](#-ingestion-patterns) | [✅ Quality Control](#-quality-control) | [📡 Data Serving](#-data-serving) |
-| [🏗️ Infrastructure](#️-infrastructure) | [💾 Data Sources](#-data-sources) | [⚙️ Processing Logic](#️-processing-logic) | [📊 Observability](#-observability) |
+| [🏗️ Infrastructure](#🏗-infrastructure) | [💾 Data Sources](#-data-sources) | [⚙️ Processing Logic](#⚙-processing-logic) | [📊 Observability](#-observability) |
 
 ---
 
