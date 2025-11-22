@@ -1,72 +1,180 @@
 {
-  "critical_info": [
+  "metadata": {
+    "version": "2.0",
+    "description": "Optimized refactoring rules for Python data engineering code."
+  },
+  "refactoring_rules": [
     {
       "topic": "design_patterns",
-      "example": [
-        "Favor dependency injection over hardcoding clients or service objects.",
-        "Abstract and decouple metric and logging components for reusability across environments."
+      "priority": "high",
+      "principle": "Decouple components (e.g., metrics, logging, DB clients) for testability, maintainability, and environment adaptability.",
+      "anti_patterns_to_find": [
+        "Hardcoded client instantiation inside functions (e.g., `s3 = boto3.client('s3')`).",
+        "Direct global calls to logging/metrics in business logic."
       ],
-      "detail": "Decoupling components (like metrics, logging, and DB clients) makes systems highly testable, maintainable, and adaptable to different environments (dev, prod) without code changes."
-    },
-    {
-      "topic": "metrics_and_observability",
-      "example": [
-        "Instrument all states: successes, failures, exception reasons, and latencies.",
-        "Standardize metric naming, prefixes, and tagging across all system components.",
-        "Expose composite metrics (e.g., SLA streaks) for business insights."
+      "refactoring_guidance": [
+        "Use Dependency Injection: Pass clients into class `__init__` or function args.",
+        "Abstract logging/metrics via injected classes (e.g., `MetricsLogger`) for mocking."
       ],
-      "detail": "A unified observability strategy allows for consistent, system-wide dashboards and alerts. Tracking business-level metrics (like SLA streaks) provides actionable insights beyond just system health."
-    },
-    {
-      "topic": "configuration_management",
-      "example": [
-        "Allow run-time configuration of thresholds, policies, and drift detection parameters.",
-        "Parameterize operational behaviors such as warning vs. failure modes."
-      ],
-      "detail": "Separating configuration from code (e.g., `warn` vs. `fail` policies) empowers operators to tune system behavior in production without requiring a new code deployment, increasing flexibility."
+      "examples": {
+        "before": "def process(): s3 = boto3.client('s3'); ...",
+        "after": "def process(s3_client): ..."
+      }
     },
     {
       "topic": "data_validation",
-      "example": [
-        "Validate all input data for required columns, data types, and schema conformance before processing.",
-        "Enforce rigorous contracts with schema tools (Pandera/Pydantic) at all data and API boundaries."
+      "priority": "critical",
+      "principle": "Automate data contracts to prevent silent corruption in downstream systems.",
+      "anti_patterns_to_find": [
+        "Unchecked DataFrames or dicts in functions/APIs.",
+        "Manual checks like `if 'col' not in df:`."
       ],
-      "detail": "Enforcing strict, automated data contracts is the most effective way to prevent silent data corruption, which can poison downstream models and analytics. This builds trust in the data platform."
+      "refactoring_guidance": [
+        "Use `pandera.SchemaModel` or decorators for DataFrame I/O.",
+        "Define APIs with `pydantic.BaseModel` for structured data."
+      ],
+      "examples": {
+        "before": "def func(df): if 'col' in df: ...",
+        "after": "@pa.check_io(df=SchemaModel) def func(df): ..."
+      }
     },
     {
-      "topic": "real_world_connectivity",
-      "example": [
-        "Abstract data sources to support integration with SQL or metadata stores beyond in-memory data."
+      "topic": "configuration_management",
+      "priority": "high",
+      "principle": "Separate config from code for runtime tuning without redeploys.",
+      "anti_patterns_to_find": [
+        "Hardcoded thresholds/modes (e.g., `drift > 0.05`).",
+        "Embedded secrets or env names."
       ],
-      "detail": "Abstracting data sources (e.g., behind a repository pattern) allows code to be tested against in-memory fakes and easily swapped to connect to production data warehouses, ensuring portability."
+      "refactoring_guidance": [
+        "Use Pydantic `BaseSettings` loaded from env vars/files.",
+        "Inject config into main classes/functions."
+      ],
+      "examples": {
+        "before": "if drift > 0.05: raise ...",
+        "after": "if drift > config.drift_threshold: ..."
+      }
+    },
+    {
+      "topic": "observability_and_metrics",
+      "priority": "high",
+      "principle": "Unified metrics/observability for dashboards, alerts, and business insights beyond system health.",
+      "anti_patterns_to_find": [
+        "Inconsistent metric names or missing error instrumentation.",
+        "Using `print()`; no correlation IDs.",
+        "Only system metrics; ignoring data KPIs like staleness."
+      ],
+      "refactoring_guidance": [
+        "Standardize names: `service.component.action.status`.",
+        "Log errors in every `except`; use structured logging with IDs.",
+        "Add data KPIs (e.g., `data.freshness_seconds`) and composites (e.g., `pipeline.sla_compliance`)."
+      ],
+      "examples": {
+        "before": "print('Error'); metric = 'job_failed'",
+        "after": "logger.error('Error', exc_info=True, correlation_id=...); metrics.emit('data.pipeline.sla_compliance', 1)"
+      }
     },
     {
       "topic": "resilience_and_robustness",
-      "example": [
-        "Implement retries, backoffs, and connection pools for external dependencies."
+      "priority": "critical",
+      "principle": "Handle external failures with retries and timeouts to turn transients into non-events.",
+      "anti_patterns_to_find": [
+        "Unretried API/DB calls.",
+        "No connection pooling or timeouts."
       ],
-      "detail": "External systems (APIs, DBs) will fail. Building resilience logic (like exponential backoff) directly into clients transforms transient failures from critical errors into non-events, ensuring high availability."
-    },
-    {
-      "topic": "security",
-      "example": [
-        "Adopt rotating and hashed API keys, enforce rate limits, and use correlation IDs for secure, auditable service calls."
+      "refactoring_guidance": [
+        "Wrap calls with `tenacity.@retry` (exponential backoff).",
+        "Use pooled DB clients; set timeouts (e.g., `requests.get(timeout=10)`)."
       ],
-      "detail": "A multi-layered security approach (e.g., rate limiting, hashed keys, audit logs) is essential for protecting data APIs from abuse, ensuring compliance, and enabling forensics."
+      "examples": {
+        "before": "requests.get(url)",
+        "after": "@retry(...) def fetch(): requests.get(url, timeout=10)"
+      }
     },
     {
       "topic": "correctness_and_safety",
-      "example": [
-        "Use safe SQL parameterization, input normalization, and complete type-casting for ingest pipelines."
+      "priority": "critical",
+      "principle": "Enforce type safety and safe inputs for integrity and security.",
+      "anti_patterns_to_find": [
+        "String-formatted SQL queries.",
+        "Unnormalized inputs; missing type hints."
       ],
-      "detail": "Ensuring type safety, normalized inputs (like dates), and safe query construction (preventing SQL injection) is fundamental to data integrity and system security."
+      "refactoring_guidance": [
+        "Use parameterized queries only (no f-strings).",
+        "Add type hints; run `mypy`; normalize inputs (strip/lower)."
+      ],
+      "examples": {
+        "before": "f'SELECT * FROM {table}'",
+        "after": "cursor.execute('SELECT * FROM %s', (table,))"
+      }
     },
     {
-      "topic": "business_alignment",
-      "example": [
-        "Measure and expose data-level KPIs such as feature TTLs, schema drift, and staleness, not just system metrics."
+      "topic": "real_world_connectivity",
+      "priority": "medium",
+      "principle": "Abstract data sources for testable, swappable implementations.",
+      "anti_patterns_to_find": [
+        "Logic tied to specific sources (e.g., direct `read_csv`).",
+        "Tests needing live resources."
       ],
-      "detail": "System metrics (like latency) show if the system is *working*. Data-level metrics (like feature staleness) show if the system is providing *business value*. Both are required for a successful data product."
+      "refactoring_guidance": [
+        "Use Repository Pattern with ABCs (e.g., `IFeatureStore`).",
+        "Implement prod (S3) and test (in-memory) variants."
+      ],
+      "examples": {
+        "before": "df = pd.read_csv('s3://...')",
+        "after": "df = store.get_features(...)"
+      }
+    },
+    {
+      "topic": "security",
+      "priority": "critical",
+      "principle": "Layered security to protect APIs, ensure compliance, and enable forensics.",
+      "anti_patterns_to_find": [
+        "Hardcoded secrets.",
+        "Unauthenticated endpoints; no rate limits."
+      ],
+      "refactoring_guidance": [
+        "Load secrets from env/secret managers.",
+        "Add JWT/OAuth auth and rate-limiting middleware."
+      ],
+      "examples": {
+        "before": "API_KEY = 'secret'",
+        "after": "api_key = os.getenv('API_KEY')"
+      }
+    },
+    {
+      "topic": "performance_and_scalability",  // New extension
+      "priority": "high",
+      "principle": "Optimize for large datasets and distributed environments to avoid bottlenecks.",
+      "anti_patterns_to_find": [
+        "Inefficient pandas ops (e.g., loops over rows).",
+        "No parallelization for batch processing."
+      ],
+      "refactoring_guidance": [
+        "Use vectorized ops or switch to Dask/Spark for big data.",
+        "Apply multiprocessing/threading for I/O-bound tasks."
+      ],
+      "examples": {
+        "before": "for row in df.iterrows(): ...",
+        "after": "df['new_col'] = df['col'].apply(func, axis=1)"  // Or Dask equivalent
+      }
+    },
+    {
+      "topic": "testing_and_cicd",  // New extension
+      "priority": "critical",
+      "principle": "Comprehensive tests ensure reliability; integrate with CI/CD for automated checks.",
+      "anti_patterns_to_find": [
+        "Untested data flows or edge cases.",
+        "No mocking for external deps in tests."
+      ],
+      "refactoring_guidance": [
+        "Write pytest units/integrations; mock injected deps.",
+        "Add linting/type checks to CI pipelines."
+      ],
+      "examples": {
+        "before": "# No tests",
+        "after": "@pytest.mark.parametrize(...) def test_func(mock_client): ..."
+      }
     }
   ]
 }
