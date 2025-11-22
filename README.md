@@ -49,7 +49,14 @@ Production ML systems and governance:
 - **Maintenance**: Model versioning, retraining pipelines
 - **Governance**: Compliance, explainability, bias detection
 
-**Total: 74+ code snippets**
+### 🎮 Reinforcement Learning (10 notebooks)
+Educational Jupyter notebooks covering fundamental RL algorithms:
+- **Value-Based**: Q-Learning, SARSA, Deep Q-Networks (DQN)
+- **Policy-Based**: REINFORCE, PPO, TRPO
+- **Actor-Critic**: A2C, A3C-style implementations
+- **Model-Based**: Dyna-Q, Model Predictive Control (MPC)
+
+**Total: 74+ code snippets + 10 RL notebooks**
 
 ## Repository Structure
 
@@ -64,18 +71,23 @@ Snippets-4-LLM-Testing/
 ├── Data-Science/             # 24 ML/analytics snippets
 │   └── README.md             # Full catalog of DS snippets
 │
-└── ML-Ops/                   # 24 ML operations snippets
-    └── README.md             # Full catalog of MLOps snippets
+├── ML-Ops/                   # 24 ML operations snippets
+│   └── README.md             # Full catalog of MLOps snippets
+│
+└── Notebooks/                # 10 RL Jupyter notebooks
+    ├── README.md             # Full RL notebook guide
+    └── requirements.txt      # RL-specific dependencies
 ```
 
 ## Quick Start
 
 ### For Humans
 
-1. **Browse by domain**: Navigate to `Data-Engineering/`, `Data-Science/`, or `ML-Ops/`
+1. **Browse by domain**: Navigate to `Data-Engineering/`, `Data-Science/`, `ML-Ops/`, or `Notebooks/`
 2. **Check the catalog**: Each directory has a README with a complete snippet listing
 3. **Explore snippets**: Files follow the pattern `{domain}-{category}-{subcategory}-{number}-{description}.py`
-4. **Adapt and learn**: Code is self-contained with comments explaining key concepts
+4. **Try notebooks**: Interactive RL tutorials in `Notebooks/` with step-by-step implementations
+5. **Adapt and learn**: Code is self-contained with comments explaining key concepts
 
 ### For AI Assistants
 
@@ -121,6 +133,8 @@ This repository demonstrates real-world usage of:
 **Data Engineering**: Spark, Kafka, Airflow, Pandera, SQLAlchemy, boto3
 
 **ML Ops**: FastAPI, MLflow, Docker, Kubernetes, SHAP, LIME
+
+**Reinforcement Learning**: Gymnasium, PyTorch, NumPy, Scipy
 
 **Visualization**: matplotlib, seaborn, Plotly
 
@@ -170,6 +184,7 @@ This repository demonstrates real-world usage of:
 - **[Data-Engineering/README.md](./Data-Engineering/README.md)** - Complete catalog of DE snippets
 - **[Data-Science/README.md](./Data-Science/README.md)** - Complete catalog of DS snippets
 - **[ML-Ops/README.md](./ML-Ops/README.md)** - Complete catalog of MLOps snippets
+- **[Notebooks/README.md](./Notebooks/README.md)** - Comprehensive guide to RL notebooks with learning paths
 
 ## Quick Find
 
