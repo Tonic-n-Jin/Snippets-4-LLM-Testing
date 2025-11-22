@@ -15,7 +15,7 @@ This directory contains **production-ready code examples** for Data Science, cov
 | **Problem Formulation** | **Data Exploration** | **Model Development** | **Validation & Communication** |
 | :--- | :--- | :--- | :--- |
 | [🎯 Problem Definition](#-problem-definition) | [🔍 EDA Techniques](#-eda-techniques) | [🤖 Algorithm Selection](#-algorithm-selection) | [📊 Evaluation Metrics](#-evaluation-metrics) |
-| [🧪 Hypothesis Testing](#-hypothesis-testing) | [🔧 Feature Engineering](#-feature-engineering) | [⚙️ Hyperparameter Tuning](#️-hyperparameter-tuning) | [📖 Data Storytelling](#-data-storytelling) |
+| [🧪 Hypothesis Testing](#-hypothesis-testing) | [🔧 Feature Engineering](#-feature-engineering) | [⚙️ Hyperparameter Tuning](#⚙️-hyperparameter-tuning) | [📖 Data Storytelling](#-data-storytelling) |
 
 ---
 
