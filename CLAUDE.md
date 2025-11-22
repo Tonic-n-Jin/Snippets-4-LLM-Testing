@@ -2,13 +2,14 @@
 
 ## Repository Overview
 
-This repository contains **production-ready code snippets** organized for testing and training Large Language Models (LLMs). The codebase provides real-world examples across three critical domains in modern data and ML infrastructure:
+This repository contains **production-ready code snippets** and **educational Jupyter notebooks** organized for testing and training Large Language Models (LLMs). The codebase provides real-world examples across three critical domains in modern data and ML infrastructure, plus interactive reinforcement learning tutorials:
 
 - **Data Engineering** (26 snippets)
 - **Data Science** (24 snippets)
 - **ML Ops** (24 snippets)
+- **Reinforcement Learning** (10 Jupyter notebooks)
 
-**Total**: 74+ code snippets covering end-to-end workflows
+**Total**: 74+ code snippets + 10 interactive RL notebooks covering end-to-end workflows
 
 ### Repository Purpose
 
@@ -44,31 +45,41 @@ Snippets-4-LLM-Testing/
 │   ├── ds-model-*           # Algorithm selection and tuning
 │   └── ds-validate-*        # Evaluation and storytelling
 │
-└── ML-Ops/                  # 24 snippets for ML operations
-    ├── README.md           # Comprehensive catalog of MLOps snippets
-    ├── mlops-deploy-*      # Model serving and infrastructure
-    ├── mlops-monitor-*     # Observability and drift detection
-    ├── mlops-maintain-*    # Versioning and retraining
-    └── mlops-govern-*      # Compliance and explainability
+├── ML-Ops/                  # 24 snippets for ML operations
+│   ├── README.md           # Comprehensive catalog of MLOps snippets
+│   ├── mlops-deploy-*      # Model serving and infrastructure
+│   ├── mlops-monitor-*     # Observability and drift detection
+│   ├── mlops-maintain-*    # Versioning and retraining
+│   └── mlops-govern-*      # Compliance and explainability
+│
+└── Notebooks/               # 10 RL Jupyter notebooks
+    ├── README.md           # Comprehensive RL notebook guide
+    ├── requirements.txt    # RL-specific dependencies
+    ├── reinforcement__value_based__*.ipynb
+    ├── reinforcement__policy_based__*.ipynb
+    ├── reinforcement__actor_critic__*.ipynb
+    └── reinforcement__model_based__*.ipynb
 ```
 
 ---
 
 ## File Naming Convention
 
+### Code Snippets Naming Pattern
+
 All code snippets follow a **strict hierarchical naming pattern**:
 
-### Pattern Structure
+#### Pattern Structure
 ```
 {domain}-{category}-{subcategory}-{number}-{description}.{extension}
 ```
 
-### Domain Prefixes
+#### Domain Prefixes
 - `de-` = Data Engineering
 - `ds-` = Data Science
 - `mlops-` = ML Ops
 
-### Examples
+#### Examples
 ```
 de-collect-sources-2-robust-api-client-pagination.py
 │  │       │       │ │
@@ -82,8 +93,37 @@ ds-model-algorithm-1-model-benchmarking-fair-comparison-framework.py
 mlops-deploy-serving-2-real-time-api-with-fastapi.py
 ```
 
+### Jupyter Notebooks Naming Pattern
+
+Reinforcement Learning notebooks follow a **double-underscore naming pattern**:
+
+#### Pattern Structure
+```
+reinforcement__{category}__{algorithm}.ipynb
+```
+
+#### Categories
+- `value_based` = Q-Learning, SARSA, DQN
+- `policy_based` = REINFORCE, PPO, TRPO
+- `actor_critic` = A2C, A3C
+- `model_based` = Dyna-Q, MPC
+
+#### Examples
+```
+reinforcement__value_based__q_learning.ipynb
+│            │          │
+│            │          └─ Algorithm name
+│            └─────────── Category
+└──────────────────────── Domain
+
+reinforcement__policy_based__ppo.ipynb
+reinforcement__actor_critic__a2c.ipynb
+reinforcement__model_based__dyna_q.ipynb
+```
+
 ### File Extensions
 - `.py` - Python code snippets (majority)
+- `.ipynb` - Jupyter notebooks (RL tutorials)
 - `.yml` / `.yaml` - Configuration files (Kubernetes, alerts)
 - `.dockerfile` - Docker configurations
 - `.md` - Documentation
@@ -230,6 +270,47 @@ YAML files use standard indentation (2 spaces) and include comments explaining c
 
 **Key Technologies**: FastAPI, MLflow, Docker, Kubernetes, Faust, SHAP, LIME
 
+### Reinforcement Learning (`Notebooks/`)
+
+**Focus**: Educational implementations of fundamental RL algorithms
+
+**Categories**:
+1. **Value-Based Methods** (`reinforcement__value_based__`)
+   - `q_learning`: Classic tabular RL for discrete spaces
+   - `sarsa`: On-policy temporal difference learning
+   - `dqn`: Deep Q-Network with experience replay and target networks
+
+2. **Policy-Based Methods** (`reinforcement__policy_based__`)
+   - `reinforce`: Monte Carlo policy gradient algorithm
+   - `ppo`: Proximal Policy Optimization with clipped objective
+   - `trpo`: Trust Region Policy Optimization with KL constraints
+
+3. **Actor-Critic Methods** (`reinforcement__actor_critic__`)
+   - `a2c`: Advantage Actor-Critic (synchronous)
+   - `a3c`: Asynchronous Advantage Actor-Critic variant
+
+4. **Model-Based Methods** (`reinforcement__model_based__`)
+   - `dyna_q`: Integrated planning and learning
+   - `mpc`: Model Predictive Control with trajectory optimization
+
+**Key Technologies**: Gymnasium, PyTorch, NumPy, Scipy, Matplotlib
+
+**Notebook Structure**:
+Each notebook follows a consistent educational format:
+1. **Introduction** - Algorithm principle, definition, use cases, and assumptions
+2. **Import Libraries** - Required dependencies with environment setup
+3. **Algorithm Implementation** - Core agent class with detailed docstrings
+4. **Training Loop** - Episode-based training with progress tracking
+5. **Visualization** - Performance plots, learning curves, and policy visualization
+6. **Evaluation** - Quantitative metrics and qualitative assessment
+
+**Conventions**:
+- Self-contained: Each notebook runs independently
+- Reproducible: Fixed random seeds for consistent results
+- Configurable: Hyperparameters clearly exposed at agent initialization
+- Educational: Extensive markdown cells explaining concepts
+- Visualizations: Matplotlib/Seaborn for learning curves and policy heatmaps
+
 ---
 
 ## Development Workflows
@@ -261,6 +342,34 @@ YAML files use standard indentation (2 spaces) and include comments explaining c
    - Include descriptive title
    - Link to the file
    - Place in correct category section
+
+### When Adding New Notebooks
+
+1. **Choose Category**
+   - Determine algorithm category (value-based, policy-based, actor-critic, model-based)
+   - Ensure it fits the educational purpose of the collection
+
+2. **Follow Naming Convention**
+   - Use pattern: `reinforcement__{category}__{algorithm}.ipynb`
+   - Use lowercase with underscores
+   - Use descriptive algorithm names
+
+3. **Notebook Quality Checklist**
+   - [ ] Introduction cell with principle, definition, use cases, and assumptions
+   - [ ] Organized imports with version compatibility notes
+   - [ ] Agent class with comprehensive docstrings
+   - [ ] Training loop with progress indicators
+   - [ ] Multiple visualizations (learning curves, policy plots, metrics)
+   - [ ] Evaluation section with quantitative results
+   - [ ] Markdown cells explaining key concepts
+   - [ ] Configurable hyperparameters
+   - [ ] Fixed random seeds for reproducibility
+
+4. **Update Documentation**
+   - Add entry to Notebooks/README.md
+   - Include in appropriate category section
+   - Update performance benchmarks table
+   - Verify requirements.txt includes all dependencies
 
 ### When Modifying Existing Snippets
 
@@ -367,6 +476,11 @@ YAML files use standard indentation (2 spaces) and include comments explaining c
 - `lime` - Local explanations
 - `prometheus_client` - Metrics
 
+**Reinforcement Learning**:
+- `gymnasium` - RL environments (successor to OpenAI Gym)
+- `torch` - Deep learning framework for neural network agents
+- `scipy` - Optimization for model-based methods
+
 **Orchestration**:
 - `apache-airflow` - Workflow management
 - `prefect` / `dagster` - Modern workflow engines
@@ -391,12 +505,13 @@ YAML files use standard indentation (2 spaces) and include comments explaining c
 ### When Asked About This Repository
 
 1. **Understanding Structure**
-   - Explain the three-domain organization
-   - Clarify the naming convention
+   - Explain the four-domain organization (DE, DS, MLOps, RL Notebooks)
+   - Clarify the naming conventions for both snippets and notebooks
    - Point to relevant README files
 
 2. **Finding Relevant Code**
-   - Use the naming pattern to locate snippets
+   - Use the naming pattern to locate snippets (hyphen-separated for .py files)
+   - Use the double-underscore pattern for notebooks (.ipynb files)
    - Check the domain README for descriptions
    - Consider the category and subcategory
 
@@ -416,22 +531,29 @@ YAML files use standard indentation (2 spaces) and include comments explaining c
 ### When Creating New Snippets
 
 1. **Choose Domain and Category**
-   - Determine if it's DE, DS, or MLOps
+   - Determine if it's DE, DS, MLOps, or RL Notebook
    - Select or create appropriate category/subcategory
-   - Number it sequentially
+   - Number it sequentially (for snippets) or use descriptive name (for notebooks)
 
 2. **Follow Code Standards**
-   - Include all required imports
-   - Add type hints
-   - Write docstrings
-   - Configure logging
-   - Add error handling
-   - Use production patterns
+   - **For Python Snippets:**
+     - Include all required imports
+     - Add type hints
+     - Write docstrings
+     - Configure logging
+     - Add error handling
+     - Use production patterns
+   - **For Jupyter Notebooks:**
+     - Follow the 6-section structure (intro, imports, implementation, training, visualization, evaluation)
+     - Include markdown cells explaining concepts
+     - Use configurable hyperparameters
+     - Add visualizations for learning curves and performance
 
 3. **Update Documentation**
-   - Add entry to domain README.md
+   - Add entry to appropriate domain README.md
    - Use consistent formatting
    - Provide clear description
+   - For notebooks, update the learning path and benchmarks table
 
 ### When Debugging or Reviewing
 
@@ -511,6 +633,10 @@ When using snippets:
 - Validate data quality → `de-transform-quality-2-accuracy-value-validation-with-pandera.py`
 - Create an A/B test → `ds-formulate-hypothesis-1-ab-test-implementation.py`
 - Deploy on Kubernetes → `mlops-deploy-infra-2-kubernetes-deployment.yml`
+- Learn Q-Learning basics → `Notebooks/reinforcement__value_based__q_learning.ipynb`
+- Implement deep RL → `Notebooks/reinforcement__value_based__dqn.ipynb`
+- Understand policy gradients → `Notebooks/reinforcement__policy_based__ppo.ipynb`
+- Explore actor-critic methods → `Notebooks/reinforcement__actor_critic__a2c.ipynb`
 
 ### Common File Patterns
 
@@ -528,6 +654,15 @@ find . -name "*.yml"
 ls Data-Engineering/de-collect-*
 ls Data-Science/ds-model-*
 ls ML-Ops/mlops-govern-*
+
+# List all RL notebooks
+ls Notebooks/reinforcement__*.ipynb
+
+# List notebooks by category
+ls Notebooks/reinforcement__value_based__*.ipynb
+ls Notebooks/reinforcement__policy_based__*.ipynb
+ls Notebooks/reinforcement__actor_critic__*.ipynb
+ls Notebooks/reinforcement__model_based__*.ipynb
 ```
 
 ---
@@ -565,6 +700,7 @@ ls ML-Ops/mlops-govern-*
 - [Data-Engineering/README.md](Data-Engineering/README.md) - Complete DE catalog
 - [Data-Science/README.md](Data-Science/README.md) - Complete DS catalog
 - [ML-Ops/README.md](ML-Ops/README.md) - Complete MLOps catalog
+- [Notebooks/README.md](Notebooks/README.md) - Complete RL notebooks guide with learning paths
 
 ### External Documentation
 
@@ -573,26 +709,30 @@ Referenced technologies maintain their own documentation:
 - Cloud platforms: AWS, GCP, Azure documentation
 - Orchestration: Airflow, Prefect, Dagster docs
 - ML frameworks: scikit-learn, XGBoost, MLflow docs
+- RL resources: Gymnasium docs, Sutton & Barto book, OpenAI Spinning Up
 
 ---
 
 ## Summary for AI Assistants
 
-This repository is a **curated collection of production-ready code snippets** designed to demonstrate best practices across Data Engineering, Data Science, and ML Ops domains.
+This repository is a **curated collection of production-ready code snippets and educational Jupyter notebooks** designed to demonstrate best practices across Data Engineering, Data Science, ML Ops, and Reinforcement Learning domains.
 
 **Key Points**:
-1. Strict naming convention: `{domain}-{category}-{subcategory}-{number}-{description}`
-2. Self-contained, independent snippets with full error handling and logging
-3. Production-ready patterns (retries, validation, monitoring, etc.)
-4. Comprehensive README files in each domain directory
-5. Type hints, docstrings, and clear comments throughout
-6. No hardcoded secrets - all configuration via parameters
+1. **Code Snippets**: Strict naming convention `{domain}-{category}-{subcategory}-{number}-{description}`
+2. **Notebooks**: Double-underscore pattern `reinforcement__{category}__{algorithm}.ipynb`
+3. Self-contained, independent code with full error handling and logging
+4. Production-ready patterns (retries, validation, monitoring, etc.)
+5. Comprehensive README files in each domain directory
+6. Type hints, docstrings, and clear comments throughout
+7. No hardcoded secrets - all configuration via parameters
+8. Educational notebooks with step-by-step implementations and visualizations
 
 **When working with this codebase**:
-- Respect the naming convention
-- Maintain code quality standards
-- Update README files when adding snippets
+- Respect both naming conventions (snippets vs. notebooks)
+- Maintain code quality standards for snippets and educational clarity for notebooks
+- Update README files when adding snippets or notebooks
 - Keep snippets independent and self-contained
+- Ensure notebooks follow the 6-section structure (intro, imports, implementation, training, visualization, evaluation)
 - Follow the existing code style and patterns
 
-This repository serves as both a reference implementation and a testing ground for LLM understanding of production-grade data and ML code.
+This repository serves as both a reference implementation and a testing ground for LLM understanding of production-grade data and ML code, plus educational RL implementations.
