@@ -1,0 +1,25 @@
+# Prometheus alerting rules
+
+groups:
+
+- name: ml_model_alerts
+  rules: - alert: HighModelLatency
+  expr: histogram_quantile(0.95, model_latency_seconds) > 0.5
+  for: 5m
+  annotations:
+  summary: "Model latency P95 > 500ms"
+  description: "Model {{ $labels.model }} latency is {{ $value }}s"
+
+        - alert: PredictionDrift
+          expr: model_prediction_drift > 0.2
+          for: 10m
+          annotations:
+            summary: "Significant prediction drift detected"
+            description: "PSI score: {{ $value }}"
+
+        - alert: LowModelAccuracy
+          expr: model_accuracy < 0.8
+          for: 15m
+          annotations:
+            summary: "Model accuracy below threshold"
+            description: "Current accuracy: {{ $value }}"
