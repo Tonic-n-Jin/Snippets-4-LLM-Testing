@@ -28,7 +28,7 @@ Think of this as a "tour" of data infrastructure possibilities rather than a com
 
 ## What's Inside
 
-### 📊 Data Engineering (26 snippets)
+### 📊 Data Engineering (24 snippets)
 Production-ready patterns for building reliable data pipelines:
 - **Architecture**: Lambda, Kappa, Data Mesh patterns
 - **Collection**: CDC, Kafka, API clients, batch ETL
