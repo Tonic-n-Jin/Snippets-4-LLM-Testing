@@ -156,7 +156,7 @@
       ],
       "examples": {
         "before": "for row in df.iterrows(): ...",
-        "after": "df['new_col'] = df['col'].map(func) or df['result'] = df['col1'] * df['col2'] for vectorized ops"
+        "after": "df['new_col'] = df['col'].map(func)  # or use: df['result'] = df['col1'] * df['col2'] for vectorized ops"
       }
     },
     {
