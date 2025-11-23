@@ -517,6 +517,172 @@ Unlike code snippets, these are JSON workflow definitions containing:
 - No hardcoded secrets
 - Production-ready patterns (retries, timeouts, etc.)
 
+### When Refactoring Code
+
+When asked to refactor code, follow this systematic approach using the comprehensive rules defined in `/refactoring_rules.json`:
+
+#### 1. Load and Understand Refactoring Rules
+
+Reference the 10 refactoring topics in `refactoring_rules.json`:
+- **Critical Priority**: Data Validation, Resilience & Robustness, Correctness & Safety, Security, Testing & CI/CD
+- **High Priority**: Design Patterns, Configuration Management, Observability & Metrics, Performance & Scalability
+- **Medium Priority**: Real-World Connectivity
+
+#### 2. Analysis Phase
+
+**Before making any changes**:
+- **Read the target file(s)** completely to understand current implementation
+- **Identify anti-patterns** by comparing code against the `anti_patterns_to_find` in each rule
+- **Assess scope**: Determine which refactoring topics apply to the current code
+- **Check priority**: Focus on critical > high > medium issues first
+
+**Example anti-patterns to look for**:
+```python
+# Security (Critical)
+API_KEY = "secret123"  # Hardcoded secret
+
+# Data Validation (Critical)
+def process(df):  # Unchecked DataFrame
+    if 'col' in df: ...  # Manual validation
+
+# Design Patterns (High)
+def fetch():
+    s3 = boto3.client('s3')  # Hardcoded client instantiation
+
+# Configuration (High)
+if drift > 0.05:  # Hardcoded threshold
+    raise Alert()
+```
+
+#### 3. Planning Phase
+
+Use the TodoWrite tool to create a structured refactoring plan:
+
+```markdown
+1. **Critical Fixes** (Must address)
+   - Fix SQL injection vulnerability (Correctness & Safety)
+   - Add data validation with Pandera (Data Validation)
+   - Implement retry logic for API calls (Resilience & Robustness)
+
+2. **High-Priority Improvements** (Should address)
+   - Refactor to dependency injection pattern (Design Patterns)
+   - Extract hardcoded thresholds to config (Configuration Management)
+   - Add structured logging with correlation IDs (Observability & Metrics)
+
+3. **Medium-Priority Optimizations** (Nice to have)
+   - Replace DataFrame iteration with vectorized ops (Performance & Scalability)
+   - Abstract S3 access via repository pattern (Real-World Connectivity)
+```
+
+**Share the plan** with the user for approval before proceeding.
+
+#### 4. Implementation Phase
+
+Apply refactoring rules systematically:
+
+**For each refactoring task**:
+1. **Mark todo as in_progress** before starting
+2. **Apply the transformation** following the `refactoring_guidance` in the rule
+3. **Use the examples** in `refactoring_rules.json` as templates
+4. **Cite the principle** when explaining changes
+5. **Maintain backward compatibility** unless explicitly asked to break it
+6. **Test incrementally** - verify syntax after each change
+
+**Example transformations**:
+
+```python
+# Before: Security violation
+API_KEY = "secret123"
+
+# After: Following Security rule
+API_KEY = os.getenv('API_KEY')
+# Principle: "Load secrets from env/secret managers"
+```
+
+```python
+# Before: No dependency injection
+def process():
+    s3 = boto3.client('s3')
+    return s3.get_object(Bucket='data', Key='file.csv')
+
+# After: Following Design Patterns rule
+def process(s3_client):
+    return s3_client.get_object(Bucket='data', Key='file.csv')
+# Principle: "Pass clients into function args for testability"
+```
+
+```python
+# Before: Manual data validation
+def transform(df):
+    if 'user_id' not in df:
+        raise ValueError("Missing user_id")
+    if df['age'].min() < 0:
+        raise ValueError("Invalid age")
+
+# After: Following Data Validation rule
+import pandera as pa
+
+class DataSchema(pa.SchemaModel):
+    user_id: int = pa.Field()
+    age: int = pa.Field(ge=0)
+
+@pa.check_io(df=DataSchema)
+def transform(df: pd.DataFrame) -> pd.DataFrame:
+    return df
+# Principle: "Automate data contracts to prevent silent corruption"
+```
+
+#### 5. Validation Phase
+
+After each refactoring:
+- **Verify syntax**: Ensure code is syntactically correct
+- **Check imports**: Update imports for new dependencies (e.g., `import pandera as pa`)
+- **Maintain type hints**: Keep or add type annotations
+- **Update docstrings**: Reflect new parameters or behavior
+- **No secrets**: Confirm no hardcoded credentials introduced
+- **Mark todo completed**: Only after verification passes
+
+#### 6. Documentation Phase
+
+Update relevant documentation:
+- **Code comments**: Explain why refactoring was necessary (reference the principle)
+- **Docstrings**: Update if function signatures changed
+- **README files**: Update if public interfaces changed
+
+#### Refactoring Scope Guidelines
+
+**Choose scope based on user request**:
+
+| User Request | Refactoring Focus | Topics to Apply |
+|--------------|-------------------|-----------------|
+| "Full refactoring" | Comprehensive | All applicable rules by priority |
+| "Make it production-ready" | Critical + High | Security, Validation, Resilience, Config |
+| "Make it more testable" | Design + Testing | Design Patterns, Testing & CI/CD |
+| "Improve error handling" | Robustness | Resilience & Robustness, Observability |
+| "Add validation" | Data Quality | Data Validation, Correctness & Safety |
+| "Security audit" | Security | Security, Correctness & Safety |
+| "Performance issues" | Optimization | Performance & Scalability |
+| "Fix code smells" | Design + Config | Design Patterns, Configuration Management |
+
+#### Important Refactoring Principles
+
+**DO**:
+- ✅ Only refactor when explicitly requested or when fixing bugs
+- ✅ Read the entire file before suggesting changes
+- ✅ Apply rules relevant to the code's purpose
+- ✅ Explain each change by citing the principle from `refactoring_rules.json`
+- ✅ Make changes incrementally (one topic at a time)
+- ✅ Preserve functionality - refactoring should not change behavior
+- ✅ Use TodoWrite to track progress and give visibility
+
+**DON'T**:
+- ❌ Over-engineer - don't add abstractions for single-use cases
+- ❌ Refactor unsolicited - only when user asks
+- ❌ Apply all rules blindly - be selective based on context
+- ❌ Change behavior - refactoring improves structure, not functionality
+- ❌ Skip planning - always create a todo list for non-trivial refactoring
+- ❌ Batch completions - mark todos done immediately after finishing each
+
 ---
 
 ## Key Architectural Patterns
@@ -757,6 +923,7 @@ When using snippets:
 - Explore actor-critic methods → `Notebooks/reinforcement__actor_critic__a2c.ipynb`
 - Create AI prompts systematically → `Workflows/prompt-generator.json`
 - Reduce LLM costs with caching → `Workflows/semantic-cache-redis-vector-store.json`
+- **Refactor code to production standards** → See `refactoring_rules.json` and CLAUDE.md "When Refactoring Code"
 
 ### Common File Patterns
 
@@ -847,14 +1014,15 @@ This repository is a **curated collection of production-ready code snippets, edu
 1. **Code Snippets**: Strict naming convention `{domain}-{category}-{subcategory}-{number}-{description}`
 2. **Notebooks**: Double-underscore pattern `reinforcement__{category}__{algorithm}.ipynb`
 3. **Workflows**: Descriptive pattern `{workflow-type}-{descriptive-name}.json` for n8n templates
-4. Self-contained, independent code with full error handling and logging
-5. Production-ready patterns (retries, validation, monitoring, semantic caching, etc.)
-6. Comprehensive README files in each domain directory
-7. Type hints, docstrings, and clear comments throughout (code snippets and notebooks)
-8. In-workflow documentation with Sticky Notes (workflow templates)
-9. No hardcoded secrets - all configuration via parameters or credential references
-10. Educational notebooks with step-by-step implementations and visualizations
-11. Workflow templates demonstrate AI automation patterns (prompt engineering, cost optimization)
+4. **Refactoring Rules**: Comprehensive refactoring guidelines in `refactoring_rules.json` with 10 topics (critical, high, medium priority)
+5. Self-contained, independent code with full error handling and logging
+6. Production-ready patterns (retries, validation, monitoring, semantic caching, etc.)
+7. Comprehensive README files in each domain directory
+8. Type hints, docstrings, and clear comments throughout (code snippets and notebooks)
+9. In-workflow documentation with Sticky Notes (workflow templates)
+10. No hardcoded secrets - all configuration via parameters or credential references
+11. Educational notebooks with step-by-step implementations and visualizations
+12. Workflow templates demonstrate AI automation patterns (prompt engineering, cost optimization)
 
 **When working with this codebase**:
 - Respect all three naming conventions (snippets vs. notebooks vs. workflows)
@@ -864,5 +1032,6 @@ This repository is a **curated collection of production-ready code snippets, edu
 - Ensure notebooks follow the 6-section structure (intro, imports, implementation, training, visualization, evaluation)
 - Ensure workflows use credential references (never hardcoded API keys)
 - Follow the existing code style and patterns
+- **When refactoring**: Use `refactoring_rules.json` as a guide, create a TodoWrite plan, apply rules by priority (critical > high > medium)
 
 This repository serves as both a reference implementation and a testing ground for LLM understanding of production-grade data and ML code, educational RL implementations, and AI-powered workflow automation.
