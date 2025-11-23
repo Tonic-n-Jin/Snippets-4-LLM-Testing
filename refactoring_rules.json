@@ -143,7 +143,7 @@
       }
     },
     {
-      "topic": "performance_and_scalability",  // New extension
+      "topic": "performance_and_scalability",
       "priority": "high",
       "principle": "Optimize for large datasets and distributed environments to avoid bottlenecks.",
       "anti_patterns_to_find": [
@@ -156,11 +156,11 @@
       ],
       "examples": {
         "before": "for row in df.iterrows(): ...",
-        "after": "df['new_col'] = df['col'].apply(func, axis=1)"  // Or Dask equivalent
+        "after": "df['new_col'] = df['col'].map(func)  # or use: df['result'] = df['col1'] * df['col2'] for vectorized ops"
       }
     },
     {
-      "topic": "testing_and_cicd",  // New extension
+      "topic": "testing_and_cicd",
       "priority": "critical",
       "principle": "Comprehensive tests ensure reliability; integrate with CI/CD for automated checks.",
       "anti_patterns_to_find": [
