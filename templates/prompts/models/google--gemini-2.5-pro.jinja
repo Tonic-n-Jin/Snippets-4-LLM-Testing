@@ -1,0 +1,76 @@
+{#
+    Gemini 2.5 Pro Template - Long Context Optimized
+
+    Gemini 2.5 Pro features:
+    - 2M token context window (largest available)
+    - Excellent for document analysis
+    - Strong coding capabilities
+    - MUST keep temperature at 1.0
+
+    Key: Default responses are concise - request detail explicitly.
+#}
+{% extends "families/gemini.jinja" %}
+
+{% block header %}
+{# Gemini 2.5 Pro: Long-context optimized #}
+{% endblock %}
+
+{% block role_section %}
+## Task Definition
+
+{% if role %}
+**Role:** {{ role }}
+
+{% endif %}
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Clear, concise task statement]
+{% endif %}
+
+{% if context_length and context_length > 100000 %}
+### Long-Context Capabilities
+This model supports up to 2 million tokens of context.
+When analyzing large documents:
+- Process information systematically
+- Reference specific sections when relevant
+- Synthesize insights across the full context
+{% endif %}
+
+{% endblock %}
+
+{% block output_section %}
+## Output Requirements
+{% if output_format %}
+{{ output_format }}
+{% endif %}
+
+{% if verbosity == "comprehensive" %}
+**Detail Level:** Provide a comprehensive, thorough response covering all aspects of the task. Do not summarize prematurely. Include:
+- Complete analysis of all relevant factors
+- Supporting evidence and reasoning
+- Consideration of edge cases
+- Actionable recommendations where appropriate
+{% elif verbosity == "detailed" %}
+**Detail Level:** Provide a detailed response with full explanations. Do not abbreviate.
+{% else %}
+**Detail Level:** Provide sufficient detail to fully address the task. Be thorough but focused.
+{% endif %}
+
+{% endblock %}
+
+{% block constraints_section %}
+{% if constraints %}
+## Guidelines
+{% for constraint in constraints %}
+- {{ constraint }}
+{% endfor %}
+
+{% endif %}
+{# Gemini-specific: Explicit instruction style #}
+## Response Guidelines
+- Be direct and precise in language
+- Avoid hedging or unnecessary qualifiers
+- Structure response with clear sections
+- Use specific examples where helpful
+{% endblock %}

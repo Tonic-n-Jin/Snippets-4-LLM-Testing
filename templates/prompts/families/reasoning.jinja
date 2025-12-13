@@ -1,0 +1,41 @@
+{#
+    Reasoning Model Template - Minimal Structure
+
+    For: OpenAI o1, o3, o3-mini, DeepSeek R1
+
+    CRITICAL CONSTRAINTS:
+    - Keep prompts MINIMAL - verbose instructions degrade performance
+    - NO chain-of-thought instructions - these models do it internally
+    - NO few-shot examples - causes over-fitting
+    - NO lengthy preambles - wastes context
+
+    These models perform BETTER with simpler prompts.
+
+    Variables:
+        task (str): Single clear task statement
+        context (str, optional): Only essential context
+        output_format (str): Output requirements
+
+    Note: Most standard variables (role, examples, etc.) are INTENTIONALLY
+    not used in this template to maintain minimalism.
+#}
+{# Minimal header - reasoning models don't need elaborate setup #}
+{% if task %}
+{{ task }}
+{% else %}
+[State the task clearly and concisely]
+{% endif %}
+
+{% if context %}
+
+{{ context }}
+{% endif %}
+
+{% if output_format %}
+
+{{ output_format }}
+{% endif %}
+{% if is_math_problem %}
+
+Please reason step by step, and put your final answer within \boxed{}.
+{% endif %}

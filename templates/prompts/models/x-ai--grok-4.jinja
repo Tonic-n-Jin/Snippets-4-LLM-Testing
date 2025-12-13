@@ -1,0 +1,65 @@
+{#
+    xAI Grok 4 Template
+
+    xAI's flagship reasoning model optimized for:
+    - 256K token context window
+    - Advanced reasoning and analysis
+    - Real-time web and X search integration
+    - Tool-calling and agentic workflows
+
+    Grok prefers direct, clear instructions with room for wit.
+#}
+{% extends "families/grok.jinja" %}
+
+{% block header %}
+{# Grok 4 - flagship reasoning model #}
+{% endblock %}
+
+{% block reasoning_section %}
+{% if reasoning_strategy %}
+## Approach
+{{ reasoning_strategy }}
+
+{% endif %}
+{% if use_web_search %}
+## Real-Time Information
+You have access to real-time web and X search. Use these capabilities to:
+- Verify current information
+- Access recent developments
+- Cross-reference multiple sources
+{% endif %}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Provide clear, direct instructions for the task]
+{% endif %}
+
+{% if tool_calling %}
+### Available Tools
+Use the following tools as needed:
+{% for tool in tools %}
+- **{{ tool.name }}**: {{ tool.description }}
+{% endfor %}
+{% endif %}
+
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output structure]
+{% endif %}
+
+{% if use_reasoning %}
+### Reasoning Guidelines
+- Think through complex problems step by step
+- Consider multiple perspectives
+- Validate conclusions against available evidence
+{% endif %}
+{% endblock %}

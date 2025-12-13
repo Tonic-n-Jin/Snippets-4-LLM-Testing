@@ -1,0 +1,66 @@
+{#
+    xAI Grok 4.1 Fast Template
+
+    xAI's best tool-calling model optimized for:
+    - 2M token context window
+    - Enterprise tool-calling (best-in-class)
+    - Speed and efficiency (40% fewer thinking tokens)
+    - Unified reasoning/non-reasoning modes
+
+    Optimized for agentic workflows and function orchestration.
+#}
+{% extends "families/grok.jinja" %}
+
+{% block header %}
+{# Grok 4.1 Fast - optimized for tool-calling and speed #}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Provide clear task instructions]
+{% endif %}
+
+{% if tool_calling %}
+### Tool Orchestration
+You have access to the following tools. Use them efficiently:
+{% for tool in tools %}
+- **{{ tool.name }}**: {{ tool.description }}
+  {% if tool.parameters %}Parameters: {{ tool.parameters }}{% endif %}
+{% endfor %}
+
+**Guidelines:**
+- Select appropriate tools for each subtask
+- Chain tool calls when dependencies exist
+- Minimize redundant calls for efficiency
+{% endif %}
+
+{% if web_search_enabled %}
+### Search Capabilities
+- Web search for current information
+- X/Twitter search for real-time social context
+- Use search judiciously for factual grounding
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% elif json_mode %}
+Respond with valid JSON:
+```json
+{{ json_schema | tojson(indent=2) if json_schema is mapping else json_schema }}
+```
+{% else %}
+[Specify expected output structure]
+{% endif %}
+
+{% if reasoning_mode == "non-reasoning" %}
+**Mode:** Non-reasoning (direct response, no extended thinking)
+{% elif reasoning_mode == "reasoning" %}
+**Mode:** Reasoning (use extended thinking for complex analysis)
+{% endif %}
+{% endblock %}

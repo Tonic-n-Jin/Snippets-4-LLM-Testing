@@ -1,0 +1,73 @@
+{#
+    Mistral Large 3 Template
+
+    Mistral's flagship open-weight MoE model:
+    - 675B total / 41B active parameters (granular MoE)
+    - 256K token context
+    - Multimodal understanding
+    - Apache 2.0 license
+
+    Strong for general-purpose tasks with open weights.
+#}
+{% extends "families/mistral.jinja" %}
+
+{% block header %}
+{# Mistral Large 3 - flagship open-weight MoE #}
+{% endblock %}
+
+{% block role_section %}
+## Role
+{% if role %}
+{{ role }}
+{% else %}
+[Define the assistant's role]
+{% endif %}
+
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the task clearly]
+{% endif %}
+
+{% if code_task %}
+### Code Guidelines
+- Follow best practices for the target language
+- Include appropriate comments and documentation
+- Consider edge cases and error handling
+{% endif %}
+
+{% if multilingual %}
+### Language Requirements
+{% if target_language %}
+Respond in: {{ target_language }}
+{% else %}
+[Specify target language if not English]
+{% endif %}
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% elif json_mode %}
+Return valid JSON matching:
+```json
+{{ json_schema | tojson(indent=2) if json_schema is mapping else json_schema }}
+```
+{% else %}
+[Specify expected output format]
+{% endif %}
+
+{% if function_calling %}
+### Function Calling
+Available functions:
+{% for func in functions %}
+- `{{ func.name }}({{ func.params }})`: {{ func.description }}
+{% endfor %}
+{% endif %}
+{% endblock %}

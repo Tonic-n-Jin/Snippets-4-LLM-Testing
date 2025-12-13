@@ -1,0 +1,85 @@
+{#
+    xAI Grok Family Template
+
+    Optimized for Grok models (Grok 3, Grok 4, Grok 4.1 Fast):
+    - Direct, clear communication style
+    - Real-time web and X search integration
+    - Strong reasoning and tool-calling capabilities
+    - Allows for wit and personality
+
+    Grok models prefer direct instructions with room for natural responses.
+#}
+{% extends "base/base_chatgpt.jinja" %}
+
+{% block header %}
+{# Grok prefers minimal headers - get to the point #}
+{% endblock %}
+
+{% block role_section %}
+## Role
+{% if role %}
+{{ role }}
+{% else %}
+[Define the assistant's role and expertise]
+{% endif %}
+
+{% endblock %}
+
+{% block reasoning_section %}
+{% if reasoning_strategy %}
+## Approach
+{{ reasoning_strategy }}
+
+{% endif %}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the task directly and clearly]
+{% endif %}
+
+{% endblock %}
+
+{% block examples_section %}
+{% if examples and examples|length <= 3 %}
+## Examples
+{% for example in examples %}
+**Example {{ loop.index }}:**
+- Input: {{ example.input }}
+- Output: {{ example.output }}
+
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block constraints_section %}
+{% if constraints %}
+## Guidelines
+{% for constraint in constraints %}
+- {{ constraint }}
+{% endfor %}
+
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output structure]
+{% endif %}
+
+{% endblock %}
+
+{% block checklist_section %}
+{% if checklist %}
+## Validation
+{% for item in checklist %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+{% endblock %}

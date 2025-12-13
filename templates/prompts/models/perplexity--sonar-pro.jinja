@@ -1,0 +1,70 @@
+{#
+    Perplexity Sonar Pro Template
+
+    Web-connected search model optimized for:
+    - Real-time web search
+    - Multi-step research
+    - Superior factuality (0.858 F-score)
+    - Citation generation
+
+    Best for research requiring current information.
+#}
+{% extends "families/perplexity.jinja" %}
+
+{% block header %}
+{# Sonar Pro - real-time research model #}
+{% endblock %}
+
+{% block instructions_section %}
+## Research Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the research query - Sonar Pro excels at factual research]
+{% endif %}
+
+{% if search_mode %}
+### Search Mode: {{ search_mode }}
+{% if search_mode == "high" %}
+Perform comprehensive, multi-step research with maximum depth and context.
+{% elif search_mode == "medium" %}
+Balance depth and speed for moderate research needs.
+{% elif search_mode == "low" %}
+Quick search for straightforward queries.
+{% endif %}
+{% endif %}
+
+{% if domain_filter %}
+### Search Domain Filter
+Focus search on: {{ domain_filter | join(", ") }}
+{% endif %}
+
+{% if exclude_domains %}
+Exclude: {{ exclude_domains | join(", ") }}
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% else %}
+Provide a well-researched response with:
+- Clear, factual information
+- Multiple source citations
+- Synthesis of findings
+{% endif %}
+
+### Citation Requirements
+- Include citations for all factual claims
+- Use format: [Source Title](URL)
+- Provide 2x more citations than standard for thoroughness
+- Note recency of sources when relevant
+
+{% if json_mode %}
+Return structured JSON:
+```json
+{{ json_schema | tojson(indent=2) if json_schema is mapping else json_schema }}
+```
+{% endif %}
+{% endblock %}

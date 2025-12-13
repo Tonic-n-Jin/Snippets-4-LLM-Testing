@@ -1,0 +1,74 @@
+{#
+    NVIDIA Nemotron Nano 9B v2 Template
+
+    Hybrid Mamba-Transformer model optimized for:
+    - 128K token context
+    - Reasoning with trace generation
+    - Efficient edge inference
+    - Single GPU deployment (A10G)
+
+    Designed for explainable reasoning on resource-constrained hardware.
+#}
+{% extends "families/nvidia.jinja" %}
+
+{% block header %}
+{# Nemotron Nano - hybrid reasoning model #}
+{% endblock %}
+
+{% block reasoning_section %}
+{% if reasoning_strategy %}
+## Reasoning Approach
+{{ reasoning_strategy }}
+
+{% endif %}
+{% if generate_trace %}
+## Reasoning Trace
+Generate a step-by-step reasoning trace before your final response:
+1. Analyze the problem
+2. Identify key factors
+3. Consider alternatives
+4. Draw conclusions
+5. Provide final answer
+
+Mark your final answer clearly after the reasoning trace.
+{% endif %}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the task - Nemotron excels at explainable reasoning]
+{% endif %}
+
+{% if agentic_task %}
+### Agentic Guidelines
+- Plan actions before execution
+- Report intermediate results
+- Handle errors gracefully
+- Validate outcomes
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output format]
+{% endif %}
+
+{% if reasoning_required %}
+### Reasoning Format
+```
+<reasoning>
+[Your step-by-step analysis]
+</reasoning>
+
+<answer>
+[Your final response]
+</answer>
+```
+{% endif %}
+{% endblock %}

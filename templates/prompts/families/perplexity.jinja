@@ -1,0 +1,85 @@
+{#
+    Perplexity Family Template
+
+    Optimized for Perplexity Sonar models:
+    - Real-time web search integration
+    - High factuality (SimpleQA benchmark leader)
+    - Citation generation
+    - Multiple search modes (High/Medium/Low)
+
+    Sonar models are optimized for research with real-time information.
+#}
+{% extends "base/base_chatgpt.jinja" %}
+
+{% block header %}
+{# Sonar - web-connected research model #}
+{% endblock %}
+
+{% block role_section %}
+## Role
+{% if role %}
+{{ role }}
+{% else %}
+You are a research assistant with access to real-time web information.
+{% endif %}
+
+{% endblock %}
+
+{% block reasoning_section %}
+{% if reasoning_strategy %}
+## Research Approach
+{{ reasoning_strategy }}
+
+{% endif %}
+{% endblock %}
+
+{% block instructions_section %}
+## Research Query
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the research question or topic]
+{% endif %}
+
+{% endblock %}
+
+{% block examples_section %}
+{# Sonar typically doesn't need examples - it searches #}
+{% endblock %}
+
+{% block constraints_section %}
+{% if constraints %}
+## Research Guidelines
+{% for constraint in constraints %}
+- {{ constraint }}
+{% endfor %}
+
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% else %}
+Provide a comprehensive research response including:
+- Key findings
+- Multiple source citations
+- Synthesis of information
+{% endif %}
+
+## Citation Requirements
+- Include inline citations for all factual claims
+- Use format: [Source Title](URL) or [N]
+- Provide a references section at the end
+- Note the date/recency of sources when relevant
+{% endblock %}
+
+{% block checklist_section %}
+{% if checklist %}
+## Validation
+{% for item in checklist %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+{% endblock %}

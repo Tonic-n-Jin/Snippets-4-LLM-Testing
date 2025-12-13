@@ -1,0 +1,106 @@
+{#
+    Microsoft Phi Family Template
+
+    Optimized for Phi models (Phi-4, Phi-4 Reasoning):
+    - Small language models (3.8B-14B parameters)
+    - Strong reasoning for size
+    - STEM and math specialization
+    - Efficient edge deployment
+
+    Phi models punch above their weight on reasoning tasks.
+#}
+{% extends "base/base_chatgpt.jinja" %}
+
+{% block header %}
+{# Phi - efficient small language models #}
+{% endblock %}
+
+{% block role_section %}
+## Role
+{% if role %}
+{{ role }}
+{% else %}
+[Define the assistant's role]
+{% endif %}
+
+{% endblock %}
+
+{% block reasoning_section %}
+{% if reasoning_strategy %}
+## Reasoning Approach
+{{ reasoning_strategy }}
+
+{% endif %}
+{% if extended_reasoning %}
+## Extended Reasoning
+For this task, use extended reasoning:
+- Break down the problem into steps
+- Show your work clearly
+- Verify intermediate results
+- Provide a clear final answer
+{% endif %}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the task - Phi excels at STEM and reasoning]
+{% endif %}
+
+{% if math_problem %}
+### Math Problem
+Solve step by step. Show all work.
+{% endif %}
+
+{% if code_task %}
+### Code Task
+Write clean, efficient code with appropriate comments.
+{% endif %}
+{% endblock %}
+
+{% block examples_section %}
+{% if examples %}
+## Examples
+{% for example in examples %}
+**Example {{ loop.index }}:**
+Input: {{ example.input }}
+Output: {{ example.output }}
+
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block constraints_section %}
+{% if constraints %}
+## Constraints
+{% for constraint in constraints %}
+- {{ constraint }}
+{% endfor %}
+
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output format]
+{% endif %}
+
+{% if show_work %}
+### Show Work
+Present your solution with clear reasoning steps.
+{% endif %}
+{% endblock %}
+
+{% block checklist_section %}
+{% if checklist %}
+## Validation
+{% for item in checklist %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+{% endblock %}

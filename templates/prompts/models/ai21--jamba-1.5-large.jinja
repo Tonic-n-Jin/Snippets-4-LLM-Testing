@@ -1,0 +1,71 @@
+{#
+    AI21 Jamba 1.5 Large Template
+
+    Hybrid Mamba-Transformer model optimized for:
+    - 256K token context (verified on RULER)
+    - Enterprise long-form processing
+    - Function calling and structured output
+    - Grounded generation
+
+    Best for enterprise document processing.
+#}
+{% extends "families/ai21.jinja" %}
+
+{% block header %}
+{# Jamba 1.5 Large - 256K enterprise specialist #}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the task - Jamba excels at long document processing]
+{% endif %}
+
+{% if long_document %}
+### Long Document Processing
+You are processing an extensive document (up to 800+ pages). Guidelines:
+- Maintain understanding across the entire document
+- Reference specific sections by page/section number
+- Provide accurate citations
+- Note any inconsistencies found
+{% endif %}
+
+{% if function_calling %}
+### Available Functions
+{% for func in functions %}
+- `{{ func.name }}`: {{ func.description }}
+  Parameters: {{ func.parameters }}
+{% endfor %}
+{% endif %}
+
+{% if grounded_generation %}
+### Grounded Generation
+Ground your response in the provided context:
+- Only make claims supported by the source material
+- Clearly distinguish facts from inferences
+- Cite specific locations for key claims
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if json_mode and json_schema %}
+**Structured JSON Output**
+```json
+{{ json_schema | tojson(indent=2) if json_schema is mapping else json_schema }}
+```
+{% elif output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output format]
+{% endif %}
+
+{% if enterprise_mode %}
+### Enterprise Requirements
+- Maintain data confidentiality
+- Follow compliance guidelines
+- Provide audit-ready citations
+{% endif %}
+{% endblock %}

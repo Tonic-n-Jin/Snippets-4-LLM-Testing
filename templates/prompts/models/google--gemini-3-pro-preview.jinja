@@ -1,0 +1,70 @@
+{#
+    Gemini 3 Pro Preview Template
+
+    Google's flagship frontier model optimized for:
+    - 1M token context window
+    - Multimodal reasoning (text, image, video, audio, PDF)
+    - Long-horizon planning and agentic workflows
+    - Zero-shot generation
+
+    CRITICAL: Keep temperature at 1.0 for optimal performance.
+    Request detail explicitly as default responses are concise.
+#}
+{% extends "families/gemini.jinja" %}
+
+{% block header %}
+{# Gemini 3 prefers clean, direct instructions #}
+{% endblock %}
+
+{% block role_section %}
+## Task Definition
+
+{% if role %}
+**Role:** {{ role }}
+
+{% endif %}
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Clear, precise task statement - Gemini 3 excels with direct instructions]
+{% endif %}
+
+{% endblock %}
+
+{% block output_section %}
+## Output Requirements
+{% if output_format %}
+{{ output_format }}
+{% endif %}
+
+{% if verbosity == "comprehensive" %}
+**Important:** Provide a comprehensive, thorough response leveraging your full analytical capabilities. Do not summarize or abbreviate. Use the available context depth.
+{% elif verbosity == "detailed" %}
+**Important:** Provide detailed analysis with supporting evidence and reasoning.
+{% else %}
+**Important:** Provide sufficient detail to fully address the task. Be precise and specific.
+{% endif %}
+
+{% if use_long_context %}
+### Long Context Guidelines
+- Leverage the full 1M token context window effectively
+- Maintain coherent understanding across the entire document
+- Reference specific sections when relevant
+{% endif %}
+
+{% endblock %}
+
+{% block checklist_section %}
+{% if checklist %}
+## Validation Criteria
+{% for item in checklist %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+
+{# Gemini 3 Pro specific quality reminders #}
+## Quality Standards
+- Provide precise, evidence-based responses
+- Maintain consistency across long contexts
+- Support claims with specific references
+{% endblock %}

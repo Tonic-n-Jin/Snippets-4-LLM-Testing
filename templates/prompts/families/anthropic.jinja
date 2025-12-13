@@ -1,0 +1,116 @@
+{#
+    Anthropic Claude Template - XML-Structured
+
+    Claude models are specifically trained with XML tags in their training data.
+    This template uses semantic XML tags for optimal Claude performance.
+
+    CRITICAL: Do NOT remove XML tags - Claude pays special attention to them.
+
+    Variables: Same as base_chatgpt.jinja
+
+    Additional Claude-specific:
+        thinking_budget (int, optional): Token budget for extended thinking
+        prefill_assistant (str, optional): Prime the response
+#}
+{% extends "base/base_chatgpt.jinja" %}
+
+{% block header %}
+{# Claude prefers minimal header - content in tags #}
+{% endblock %}
+
+{% block role_section %}
+<role>
+{% if role %}
+{{ role }}
+{% else %}
+[Define the AI's role and expertise]
+{% endif %}
+</role>
+
+{% endblock %}
+
+{% block reasoning_section %}
+{% if reasoning_strategy %}
+<reasoning_strategy>
+{{ reasoning_strategy }}
+</reasoning_strategy>
+
+{% endif %}
+{% if thinking_budget %}
+<thinking>
+You have {{ thinking_budget }} tokens for internal reasoning.
+Use <scratchpad> tags to work through complex problems before responding.
+</thinking>
+
+{% endif %}
+{% endblock %}
+
+{% block instructions_section %}
+<task>
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe what the AI should do]
+{% endif %}
+</task>
+
+{% endblock %}
+
+{% block examples_section %}
+{% if examples %}
+<examples>
+{% for example in examples %}
+<example index="{{ loop.index }}">
+<input>{{ example.input }}</input>
+<output>{{ example.output }}</output>
+{% if example.explanation %}
+<explanation>{{ example.explanation }}</explanation>
+{% endif %}
+</example>
+
+{% endfor %}
+</examples>
+
+{% endif %}
+{% endblock %}
+
+{% block constraints_section %}
+{% if constraints %}
+<constraints>
+{% for constraint in constraints %}
+<constraint>{{ constraint }}</constraint>
+{% endfor %}
+</constraints>
+
+{% endif %}
+{% endblock %}
+
+{% block safety_section %}
+{% if safety_guidelines %}
+<guidelines>
+{{ safety_guidelines }}
+</guidelines>
+
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+<output_format>
+{% if output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output structure]
+{% endif %}
+</output_format>
+
+{% endblock %}
+
+{% block checklist_section %}
+{% if checklist %}
+<checklist>
+{% for item in checklist %}
+<item status="pending">{{ item }}</item>
+{% endfor %}
+</checklist>
+{% endif %}
+{% endblock %}

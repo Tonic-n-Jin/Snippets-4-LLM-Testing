@@ -1,0 +1,102 @@
+{#
+    Cohere Family Template
+
+    Optimized for Cohere models (Command R, Command R+):
+    - Enterprise RAG capabilities
+    - Grounded generation with citations
+    - Tool use and function calling
+    - Multiple safety modes
+
+    Cohere models excel at enterprise workflows with grounded responses.
+#}
+{% extends "base/base_chatgpt.jinja" %}
+
+{% block header %}
+{# Cohere models work well with structured prompts #}
+{% endblock %}
+
+{% block role_section %}
+## Role
+{% if role %}
+{{ role }}
+{% else %}
+[Define the assistant's role for this task]
+{% endif %}
+
+{% endblock %}
+
+{% block reasoning_section %}
+{% if reasoning_strategy %}
+## Approach
+{{ reasoning_strategy }}
+
+{% endif %}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the task - Command R excels at grounded responses]
+{% endif %}
+
+{% if documents %}
+### Retrieved Documents
+{% for doc in documents %}
+**Document {{ loop.index }}:** {{ doc.title }}
+{{ doc.content }}
+---
+{% endfor %}
+
+Ground your response in these documents. Cite sources using [Doc N].
+{% endif %}
+
+{% endblock %}
+
+{% block examples_section %}
+{% if examples %}
+## Examples
+{% for example in examples %}
+**Example {{ loop.index }}:**
+- Query: {{ example.input }}
+- Response: {{ example.output }}
+
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block constraints_section %}
+{% if constraints %}
+## Guidelines
+{% for constraint in constraints %}
+- {{ constraint }}
+{% endfor %}
+
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output format]
+{% endif %}
+
+{% if grounded %}
+### Citation Guidelines
+- Cite sources for factual claims: [Doc N] or [Source Name]
+- Distinguish between sourced facts and inferences
+- Acknowledge when information is not in the provided context
+{% endif %}
+{% endblock %}
+
+{% block checklist_section %}
+{% if checklist %}
+## Validation
+{% for item in checklist %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+{% endblock %}

@@ -1,0 +1,56 @@
+{#
+    Claude Opus 4 - High Capability Model Template
+
+    Claude Opus 4 is Anthropic's most capable model with:
+    - 200K context window
+    - Extended thinking capabilities
+    - Superior reasoning and analysis
+
+    This template includes extended thinking support.
+#}
+{% extends "families/anthropic.jinja" %}
+
+{% block header %}
+{# Opus-specific: Enable extended thinking if budget provided #}
+{% if thinking_budget %}
+{# Extended thinking mode enabled with {{ thinking_budget }} tokens #}
+{% endif %}
+{% endblock %}
+
+{% block reasoning_section %}
+{% if reasoning_strategy %}
+<reasoning_strategy>
+{{ reasoning_strategy }}
+</reasoning_strategy>
+
+{% endif %}
+{% if thinking_budget %}
+<extended_thinking>
+You have {{ thinking_budget }} tokens allocated for deep reasoning.
+Use <scratchpad> tags to:
+- Break down complex problems systematically
+- Consider multiple perspectives and approaches
+- Verify your reasoning before responding
+- Explore edge cases and potential issues
+</extended_thinking>
+
+{% endif %}
+{% endblock %}
+
+{% block constraints_section %}
+{% if constraints %}
+<constraints>
+{% for constraint in constraints %}
+<constraint priority="{{ loop.index }}">{{ constraint }}</constraint>
+{% endfor %}
+</constraints>
+
+{% endif %}
+{# Opus-specific: Add depth guidance #}
+<quality_guidelines>
+<guideline>Provide comprehensive, nuanced analysis</guideline>
+<guideline>Consider implications and second-order effects</guideline>
+<guideline>Acknowledge uncertainty where appropriate</guideline>
+</quality_guidelines>
+
+{% endblock %}

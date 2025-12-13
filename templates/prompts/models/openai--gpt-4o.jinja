@@ -1,0 +1,73 @@
+{#
+    GPT-4o Model Template - Multimodal Optimized
+
+    GPT-4o is OpenAI's flagship multimodal model with:
+    - 128K context window
+    - Vision capabilities (image input)
+    - JSON mode for structured outputs
+    - Function calling support
+
+    This template includes multimodal and structured output support.
+#}
+{% extends "base/base_chatgpt.jinja" %}
+
+{% block header %}
+# SYSTEM PROMPT: {{ display_name or "GPT-4o" }}
+{# Multimodal model - can process images and text #}
+
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe what the AI should do]
+{% endif %}
+
+{% if supports_vision %}
+### Image Processing
+When provided with images:
+- Analyze visual content thoroughly
+- Describe relevant details accurately
+- Connect visual information to the task context
+{% endif %}
+
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if use_json_mode and json_schema %}
+**JSON Mode Enabled**
+
+Respond with valid JSON matching this schema:
+```json
+{{ json_schema | tojson(indent=2) if json_schema is mapping else json_schema }}
+```
+
+Ensure:
+- Valid JSON syntax (no trailing commas)
+- All required fields present
+- Correct data types
+{% elif output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output structure]
+{% endif %}
+
+{% endblock %}
+
+{% block checklist_section %}
+{% if checklist %}
+# CHECKLIST
+{% for item in checklist %}
+- [ ] {{ item }}
+{% endfor %}
+{% endif %}
+
+{# GPT-4o specific: Quality reminders #}
+# Quality Guidelines
+- Be precise and specific in responses
+- Support claims with reasoning
+- Format output for clarity
+{% endblock %}

@@ -1,0 +1,76 @@
+{#
+    Meta Llama 4 Maverick Template
+
+    Meta's flagship multimodal MoE model optimized for:
+    - 400B total / 17B active parameters (128 experts)
+    - 512K context (extendable to 10M)
+    - Multimodal (text + image input)
+    - Multilingual (12 languages)
+
+    Llama 4 prefers clear, structured prompts.
+#}
+{% extends "families/llama.jinja" %}
+
+{% block header %}
+{# Llama 4 Maverick - flagship multimodal MoE #}
+{% endblock %}
+
+{% block role_section %}
+## Role
+{% if role %}
+{{ role }}
+{% else %}
+[Define the assistant's role and expertise]
+{% endif %}
+
+{% if language and language != "en" %}
+**Language:** Respond in {{ language }}
+{% endif %}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the task clearly and specifically]
+{% endif %}
+
+{% if image_input %}
+### Image Analysis
+When analyzing the provided image(s):
+- Describe relevant visual elements
+- Connect visual information to the task
+- Note any text, diagrams, or data visualizations
+{% endif %}
+
+{% if code_task %}
+### Code Guidelines
+- Write clean, well-documented code
+- Follow language-specific best practices
+- Include error handling where appropriate
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output structure]
+{% endif %}
+
+{% if multilingual_output %}
+### Multilingual Notes
+Supported languages: Arabic, English, French, German, Hindi, Indonesian, Italian, Portuguese, Spanish, Tagalog, Thai, Vietnamese
+{% endif %}
+{% endblock %}
+
+{% block checklist_section %}
+{% if checklist %}
+## Validation Checklist
+{% for item in checklist %}
+- [ ] {{ item }}
+{% endfor %}
+{% endif %}
+{% endblock %}

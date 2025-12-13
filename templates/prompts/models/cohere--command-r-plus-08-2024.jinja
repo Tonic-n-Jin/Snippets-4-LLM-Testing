@@ -1,0 +1,78 @@
+{#
+    Cohere Command R+ Template
+
+    Cohere's enterprise model optimized for:
+    - 128K token context
+    - RAG and grounded generation
+    - Tool use and function calling
+    - Multilingual (10 languages)
+
+    Best for enterprise RAG and tool orchestration.
+#}
+{% extends "families/cohere.jinja" %}
+
+{% block header %}
+{# Command R+ - Enterprise RAG specialist #}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the task - Command R+ excels at grounded generation]
+{% endif %}
+
+{% if rag_context %}
+### Retrieved Context
+The following information has been retrieved to help answer the query:
+
+{{ rag_context }}
+
+**Guidelines:**
+- Ground your response in the provided context
+- Cite sources when making claims
+- Acknowledge if information is not in the context
+{% endif %}
+
+{% if tool_use %}
+### Available Tools
+{% for tool in tools %}
+- **{{ tool.name }}**: {{ tool.description }}
+  {% if tool.parameters %}Parameters: {{ tool.parameters }}{% endif %}
+{% endfor %}
+
+Use tools to gather information or perform actions as needed.
+{% endif %}
+
+{% if structured_data %}
+### Data Analysis
+Analyze the following structured data:
+{{ structured_data }}
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output format]
+{% endif %}
+
+{% if citations_required %}
+### Citation Requirements
+- Include citations for factual claims: [Source: document_name]
+- Reference specific sections when applicable
+- Clearly distinguish between sourced and inferred information
+{% endif %}
+
+{% if safety_mode %}
+### Safety Mode: {{ safety_mode }}
+{% if safety_mode == "strict" %}
+Apply strict content filtering and safety guidelines.
+{% elif safety_mode == "contextual" %}
+Apply contextual safety based on the use case.
+{% endif %}
+{% endif %}
+{% endblock %}

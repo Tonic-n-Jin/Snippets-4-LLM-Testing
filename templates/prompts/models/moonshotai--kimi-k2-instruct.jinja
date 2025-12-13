@@ -1,0 +1,67 @@
+{#
+    Moonshot AI Kimi K2 Instruct Template
+
+    Trillion-parameter MoE model optimized for:
+    - 1T total / 32B active parameters
+    - 256K token context
+    - Agentic intelligence and workflows
+    - Tool orchestration
+
+    Meticulously optimized for agentic capabilities.
+#}
+{% extends "families/moonshot.jinja" %}
+
+{% block header %}
+{# Kimi K2 - trillion-parameter agentic model #}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the task - Kimi K2 excels at complex agentic workflows]
+{% endif %}
+
+{% if agentic_workflow %}
+### Agentic Workflow
+Execute this task autonomously:
+1. Analyze the requirements
+2. Plan the approach
+3. Execute steps systematically
+4. Validate results
+5. Report completion
+
+**Guidelines:**
+- Break complex tasks into manageable steps
+- Handle errors gracefully
+- Maintain progress tracking
+{% endif %}
+
+{% if tool_use %}
+### Available Tools
+{% for tool in tools %}
+- **{{ tool.name }}**: {{ tool.description }}
+{% endfor %}
+
+Use tools strategically to accomplish the task efficiently.
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output structure]
+{% endif %}
+
+{% if report_progress %}
+### Progress Reporting
+Include status updates:
+- Current step
+- Completed actions
+- Next steps
+- Any blockers or issues
+{% endif %}
+{% endblock %}

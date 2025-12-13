@@ -1,0 +1,107 @@
+{#
+    AI21 Labs Jamba Family Template
+
+    Optimized for Jamba models (1.5 Large, 1.5 Mini, Reasoning):
+    - Hybrid Mamba-Transformer-MoE architecture
+    - 256K verified context (RULER benchmark)
+    - Enterprise document processing
+    - Function calling and structured output
+
+    Jamba models excel at long document processing with grounded generation.
+#}
+{% extends "base/base_chatgpt.jinja" %}
+
+{% block header %}
+{# Jamba - hybrid architecture for enterprise long-form processing #}
+{% endblock %}
+
+{% block role_section %}
+## Role
+{% if role %}
+{{ role }}
+{% else %}
+[Define the assistant's role for this task]
+{% endif %}
+
+{% endblock %}
+
+{% block reasoning_section %}
+{% if reasoning_strategy %}
+## Approach
+{{ reasoning_strategy }}
+
+{% endif %}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the task - Jamba excels at long document analysis]
+{% endif %}
+
+{% if document_context %}
+### Document Context
+The following document(s) are provided for analysis:
+{{ document_context }}
+
+**Guidelines:**
+- Reference specific sections by page/location
+- Provide accurate citations
+- Maintain understanding across the full document
+{% endif %}
+
+{% endblock %}
+
+{% block examples_section %}
+{% if examples %}
+## Examples
+{% for example in examples %}
+**Example {{ loop.index }}:**
+- Input: {{ example.input }}
+- Output: {{ example.output }}
+
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block constraints_section %}
+{% if constraints %}
+## Guidelines
+{% for constraint in constraints %}
+- {{ constraint }}
+{% endfor %}
+
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if json_mode and json_schema %}
+**Structured JSON Output**
+```json
+{{ json_schema | tojson(indent=2) if json_schema is mapping else json_schema }}
+```
+{% elif output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output format]
+{% endif %}
+
+{% if grounded %}
+### Grounding Requirements
+- Base responses on provided context
+- Cite sources: [Page X] or [Section Y]
+- Distinguish facts from inferences
+{% endif %}
+{% endblock %}
+
+{% block checklist_section %}
+{% if checklist %}
+## Validation
+{% for item in checklist %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+{% endblock %}

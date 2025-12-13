@@ -1,0 +1,87 @@
+{#
+    Qwen Template
+
+    Optimized for Qwen models with support for:
+    - 119 languages and dialects
+    - Built-in thinking mode (like DeepSeek R1)
+    - Dynamic mode switching with /think and /no_think
+    - Excellent JSON schema adherence
+
+    Variables: Same as base_chatgpt.jinja
+
+    Additional Qwen-specific:
+        thinking_enabled (bool): Enable thinking mode
+        language (str): Primary language for response
+        json_schema (dict): JSON schema for structured output
+#}
+{% extends "base/base_chatgpt.jinja" %}
+
+{% block header %}
+{% if thinking_enabled %}
+{# Thinking mode: Use temperature 0.6, TopP 0.95 #}
+/think
+{% endif %}
+{% endblock %}
+
+{% block role_section %}
+# Task Definition
+{% if language %}
+**Language:** {{ language }}
+
+{% endif %}
+{% if role %}
+{{ role }}
+{% else %}
+[Clear task statement with language specification if multilingual]
+{% endif %}
+
+{% endblock %}
+
+{% block instructions_section %}
+# Context
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Background information with cultural context when relevant]
+{% endif %}
+
+{% endblock %}
+
+{% block output_section %}
+# Output Format
+{% if json_schema %}
+Respond with valid JSON matching this schema:
+```json
+{{ json_schema | tojson(indent=2) if json_schema is mapping else json_schema }}
+```
+{% elif output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output structure]
+{% endif %}
+
+{% endblock %}
+
+{% block constraints_section %}
+{% if constraints %}
+# Guidelines
+{% for constraint in constraints %}
+- {{ constraint }}
+{% endfor %}
+
+{% endif %}
+{% endblock %}
+
+{% block checklist_section %}
+{% if checklist %}
+# Validation Checklist
+{% for item in checklist %}
+- [ ] {{ item }}
+{% endfor %}
+{% endif %}
+{% if thinking_enabled %}
+
+{# Remind to disable thinking if needed #}
+{# Use /no_think to disable thinking mode for follow-up turns #}
+{% endif %}
+{% endblock %}

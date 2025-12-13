@@ -1,0 +1,113 @@
+{#
+    Amazon Nova Family Template
+
+    Optimized for Nova models (Premier, Pro, Lite, Micro):
+    - Multimodal understanding (text, image, video)
+    - Long context support (up to 1M tokens)
+    - Model distillation capabilities
+    - AWS Bedrock integration
+
+    Nova models excel at multimodal enterprise tasks.
+#}
+{% extends "base/base_chatgpt.jinja" %}
+
+{% block header %}
+{# Nova - AWS multimodal foundation models #}
+{% endblock %}
+
+{% block role_section %}
+## Role
+{% if role %}
+{{ role }}
+{% else %}
+[Define the assistant's role for this task]
+{% endif %}
+
+{% endblock %}
+
+{% block reasoning_section %}
+{% if reasoning_strategy %}
+## Approach
+{{ reasoning_strategy }}
+
+{% endif %}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the task - Nova excels at multimodal analysis]
+{% endif %}
+
+{% if multimodal_input %}
+### Multimodal Content
+Analyze the provided content (text, images, video) comprehensively:
+- Describe visual elements accurately
+- Connect information across modalities
+- Note relevant details for the task
+{% endif %}
+
+{% if long_document %}
+### Long Document Processing
+You are analyzing extensive content. Guidelines:
+- Maintain coherent understanding throughout
+- Reference specific sections when relevant
+- Synthesize information across the document
+{% endif %}
+{% endblock %}
+
+{% block examples_section %}
+{% if examples %}
+## Examples
+{% for example in examples %}
+**Example {{ loop.index }}:**
+- Input: {{ example.input }}
+- Output: {{ example.output }}
+
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block constraints_section %}
+{% if constraints %}
+## Guidelines
+{% for constraint in constraints %}
+- {{ constraint }}
+{% endfor %}
+
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output format]
+{% endif %}
+
+{% if rag_mode %}
+### RAG Guidelines
+- Ground responses in retrieved context
+- Cite sources clearly
+- Note when information is not available
+{% endif %}
+
+{% if function_calling %}
+### Available Functions
+{% for func in functions %}
+- `{{ func.name }}`: {{ func.description }}
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block checklist_section %}
+{% if checklist %}
+## Validation
+{% for item in checklist %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+{% endblock %}

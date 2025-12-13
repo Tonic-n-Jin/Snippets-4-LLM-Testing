@@ -1,0 +1,90 @@
+{#
+    Mistral Family Template
+
+    Optimized for Mistral models (Large 3, Pixtral, Ministral):
+    - Mixture-of-Experts architecture (granular MoE)
+    - Strong multilingual capabilities
+    - Function calling support
+    - Open weights (Apache 2.0)
+
+    Mistral models prefer clear, concise instructions.
+#}
+{% extends "base/base_chatgpt.jinja" %}
+
+{% block header %}
+{# Mistral prefers efficient, clear prompts #}
+{% endblock %}
+
+{% block role_section %}
+## Role
+{% if role %}
+{{ role }}
+{% else %}
+[Define the assistant's role]
+{% endif %}
+
+{% endblock %}
+
+{% block reasoning_section %}
+{% if reasoning_strategy %}
+## Approach
+{{ reasoning_strategy }}
+
+{% endif %}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Provide clear task instructions]
+{% endif %}
+
+{% endblock %}
+
+{% block examples_section %}
+{% if examples %}
+## Examples
+{% for example in examples %}
+**Example {{ loop.index }}:**
+Input: {{ example.input }}
+Output: {{ example.output }}
+
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block constraints_section %}
+{% if constraints %}
+## Constraints
+{% for constraint in constraints %}
+- {{ constraint }}
+{% endfor %}
+
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% elif json_mode %}
+Return valid JSON:
+```json
+{{ json_schema | tojson(indent=2) if json_schema is mapping else json_schema }}
+```
+{% else %}
+[Specify expected output format]
+{% endif %}
+
+{% endblock %}
+
+{% block checklist_section %}
+{% if checklist %}
+## Validation
+{% for item in checklist %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+{% endblock %}

@@ -1,0 +1,65 @@
+{#
+    Meta Llama 4 Scout Template
+
+    Meta's efficient MoE model optimized for:
+    - 109B total / 17B active parameters (16 experts)
+    - Industry-leading 10M token context
+    - Multi-document summarization
+    - Codebase analysis and personalization
+
+    Optimized for ultra-long context applications.
+#}
+{% extends "families/llama.jinja" %}
+
+{% block header %}
+{# Llama 4 Scout - 10M context specialist #}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the task - Scout excels at processing extensive information]
+{% endif %}
+
+{% if long_context_task %}
+### Long Context Processing
+You are processing an extensive document or codebase. Guidelines:
+- Maintain coherent understanding across the full content
+- Reference specific sections/files by location
+- Synthesize information from multiple areas
+- Provide accurate source attribution
+{% endif %}
+
+{% if multi_document %}
+### Multi-Document Analysis
+Analyze the following documents comprehensively:
+- Identify key themes across documents
+- Note agreements and contradictions
+- Synthesize findings into coherent insights
+{% endif %}
+
+{% if codebase_analysis %}
+### Codebase Analysis
+When analyzing code:
+- Understand overall architecture and patterns
+- Identify dependencies and relationships
+- Note potential issues or improvements
+- Reference specific files and line numbers
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output structure]
+{% endif %}
+
+**Citation Guidelines:**
+- Reference specific sections when making claims
+- Provide file paths/locations for code references
+- Use clear attribution for multi-source synthesis
+{% endblock %}

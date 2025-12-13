@@ -1,0 +1,93 @@
+{#
+    Google Gemini Template
+
+    Optimized for Gemini models with their specific characteristics:
+    - MUST keep temperature at 1.0 (lowering causes performance degradation)
+    - Default responses are concise - must explicitly request detail
+    - Excellent for long-context tasks (2M tokens for 2.5 Pro)
+    - Prefers direct, precise instructions
+
+    Variables: Same as base_chatgpt.jinja
+
+    Additional Gemini-specific:
+        verbosity (str): "concise" | "detailed" | "comprehensive"
+#}
+{% extends "base/base_chatgpt.jinja" %}
+
+{% block header %}
+{# Gemini prefers cleaner headers #}
+{% endblock %}
+
+{% block role_section %}
+## Task Definition
+
+{% if role %}
+**Role:** {{ role }}
+
+{% endif %}
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Clear, concise task statement]
+{% endif %}
+
+{% endblock %}
+
+{% block reasoning_section %}
+{% if reasoning_strategy %}
+## Approach
+{{ reasoning_strategy }}
+
+{% endif %}
+{% endblock %}
+
+{% block instructions_section %}
+## Instructions
+{% if constraints %}
+{% for constraint in constraints %}
+- {{ constraint }}
+{% endfor %}
+{% else %}
+[Direct, precise instructions without persuasive language]
+{% endif %}
+
+{% endblock %}
+
+{% block output_section %}
+## Output Requirements
+{% if output_format %}
+{{ output_format }}
+{% endif %}
+
+{% if verbosity == "detailed" or verbosity == "comprehensive" %}
+**Important:** Provide a detailed, thorough response. Do not summarize or abbreviate.
+{% elif verbosity == "concise" %}
+**Important:** Be concise and direct. Focus on key points only.
+{% else %}
+{# Default: Gemini tends to be concise, so request appropriate detail #}
+**Important:** Provide sufficient detail to fully address the task.
+{% endif %}
+
+{% endblock %}
+
+{% block examples_section %}
+{# Gemini: Be careful with example count - can cause over-fitting #}
+{% if examples and examples|length <= 2 %}
+## Examples
+{% for example in examples %}
+**Example {{ loop.index }}:**
+- Input: {{ example.input }}
+- Output: {{ example.output }}
+
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block checklist_section %}
+{% if checklist %}
+## Validation
+{% for item in checklist %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+{% endblock %}

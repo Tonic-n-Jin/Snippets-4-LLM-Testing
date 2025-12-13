@@ -1,0 +1,105 @@
+{#
+    NVIDIA Nemotron Family Template
+
+    Optimized for Nemotron models (Nano, Elastic):
+    - Hybrid Mamba-Transformer architecture
+    - Reasoning with trace generation
+    - Efficient edge deployment
+    - Open weights and training recipes
+
+    Nemotron models generate reasoning traces for explainable AI.
+#}
+{% extends "base/base_chatgpt.jinja" %}
+
+{% block header %}
+{# Nemotron - hybrid architecture for efficient reasoning #}
+{% endblock %}
+
+{% block role_section %}
+## Role
+{% if role %}
+{{ role }}
+{% else %}
+[Define the assistant's role]
+{% endif %}
+
+{% endblock %}
+
+{% block reasoning_section %}
+{% if reasoning_strategy %}
+## Reasoning Strategy
+{{ reasoning_strategy }}
+
+{% endif %}
+{% if show_reasoning %}
+## Reasoning Mode
+Generate a reasoning trace before your final answer:
+- Analyze the problem systematically
+- Consider key factors and constraints
+- Work through the logic step by step
+- Arrive at a well-supported conclusion
+{% endif %}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the task]
+{% endif %}
+
+{% endblock %}
+
+{% block examples_section %}
+{% if examples %}
+## Examples
+{% for example in examples %}
+**Example {{ loop.index }}:**
+- Input: {{ example.input }}
+- Output: {{ example.output }}
+
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block constraints_section %}
+{% if constraints %}
+## Constraints
+{% for constraint in constraints %}
+- {{ constraint }}
+{% endfor %}
+
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output format]
+{% endif %}
+
+{% if structured_reasoning %}
+### Reasoning Output Structure
+```
+<reasoning>
+[Step-by-step analysis]
+</reasoning>
+
+<answer>
+[Final response]
+</answer>
+```
+{% endif %}
+{% endblock %}
+
+{% block checklist_section %}
+{% if checklist %}
+## Validation
+{% for item in checklist %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+{% endblock %}

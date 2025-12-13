@@ -1,0 +1,100 @@
+{#
+    Moonshot AI Kimi Family Template
+
+    Optimized for Kimi models (K2, K2 Thinking, Linear):
+    - Trillion-parameter MoE architecture
+    - Strong agentic capabilities
+    - Long context support (256K-1M tokens)
+    - Efficient linear attention variants
+
+    Kimi models are optimized for agentic workflows and autonomous task execution.
+#}
+{% extends "base/base_chatgpt.jinja" %}
+
+{% block header %}
+{# Kimi models work well with structured task definitions #}
+{% endblock %}
+
+{% block role_section %}
+## Role
+{% if role %}
+{{ role }}
+{% else %}
+[Define the agent's role and capabilities]
+{% endif %}
+
+{% endblock %}
+
+{% block reasoning_section %}
+{% if reasoning_strategy %}
+## Reasoning Strategy
+{{ reasoning_strategy }}
+
+{% endif %}
+{% if agentic_mode %}
+## Agentic Mode
+You are operating in agentic mode:
+- Plan before acting
+- Execute steps systematically
+- Verify results
+- Report progress
+{% endif %}
+{% endblock %}
+
+{% block instructions_section %}
+## Task
+{% if instructions %}
+{{ instructions }}
+{% else %}
+[Describe the task - Kimi excels at autonomous execution]
+{% endif %}
+
+{% endblock %}
+
+{% block examples_section %}
+{% if examples %}
+## Examples
+{% for example in examples %}
+**Example {{ loop.index }}:**
+- Input: {{ example.input }}
+- Output: {{ example.output }}
+
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block constraints_section %}
+{% if constraints %}
+## Constraints
+{% for constraint in constraints %}
+- {{ constraint }}
+{% endfor %}
+
+{% endif %}
+{% endblock %}
+
+{% block output_section %}
+## Output Format
+{% if output_format %}
+{{ output_format }}
+{% else %}
+[Specify expected output structure]
+{% endif %}
+
+{% if progress_reporting %}
+### Progress Format
+Report progress as:
+- **Status:** [in_progress/completed/blocked]
+- **Current Step:** [description]
+- **Next Steps:** [list]
+{% endif %}
+{% endblock %}
+
+{% block checklist_section %}
+{% if checklist %}
+## Validation
+{% for item in checklist %}
+- [ ] {{ item }}
+{% endfor %}
+{% endif %}
+{% endblock %}
