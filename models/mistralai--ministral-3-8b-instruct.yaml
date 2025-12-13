@@ -1,0 +1,46 @@
+# Mistral Ministral 3 8B
+# Model defaults for mistralai/ministral-3-8b-instruct
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Ministral 3 8B"
+description: "Best-in-class edge model for text and vision, optimized for single GPU deployment"
+context_length: 256000
+output_length: 8192
+
+# Recommended defaults for this model
+temperature: 0.7
+max_tokens: 4096
+top_p: 1.0
+
+# Model capabilities
+capabilities:
+  - long context (256K tokens)
+  - vision understanding
+  - edge deployment
+  - single GPU inference
+  - code generation
+  - function calling
+
+# Model specifications
+parameters_total: 8000000000
+
+# Strengths
+strengths:
+  - Runs on single GPU (laptops, edge devices)
+  - Best performance-to-size ratio in 8B class
+  - Apache 2.0 license (fully open)
+  - Unified 256K context window
+  - Available in Base, Instruct, and Reasoning variants
+
+# Limitations
+limitations:
+  - Smaller than frontier models
+  - Limited complex reasoning capacity
+
+# Prompting notes
+notes: |
+  Ministral 3 8B is designed for edge and local deployment.
+  Best for real-time applications, on-device AI, and
+  resource-constrained environments. Use Reasoning variant
+  for tasks requiring more analytical depth.

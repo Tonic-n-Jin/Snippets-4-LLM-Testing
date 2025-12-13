@@ -1,0 +1,43 @@
+# OpenAI gpt-5.1
+# Model defaults for openai/gpt-5.1
+#
+# Merge priority: CLI > step-level config > this file > global defaults
+
+display_name: "GPT-5.1"
+description: "Frontier general model with stronger reasoning, with refinements in communication style and adaptive reasoning."
+context_length: 400000
+output_length: 128000
+
+# Recommended runtime defaults
+temperature: 0.7
+max_tokens: 4096
+top_p: 1.0
+
+# Capabilities
+capabilities:
+  - text and image input
+  - function calling
+  - structured output
+  - reasoning mode
+  - content moderation
+  - adaptive reasoning
+
+training_data_cutoff: "2025-11"
+
+# Strengths
+strengths:
+  - Dynamically assesses query difficulty and adjusts the "thinking" effort
+  - Improved performance on medium reasoning settings compared to GPT-5
+  - Significant improvements for SVG generation and frontend code
+
+# Limitations
+limitations:
+  - Not a complete architectural overhaul from GPT-5
+
+# Pricing reference (optional)
+pricing_input: "$1.25/1M tokens"
+pricing_output: "$10.00/1M tokens"
+
+# Prompting notes
+notes: |
+  Models dynamically assess query difficulty and adjust the "thinking" effort, allowing for faster responses on simple tasks and deeper analysis for complex problems. This includes "Instant Mode" for low latency and "Thinking Mode" for deeper reasoning, with an auto-routing system to select the appropriate mode.

@@ -1,0 +1,3306 @@
+01-ai/yi-lightning:
+  excels:
+  - '#2-4_in_chinese,_math,_coding,_hard_prompts'
+  - '#6_overall_on_chatbot_arena'
+  - 82.8%_memory_reduction_on_long_sequences
+  - cost-effective_(0.99_yuan/m_tokens)
+  - cost_efficiency
+  - cross-layer_kv_cache_reuse
+  - long_context
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - primarily_optimized_for_chinese_and_english
+  - text-only_(no_multimodal)
+01-ai/yi-lightning/extended:
+  excels:
+  - '#2-4_in_chinese,_math,_coding,_hard_prompts'
+  - '#6_overall_on_chatbot_arena'
+  - 82.8%_memory_reduction_on_long_sequences
+  - cost-effective_(0.99_yuan/m_tokens)
+  - cost_efficiency
+  - cross-layer_kv_cache_reuse
+  - long_context
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - primarily_optimized_for_chinese_and_english
+  - text-only_(no_multimodal)
+01-ai/yi-lightning/online:
+  excels:
+  - '#2-4_in_chinese,_math,_coding,_hard_prompts'
+  - '#6_overall_on_chatbot_arena'
+  - 82.8%_memory_reduction_on_long_sequences
+  - cost-effective_(0.99_yuan/m_tokens)
+  - cost_efficiency
+  - cross-layer_kv_cache_reuse
+  - long_context
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - primarily_optimized_for_chinese_and_english
+  - text-only_(no_multimodal)
+01-ai/yi-lightning/thinking:
+  excels:
+  - '#2-4_in_chinese,_math,_coding,_hard_prompts'
+  - '#6_overall_on_chatbot_arena'
+  - 82.8%_memory_reduction_on_long_sequences
+  - cost-effective_(0.99_yuan/m_tokens)
+  - cost_efficiency
+  - cross-layer_kv_cache_reuse
+  - long_context
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - primarily_optimized_for_chinese_and_english
+  - text-only_(no_multimodal)
+ai21/jamba-1.5-large:
+  excels:
+  - fastest_processing_via_hybrid_architecture
+  - long_context
+  - longest_verified_context_among_open_models_(ruler_benchmark)
+  - lower_memory_footprint_than_competitors
+  - maintains_quality_across_entire_256k_span
+  - secure_enterprise_deployment_options
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - enterprise-focused_pricing
+  - text-only_(no_multimodal)
+ai21/jamba-1.5-large/extended:
+  excels:
+  - fastest_processing_via_hybrid_architecture
+  - long_context
+  - longest_verified_context_among_open_models_(ruler_benchmark)
+  - lower_memory_footprint_than_competitors
+  - maintains_quality_across_entire_256k_span
+  - secure_enterprise_deployment_options
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - enterprise-focused_pricing
+  - text-only_(no_multimodal)
+ai21/jamba-1.5-large/online:
+  excels:
+  - fastest_processing_via_hybrid_architecture
+  - long_context
+  - longest_verified_context_among_open_models_(ruler_benchmark)
+  - lower_memory_footprint_than_competitors
+  - maintains_quality_across_entire_256k_span
+  - secure_enterprise_deployment_options
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - enterprise-focused_pricing
+  - text-only_(no_multimodal)
+ai21/jamba-1.5-large/thinking:
+  excels:
+  - fastest_processing_via_hybrid_architecture
+  - long_context
+  - longest_verified_context_among_open_models_(ruler_benchmark)
+  - lower_memory_footprint_than_competitors
+  - maintains_quality_across_entire_256k_span
+  - secure_enterprise_deployment_options
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - enterprise-focused_pricing
+  - text-only_(no_multimodal)
+ai21/jamba-1.5-mini:
+  excels:
+  - 256k_context_on_single_gpu
+  - cost-effective_inference
+  - cost_efficiency
+  - efficient_moe_(12b_active_of_52b_total)
+  - long_context
+  - lower_memory_footprint
+  - maintains_quality_across_full_context
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - smaller_than_large_variant
+  - text-only_(no_multimodal)
+  - weak_reasoning
+ai21/jamba-1.5-mini/extended:
+  excels:
+  - 256k_context_on_single_gpu
+  - cost-effective_inference
+  - cost_efficiency
+  - efficient_moe_(12b_active_of_52b_total)
+  - long_context
+  - lower_memory_footprint
+  - maintains_quality_across_full_context
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - smaller_than_large_variant
+  - text-only_(no_multimodal)
+  - weak_reasoning
+ai21/jamba-1.5-mini/online:
+  excels:
+  - 256k_context_on_single_gpu
+  - cost-effective_inference
+  - cost_efficiency
+  - efficient_moe_(12b_active_of_52b_total)
+  - long_context
+  - lower_memory_footprint
+  - maintains_quality_across_full_context
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - smaller_than_large_variant
+  - text-only_(no_multimodal)
+  - weak_reasoning
+ai21/jamba-1.5-mini/thinking:
+  excels:
+  - 256k_context_on_single_gpu
+  - cost-effective_inference
+  - cost_efficiency
+  - efficient_moe_(12b_active_of_52b_total)
+  - long_context
+  - lower_memory_footprint
+  - maintains_quality_across_full_context
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - smaller_than_large_variant
+  - text-only_(no_multimodal)
+  - weak_reasoning
+amazon/nova-2-lite-v1/free:
+  excels:
+  - cost_efficiency
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 32000.'
+  tier: free
+  weak_at:
+  - weak_reasoning
+amazon/nova-2-lite-v1/free/extended:
+  excels:
+  - cost_efficiency
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 32000.'
+  tier: free
+  weak_at:
+  - weak_reasoning
+amazon/nova-2-lite-v1/free/online:
+  excels:
+  - cost_efficiency
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 32000.'
+  tier: free
+  weak_at:
+  - weak_reasoning
+amazon/nova-2-lite-v1/free/thinking:
+  excels:
+  - cost_efficiency
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 32000.'
+  tier: free
+  weak_at:
+  - weak_reasoning
+amazon/nova-premier:
+  excels:
+  - 1m_token_context_(400+_pages,_90+_min_video)
+  - 87.4%_mmlu,_82.0%_math500
+  - best_for_distilling_smaller_nova_models
+  - end-to-end_action_capabilities
+  - long_context
+  - reasoning
+  - strong_chart_understanding_(84.6%_charxiv)
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - aws_bedrock_only_(limited_regions)
+  - not_a_reasoning_model_(no_extended_thinking)
+amazon/nova-premier/extended:
+  excels:
+  - 1m_token_context_(400+_pages,_90+_min_video)
+  - 87.4%_mmlu,_82.0%_math500
+  - best_for_distilling_smaller_nova_models
+  - end-to-end_action_capabilities
+  - long_context
+  - reasoning
+  - strong_chart_understanding_(84.6%_charxiv)
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - aws_bedrock_only_(limited_regions)
+  - not_a_reasoning_model_(no_extended_thinking)
+amazon/nova-premier/online:
+  excels:
+  - 1m_token_context_(400+_pages,_90+_min_video)
+  - 87.4%_mmlu,_82.0%_math500
+  - best_for_distilling_smaller_nova_models
+  - end-to-end_action_capabilities
+  - long_context
+  - reasoning
+  - strong_chart_understanding_(84.6%_charxiv)
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - aws_bedrock_only_(limited_regions)
+  - not_a_reasoning_model_(no_extended_thinking)
+amazon/nova-premier/thinking:
+  excels:
+  - 1m_token_context_(400+_pages,_90+_min_video)
+  - 87.4%_mmlu,_82.0%_math500
+  - best_for_distilling_smaller_nova_models
+  - end-to-end_action_capabilities
+  - long_context
+  - reasoning
+  - strong_chart_understanding_(84.6%_charxiv)
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - aws_bedrock_only_(limited_regions)
+  - not_a_reasoning_model_(no_extended_thinking)
+amazon/nova-pro:
+  excels:
+  - 200+_language_support
+  - available_for_distillation_from_premier
+  - best_accuracy-speed-cost_balance_in_nova_family
+  - integration_with_bedrock_knowledge_bases_and_agents
+  - long_context
+  - reasoning
+  - supports_text_and_vision_fine-tuning
+  notes: 'Derived from provider, model name, and metadata. Context length: 300000.'
+  tier: premium
+  weak_at:
+  - less_capable_than_premier_for_complex_tasks
+  - smaller_context_than_premier_(300k_vs_1m)
+amazon/nova-pro/extended:
+  excels:
+  - 200+_language_support
+  - available_for_distillation_from_premier
+  - best_accuracy-speed-cost_balance_in_nova_family
+  - integration_with_bedrock_knowledge_bases_and_agents
+  - long_context
+  - reasoning
+  - supports_text_and_vision_fine-tuning
+  notes: 'Derived from provider, model name, and metadata. Context length: 300000.'
+  tier: premium
+  weak_at:
+  - less_capable_than_premier_for_complex_tasks
+  - smaller_context_than_premier_(300k_vs_1m)
+amazon/nova-pro/online:
+  excels:
+  - 200+_language_support
+  - available_for_distillation_from_premier
+  - best_accuracy-speed-cost_balance_in_nova_family
+  - integration_with_bedrock_knowledge_bases_and_agents
+  - long_context
+  - reasoning
+  - supports_text_and_vision_fine-tuning
+  notes: 'Derived from provider, model name, and metadata. Context length: 300000.'
+  tier: premium
+  weak_at:
+  - less_capable_than_premier_for_complex_tasks
+  - smaller_context_than_premier_(300k_vs_1m)
+amazon/nova-pro/thinking:
+  excels:
+  - 200+_language_support
+  - available_for_distillation_from_premier
+  - best_accuracy-speed-cost_balance_in_nova_family
+  - integration_with_bedrock_knowledge_bases_and_agents
+  - long_context
+  - reasoning
+  - supports_text_and_vision_fine-tuning
+  notes: 'Derived from provider, model name, and metadata. Context length: 300000.'
+  tier: premium
+  weak_at:
+  - less_capable_than_premier_for_complex_tasks
+  - smaller_context_than_premier_(300k_vs_1m)
+anthropic/claude-3.5-haiku:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-3.5-haiku/extended:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-3.5-haiku/online:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-3.5-haiku/thinking:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-3.5-sonnet:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-3.5-sonnet/extended:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-3.5-sonnet/online:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-3.5-sonnet/thinking:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-opus-4:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-opus-4.5:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-opus-4.5/extended:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-opus-4.5/online:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-opus-4.5/thinking:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-opus-4/extended:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-opus-4/online:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-opus-4/thinking:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-sonnet-4:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-sonnet-4.5:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-sonnet-4.5/extended:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-sonnet-4.5/online:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-sonnet-4.5/thinking:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-sonnet-4/extended:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-sonnet-4/online:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+anthropic/claude-sonnet-4/thinking:
+  excels:
+  - analysis
+  - long_context
+  - reasoning
+  - safety
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at: []
+cohere/command-r-plus-08-2024:
+  excels:
+  - 25%_lower_latency
+  - 50%_higher_throughput_vs_previous_version
+  - excellent_rag_and_citation_capabilities
+  - multiple_safety_modes_for_enterprise_control
+  - strong_tool_use_and_api_integration
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - optimized_for_enterprise,_may_be_overkill_for_simple_tasks
+  - text-only_(no_multimodal)
+cohere/command-r-plus-08-2024/extended:
+  excels:
+  - 25%_lower_latency
+  - 50%_higher_throughput_vs_previous_version
+  - excellent_rag_and_citation_capabilities
+  - multiple_safety_modes_for_enterprise_control
+  - strong_tool_use_and_api_integration
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - optimized_for_enterprise,_may_be_overkill_for_simple_tasks
+  - text-only_(no_multimodal)
+cohere/command-r-plus-08-2024/online:
+  excels:
+  - 25%_lower_latency
+  - 50%_higher_throughput_vs_previous_version
+  - excellent_rag_and_citation_capabilities
+  - multiple_safety_modes_for_enterprise_control
+  - strong_tool_use_and_api_integration
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - optimized_for_enterprise,_may_be_overkill_for_simple_tasks
+  - text-only_(no_multimodal)
+cohere/command-r-plus-08-2024/thinking:
+  excels:
+  - 25%_lower_latency
+  - 50%_higher_throughput_vs_previous_version
+  - excellent_rag_and_citation_capabilities
+  - multiple_safety_modes_for_enterprise_control
+  - strong_tool_use_and_api_integration
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - optimized_for_enterprise,_may_be_overkill_for_simple_tasks
+  - text-only_(no_multimodal)
+databricks/dbrx-instruct:
+  excels:
+  - fine-grained_moe_(more_experts,_smaller_each)
+  - open_weights_(databricks_license)
+  - outperformed_all_open_models_at_launch_(march_2024)
+  - pretrained_on_12t_curated_tokens
+  - uses_gpt-4_tokenizer
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at:
+  - requires_4x_80gb_gpus_for_16-bit_inference
+  - smaller_context_than_newer_models_(32k)
+  - text-only
+databricks/dbrx-instruct/extended:
+  excels:
+  - fine-grained_moe_(more_experts,_smaller_each)
+  - open_weights_(databricks_license)
+  - outperformed_all_open_models_at_launch_(march_2024)
+  - pretrained_on_12t_curated_tokens
+  - uses_gpt-4_tokenizer
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at:
+  - requires_4x_80gb_gpus_for_16-bit_inference
+  - smaller_context_than_newer_models_(32k)
+  - text-only
+databricks/dbrx-instruct/online:
+  excels:
+  - fine-grained_moe_(more_experts,_smaller_each)
+  - open_weights_(databricks_license)
+  - outperformed_all_open_models_at_launch_(march_2024)
+  - pretrained_on_12t_curated_tokens
+  - uses_gpt-4_tokenizer
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at:
+  - requires_4x_80gb_gpus_for_16-bit_inference
+  - smaller_context_than_newer_models_(32k)
+  - text-only
+databricks/dbrx-instruct/thinking:
+  excels:
+  - fine-grained_moe_(more_experts,_smaller_each)
+  - open_weights_(databricks_license)
+  - outperformed_all_open_models_at_launch_(march_2024)
+  - pretrained_on_12t_curated_tokens
+  - uses_gpt-4_tokenizer
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at:
+  - requires_4x_80gb_gpus_for_16-bit_inference
+  - smaller_context_than_newer_models_(32k)
+  - text-only
+deepcogito/cogito-v2-preview-llama-109b-moe:
+  excels: []
+  notes: 'Derived from provider, model name, and metadata. Context length: 32767.'
+  tier: premium
+  weak_at: []
+deepcogito/cogito-v2-preview-llama-109b-moe/extended:
+  excels: []
+  notes: 'Derived from provider, model name, and metadata. Context length: 32767.'
+  tier: premium
+  weak_at: []
+deepcogito/cogito-v2-preview-llama-109b-moe/online:
+  excels: []
+  notes: 'Derived from provider, model name, and metadata. Context length: 32767.'
+  tier: premium
+  weak_at: []
+deepcogito/cogito-v2-preview-llama-109b-moe/thinking:
+  excels: []
+  notes: 'Derived from provider, model name, and metadata. Context length: 32767.'
+  tier: premium
+  weak_at: []
+deepseek/deepseek-chat-v3.1:
+  excels:
+  - math
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 64000.'
+  tier: premium
+  weak_at: []
+deepseek/deepseek-chat-v3.1/extended:
+  excels:
+  - math
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 64000.'
+  tier: premium
+  weak_at: []
+deepseek/deepseek-chat-v3.1/online:
+  excels:
+  - math
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 64000.'
+  tier: premium
+  weak_at: []
+deepseek/deepseek-chat-v3.1/thinking:
+  excels:
+  - math
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 64000.'
+  tier: premium
+  weak_at: []
+deepseek/deepseek-r1:
+  excels:
+  - math
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 64000.'
+  tier: premium
+  weak_at: []
+deepseek/deepseek-r1-0528:
+  excels:
+  - math
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 64000.'
+  tier: premium
+  weak_at: []
+deepseek/deepseek-r1-0528/extended:
+  excels:
+  - math
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 64000.'
+  tier: premium
+  weak_at: []
+deepseek/deepseek-r1-0528/online:
+  excels:
+  - math
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 64000.'
+  tier: premium
+  weak_at: []
+deepseek/deepseek-r1-0528/thinking:
+  excels:
+  - math
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 64000.'
+  tier: premium
+  weak_at: []
+deepseek/deepseek-r1/extended:
+  excels:
+  - math
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 64000.'
+  tier: premium
+  weak_at: []
+deepseek/deepseek-r1/online:
+  excels:
+  - math
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 64000.'
+  tier: premium
+  weak_at: []
+deepseek/deepseek-r1/thinking:
+  excels:
+  - math
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 64000.'
+  tier: premium
+  weak_at: []
+deepseek/deepseek-v3.2-speciale:
+  excels:
+  - ahead_of_gpt-5_on_difficult_reasoning_workloads
+  - large-scale_agentic_task_synthesis_pipeline
+  - math
+  - proficiency_comparable_to_gemini-3.0-pro
+  - reasoning
+  - strong_coding_and_tool-use_reliability
+  notes: 'Derived from provider, model name, and metadata. Context length: 163840.'
+  tier: premium
+  weak_at:
+  - high_compute_variant
+deepseek/deepseek-v3.2-speciale/extended:
+  excels:
+  - ahead_of_gpt-5_on_difficult_reasoning_workloads
+  - large-scale_agentic_task_synthesis_pipeline
+  - math
+  - proficiency_comparable_to_gemini-3.0-pro
+  - reasoning
+  - strong_coding_and_tool-use_reliability
+  notes: 'Derived from provider, model name, and metadata. Context length: 163840.'
+  tier: premium
+  weak_at:
+  - high_compute_variant
+deepseek/deepseek-v3.2-speciale/online:
+  excels:
+  - ahead_of_gpt-5_on_difficult_reasoning_workloads
+  - large-scale_agentic_task_synthesis_pipeline
+  - math
+  - proficiency_comparable_to_gemini-3.0-pro
+  - reasoning
+  - strong_coding_and_tool-use_reliability
+  notes: 'Derived from provider, model name, and metadata. Context length: 163840.'
+  tier: premium
+  weak_at:
+  - high_compute_variant
+deepseek/deepseek-v3.2-speciale/thinking:
+  excels:
+  - ahead_of_gpt-5_on_difficult_reasoning_workloads
+  - large-scale_agentic_task_synthesis_pipeline
+  - math
+  - proficiency_comparable_to_gemini-3.0-pro
+  - reasoning
+  - strong_coding_and_tool-use_reliability
+  notes: 'Derived from provider, model name, and metadata. Context length: 163840.'
+  tier: premium
+  weak_at:
+  - high_compute_variant
+google/gemini-2.0-flash-001:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1048576.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+google/gemini-2.0-flash-001/extended:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1048576.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+google/gemini-2.0-flash-001/online:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1048576.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+google/gemini-2.0-flash-001/thinking:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1048576.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+google/gemini-2.0-flash-exp/free:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1048576.'
+  tier: free
+  weak_at:
+  - weak_reasoning
+google/gemini-2.0-flash-exp/free/extended:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1048576.'
+  tier: free
+  weak_at:
+  - weak_reasoning
+google/gemini-2.0-flash-exp/free/online:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1048576.'
+  tier: free
+  weak_at:
+  - weak_reasoning
+google/gemini-2.0-flash-exp/free/thinking:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1048576.'
+  tier: free
+  weak_at:
+  - weak_reasoning
+google/gemini-2.5-flash:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1048576.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+google/gemini-2.5-flash-lite-preview-09-2025:
+  excels:
+  - 2x_improvement_in_token_efficiency
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  - ultra-low_latency_and_cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - multi-pass_reasoning_is_disabled_by_default_for_speed
+  - weak_reasoning
+google/gemini-2.5-flash-lite-preview-09-2025/extended:
+  excels:
+  - 2x_improvement_in_token_efficiency
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  - ultra-low_latency_and_cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - multi-pass_reasoning_is_disabled_by_default_for_speed
+  - weak_reasoning
+google/gemini-2.5-flash-lite-preview-09-2025/online:
+  excels:
+  - 2x_improvement_in_token_efficiency
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  - ultra-low_latency_and_cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - multi-pass_reasoning_is_disabled_by_default_for_speed
+  - weak_reasoning
+google/gemini-2.5-flash-lite-preview-09-2025/thinking:
+  excels:
+  - 2x_improvement_in_token_efficiency
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  - ultra-low_latency_and_cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - multi-pass_reasoning_is_disabled_by_default_for_speed
+  - weak_reasoning
+google/gemini-2.5-flash/extended:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1048576.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+google/gemini-2.5-flash/online:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1048576.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+google/gemini-2.5-flash/thinking:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1048576.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+google/gemini-2.5-pro:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - reasoning
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 2000000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+google/gemini-2.5-pro/extended:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - reasoning
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 2000000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+google/gemini-2.5-pro/online:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - reasoning
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 2000000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+google/gemini-2.5-pro/thinking:
+  excels:
+  - cost_efficiency
+  - long_context
+  - multimodal
+  - reasoning
+  - speed
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 2000000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+google/gemini-3-pro-preview:
+  excels:
+  - cost_efficiency
+  - exceptional_long-context_understanding_across_entire_codebases
+  - long-horizon_planning_stability_for_complex_agentic_tasks
+  - long_context
+  - multimodal
+  - multimodal_reasoning_across_text,_images,_video,_and_audio
+  - reasoning
+  - speed
+  - state-of-the-art_benchmark_performance_(lmarena,_gpqa_diamond,_matharena)
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - high_cost_for_long-context_usage
+  - preview_status_-_may_have_breaking_changes
+  - weak_reasoning
+google/gemini-3-pro-preview/extended:
+  excels:
+  - cost_efficiency
+  - exceptional_long-context_understanding_across_entire_codebases
+  - long-horizon_planning_stability_for_complex_agentic_tasks
+  - long_context
+  - multimodal
+  - multimodal_reasoning_across_text,_images,_video,_and_audio
+  - reasoning
+  - speed
+  - state-of-the-art_benchmark_performance_(lmarena,_gpqa_diamond,_matharena)
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - high_cost_for_long-context_usage
+  - preview_status_-_may_have_breaking_changes
+  - weak_reasoning
+google/gemini-3-pro-preview/online:
+  excels:
+  - cost_efficiency
+  - exceptional_long-context_understanding_across_entire_codebases
+  - long-horizon_planning_stability_for_complex_agentic_tasks
+  - long_context
+  - multimodal
+  - multimodal_reasoning_across_text,_images,_video,_and_audio
+  - reasoning
+  - speed
+  - state-of-the-art_benchmark_performance_(lmarena,_gpqa_diamond,_matharena)
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - high_cost_for_long-context_usage
+  - preview_status_-_may_have_breaking_changes
+  - weak_reasoning
+google/gemini-3-pro-preview/thinking:
+  excels:
+  - cost_efficiency
+  - exceptional_long-context_understanding_across_entire_codebases
+  - long-horizon_planning_stability_for_complex_agentic_tasks
+  - long_context
+  - multimodal
+  - multimodal_reasoning_across_text,_images,_video,_and_audio
+  - reasoning
+  - speed
+  - state-of-the-art_benchmark_performance_(lmarena,_gpqa_diamond,_matharena)
+  - summarization
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - high_cost_for_long-context_usage
+  - preview_status_-_may_have_breaking_changes
+  - weak_reasoning
+inflection/inflection-3-pi:
+  excels:
+  - built-in_safety_features
+  - excellent_for_customer_support_chatbots
+  - fine-tunable_for_enterprise_needs
+  - mirrors_user_tone_and_style
+  - trained_for_personality_and_empathy_(rlhf)
+  notes: 'Derived from provider, model name, and metadata. Context length: 8192.'
+  tier: premium
+  weak_at:
+  - not_optimized_for_technical/coding_tasks
+  - short_context
+  - smaller_context_window_(8k)
+  - text-only
+inflection/inflection-3-pi/extended:
+  excels:
+  - built-in_safety_features
+  - excellent_for_customer_support_chatbots
+  - fine-tunable_for_enterprise_needs
+  - mirrors_user_tone_and_style
+  - trained_for_personality_and_empathy_(rlhf)
+  notes: 'Derived from provider, model name, and metadata. Context length: 8192.'
+  tier: premium
+  weak_at:
+  - not_optimized_for_technical/coding_tasks
+  - short_context
+  - smaller_context_window_(8k)
+  - text-only
+inflection/inflection-3-pi/online:
+  excels:
+  - built-in_safety_features
+  - excellent_for_customer_support_chatbots
+  - fine-tunable_for_enterprise_needs
+  - mirrors_user_tone_and_style
+  - trained_for_personality_and_empathy_(rlhf)
+  notes: 'Derived from provider, model name, and metadata. Context length: 8192.'
+  tier: premium
+  weak_at:
+  - not_optimized_for_technical/coding_tasks
+  - short_context
+  - smaller_context_window_(8k)
+  - text-only
+inflection/inflection-3-pi/thinking:
+  excels:
+  - built-in_safety_features
+  - excellent_for_customer_support_chatbots
+  - fine-tunable_for_enterprise_needs
+  - mirrors_user_tone_and_style
+  - trained_for_personality_and_empathy_(rlhf)
+  notes: 'Derived from provider, model name, and metadata. Context length: 8192.'
+  tier: premium
+  weak_at:
+  - not_optimized_for_technical/coding_tasks
+  - short_context
+  - smaller_context_window_(8k)
+  - text-only
+meta-llama/llama-3.1-405b:
+  excels:
+  - language_comprehension
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+meta-llama/llama-3.1-405b/extended:
+  excels:
+  - language_comprehension
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+meta-llama/llama-3.1-405b/online:
+  excels:
+  - language_comprehension
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+meta-llama/llama-3.1-405b/thinking:
+  excels:
+  - language_comprehension
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+meta-llama/llama-3.3-70b-instruct/free:
+  excels:
+  - cost_efficiency
+  - language_comprehension
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: free
+  weak_at: []
+meta-llama/llama-3.3-70b-instruct/free/extended:
+  excels:
+  - cost_efficiency
+  - language_comprehension
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: free
+  weak_at: []
+meta-llama/llama-3.3-70b-instruct/free/online:
+  excels:
+  - cost_efficiency
+  - language_comprehension
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: free
+  weak_at: []
+meta-llama/llama-3.3-70b-instruct/free/thinking:
+  excels:
+  - cost_efficiency
+  - language_comprehension
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: free
+  weak_at: []
+meta-llama/llama-4-maverick:
+  excels:
+  - beats_gpt-4o_and_gemini_2.0_flash_on_coding_and_reasoning
+  - best_multimodal_model_in_its_class
+  - language_comprehension
+  - long_context
+  - open_weights_under_meta_license
+  - runs_on_single_nvidia_h100_dgx_host
+  - trained_on_22t_tokens_of_multimodal_data
+  notes: 'Derived from provider, model name, and metadata. Context length: 512000.'
+  tier: premium
+  weak_at:
+  - image_input_only_(no_video/audio)
+  - requires_license_for_>700m_mau_services
+meta-llama/llama-4-maverick/extended:
+  excels:
+  - beats_gpt-4o_and_gemini_2.0_flash_on_coding_and_reasoning
+  - best_multimodal_model_in_its_class
+  - language_comprehension
+  - long_context
+  - open_weights_under_meta_license
+  - runs_on_single_nvidia_h100_dgx_host
+  - trained_on_22t_tokens_of_multimodal_data
+  notes: 'Derived from provider, model name, and metadata. Context length: 512000.'
+  tier: premium
+  weak_at:
+  - image_input_only_(no_video/audio)
+  - requires_license_for_>700m_mau_services
+meta-llama/llama-4-maverick/online:
+  excels:
+  - beats_gpt-4o_and_gemini_2.0_flash_on_coding_and_reasoning
+  - best_multimodal_model_in_its_class
+  - language_comprehension
+  - long_context
+  - open_weights_under_meta_license
+  - runs_on_single_nvidia_h100_dgx_host
+  - trained_on_22t_tokens_of_multimodal_data
+  notes: 'Derived from provider, model name, and metadata. Context length: 512000.'
+  tier: premium
+  weak_at:
+  - image_input_only_(no_video/audio)
+  - requires_license_for_>700m_mau_services
+meta-llama/llama-4-maverick/thinking:
+  excels:
+  - beats_gpt-4o_and_gemini_2.0_flash_on_coding_and_reasoning
+  - best_multimodal_model_in_its_class
+  - language_comprehension
+  - long_context
+  - open_weights_under_meta_license
+  - runs_on_single_nvidia_h100_dgx_host
+  - trained_on_22t_tokens_of_multimodal_data
+  notes: 'Derived from provider, model name, and metadata. Context length: 512000.'
+  tier: premium
+  weak_at:
+  - image_input_only_(no_video/audio)
+  - requires_license_for_>700m_mau_services
+meta-llama/llama-4-scout:
+  excels:
+  - language_comprehension
+  - long_context
+  notes: 'Derived from provider, model name, and metadata. Context length: 327680.'
+  tier: premium
+  weak_at: []
+meta-llama/llama-4-scout/extended:
+  excels:
+  - language_comprehension
+  - long_context
+  notes: 'Derived from provider, model name, and metadata. Context length: 327680.'
+  tier: premium
+  weak_at: []
+meta-llama/llama-4-scout/online:
+  excels:
+  - language_comprehension
+  - long_context
+  notes: 'Derived from provider, model name, and metadata. Context length: 327680.'
+  tier: premium
+  weak_at: []
+meta-llama/llama-4-scout/thinking:
+  excels:
+  - language_comprehension
+  - long_context
+  notes: 'Derived from provider, model name, and metadata. Context length: 327680.'
+  tier: premium
+  weak_at: []
+microsoft/phi-4:
+  excels:
+  - 21-day_training_on_1920_h100_gpus
+  - excellent_reasoning_for_14b_size
+  - mit_license_(open_source)
+  - strong_stem_and_math_performance
+  - trained_on_high-quality_synthetic_data
+  notes: 'Derived from provider, model name, and metadata. Context length: 16384.'
+  tier: premium
+  weak_at:
+  - limited_complex_multi-step_tasks
+  - short_context
+  - smaller_context_(16k)_than_larger_models
+  - text-only_(no_multimodal_in_base)
+microsoft/phi-4-reasoning:
+  excels:
+  - 2x_context_window_vs_base_phi-4_(32k)
+  - efficient_14b_footprint
+  - extended_reasoning_chain_support
+  - open_weights_(mit_license)
+  - reasoning
+  - strong_math_and_logical_reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at:
+  - limited_for_creative_tasks
+  - slower_than_base_phi-4_(reasoning_overhead)
+  - text-only
+microsoft/phi-4-reasoning/extended:
+  excels:
+  - 2x_context_window_vs_base_phi-4_(32k)
+  - efficient_14b_footprint
+  - extended_reasoning_chain_support
+  - open_weights_(mit_license)
+  - reasoning
+  - strong_math_and_logical_reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at:
+  - limited_for_creative_tasks
+  - slower_than_base_phi-4_(reasoning_overhead)
+  - text-only
+microsoft/phi-4-reasoning/online:
+  excels:
+  - 2x_context_window_vs_base_phi-4_(32k)
+  - efficient_14b_footprint
+  - extended_reasoning_chain_support
+  - open_weights_(mit_license)
+  - reasoning
+  - strong_math_and_logical_reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at:
+  - limited_for_creative_tasks
+  - slower_than_base_phi-4_(reasoning_overhead)
+  - text-only
+microsoft/phi-4-reasoning/thinking:
+  excels:
+  - 2x_context_window_vs_base_phi-4_(32k)
+  - efficient_14b_footprint
+  - extended_reasoning_chain_support
+  - open_weights_(mit_license)
+  - reasoning
+  - strong_math_and_logical_reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at:
+  - limited_for_creative_tasks
+  - slower_than_base_phi-4_(reasoning_overhead)
+  - text-only
+microsoft/phi-4/extended:
+  excels:
+  - 21-day_training_on_1920_h100_gpus
+  - excellent_reasoning_for_14b_size
+  - mit_license_(open_source)
+  - strong_stem_and_math_performance
+  - trained_on_high-quality_synthetic_data
+  notes: 'Derived from provider, model name, and metadata. Context length: 16384.'
+  tier: premium
+  weak_at:
+  - limited_complex_multi-step_tasks
+  - short_context
+  - smaller_context_(16k)_than_larger_models
+  - text-only_(no_multimodal_in_base)
+microsoft/phi-4/online:
+  excels:
+  - 21-day_training_on_1920_h100_gpus
+  - excellent_reasoning_for_14b_size
+  - mit_license_(open_source)
+  - strong_stem_and_math_performance
+  - trained_on_high-quality_synthetic_data
+  notes: 'Derived from provider, model name, and metadata. Context length: 16384.'
+  tier: premium
+  weak_at:
+  - limited_complex_multi-step_tasks
+  - short_context
+  - smaller_context_(16k)_than_larger_models
+  - text-only_(no_multimodal_in_base)
+microsoft/phi-4/thinking:
+  excels:
+  - 21-day_training_on_1920_h100_gpus
+  - excellent_reasoning_for_14b_size
+  - mit_license_(open_source)
+  - strong_stem_and_math_performance
+  - trained_on_high-quality_synthetic_data
+  notes: 'Derived from provider, model name, and metadata. Context length: 16384.'
+  tier: premium
+  weak_at:
+  - limited_complex_multi-step_tasks
+  - short_context
+  - smaller_context_(16k)_than_larger_models
+  - text-only_(no_multimodal_in_base)
+minimax/minimax-m2:
+  excels:
+  - cost_efficiency
+  - delivers_near-frontier_intelligence_in_a_compact_model
+  - long_context
+  - low_latency_and_deployment_efficiency
+  - speed
+  - strong_on_benchmarks_like_swe-bench_verified,_multi-swe-bench,_and_terminal-bench
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - requires_preserving_reasoning_between_turns_to_avoid_degrading_performance
+  - weak_reasoning
+minimax/minimax-m2/extended:
+  excels:
+  - cost_efficiency
+  - delivers_near-frontier_intelligence_in_a_compact_model
+  - long_context
+  - low_latency_and_deployment_efficiency
+  - speed
+  - strong_on_benchmarks_like_swe-bench_verified,_multi-swe-bench,_and_terminal-bench
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - requires_preserving_reasoning_between_turns_to_avoid_degrading_performance
+  - weak_reasoning
+minimax/minimax-m2/online:
+  excels:
+  - cost_efficiency
+  - delivers_near-frontier_intelligence_in_a_compact_model
+  - long_context
+  - low_latency_and_deployment_efficiency
+  - speed
+  - strong_on_benchmarks_like_swe-bench_verified,_multi-swe-bench,_and_terminal-bench
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - requires_preserving_reasoning_between_turns_to_avoid_degrading_performance
+  - weak_reasoning
+minimax/minimax-m2/thinking:
+  excels:
+  - cost_efficiency
+  - delivers_near-frontier_intelligence_in_a_compact_model
+  - long_context
+  - low_latency_and_deployment_efficiency
+  - speed
+  - strong_on_benchmarks_like_swe-bench_verified,_multi-swe-bench,_and_terminal-bench
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - requires_preserving_reasoning_between_turns_to_avoid_degrading_performance
+  - weak_reasoning
+mistralai/codestral-2501:
+  excels:
+  - coding
+  - cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at: []
+mistralai/codestral-2501/extended:
+  excels:
+  - coding
+  - cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at: []
+mistralai/codestral-2501/online:
+  excels:
+  - coding
+  - cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at: []
+mistralai/codestral-2501/thinking:
+  excels:
+  - coding
+  - cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at: []
+mistralai/devstral-2512/free:
+  excels:
+  - coding
+  - cost_efficiency
+  - long_context
+  notes: 'Derived from provider, model name, and metadata. Context length: 262144.'
+  tier: free
+  weak_at: []
+mistralai/devstral-2512/free/extended:
+  excels:
+  - coding
+  - cost_efficiency
+  - long_context
+  notes: 'Derived from provider, model name, and metadata. Context length: 262144.'
+  tier: free
+  weak_at: []
+mistralai/devstral-2512/free/online:
+  excels:
+  - coding
+  - cost_efficiency
+  - long_context
+  notes: 'Derived from provider, model name, and metadata. Context length: 262144.'
+  tier: free
+  weak_at: []
+mistralai/devstral-2512/free/thinking:
+  excels:
+  - coding
+  - cost_efficiency
+  - long_context
+  notes: 'Derived from provider, model name, and metadata. Context length: 262144.'
+  tier: free
+  weak_at: []
+mistralai/ministral-3-8b-instruct:
+  excels:
+  - apache_2.0_license_(fully_open)
+  - available_in_base,_instruct,_and_reasoning_variants
+  - best_performance-to-size_ratio_in_8b_class
+  - coding
+  - cost_efficiency
+  - long_context
+  - runs_on_single_gpu_(laptops,_edge_devices)
+  - speed
+  - unified_256k_context_window
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - limited_complex_reasoning_capacity
+  - smaller_than_frontier_models
+  - weak_reasoning
+mistralai/ministral-3-8b-instruct/extended:
+  excels:
+  - apache_2.0_license_(fully_open)
+  - available_in_base,_instruct,_and_reasoning_variants
+  - best_performance-to-size_ratio_in_8b_class
+  - coding
+  - cost_efficiency
+  - long_context
+  - runs_on_single_gpu_(laptops,_edge_devices)
+  - speed
+  - unified_256k_context_window
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - limited_complex_reasoning_capacity
+  - smaller_than_frontier_models
+  - weak_reasoning
+mistralai/ministral-3-8b-instruct/online:
+  excels:
+  - apache_2.0_license_(fully_open)
+  - available_in_base,_instruct,_and_reasoning_variants
+  - best_performance-to-size_ratio_in_8b_class
+  - coding
+  - cost_efficiency
+  - long_context
+  - runs_on_single_gpu_(laptops,_edge_devices)
+  - speed
+  - unified_256k_context_window
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - limited_complex_reasoning_capacity
+  - smaller_than_frontier_models
+  - weak_reasoning
+mistralai/ministral-3-8b-instruct/thinking:
+  excels:
+  - apache_2.0_license_(fully_open)
+  - available_in_base,_instruct,_and_reasoning_variants
+  - best_performance-to-size_ratio_in_8b_class
+  - coding
+  - cost_efficiency
+  - long_context
+  - runs_on_single_gpu_(laptops,_edge_devices)
+  - speed
+  - unified_256k_context_window
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - limited_complex_reasoning_capacity
+  - smaller_than_frontier_models
+  - weak_reasoning
+mistralai/mistral-large-2411:
+  excels:
+  - coding
+  - cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+mistralai/mistral-large-2411/extended:
+  excels:
+  - coding
+  - cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+mistralai/mistral-large-2411/online:
+  excels:
+  - coding
+  - cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+mistralai/mistral-large-2411/thinking:
+  excels:
+  - coding
+  - cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+mistralai/mistral-large-3:
+  excels:
+  - '#2_in_oss_non-reasoning_models_on_lmarena'
+  - 80%_lower_price_than_previous_generation
+  - apache_2.0_license_(fully_open_source)
+  - available_in_fp8_and_nvfp4_optimized_variants
+  - coding
+  - cost_efficiency
+  - long_context
+  - trained_from_scratch_on_3000_h200_gpus
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - large_inference_requirements
+  - not_a_reasoning_model_(no_extended_thinking)
+mistralai/mistral-large-3/extended:
+  excels:
+  - '#2_in_oss_non-reasoning_models_on_lmarena'
+  - 80%_lower_price_than_previous_generation
+  - apache_2.0_license_(fully_open_source)
+  - available_in_fp8_and_nvfp4_optimized_variants
+  - coding
+  - cost_efficiency
+  - long_context
+  - trained_from_scratch_on_3000_h200_gpus
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - large_inference_requirements
+  - not_a_reasoning_model_(no_extended_thinking)
+mistralai/mistral-large-3/online:
+  excels:
+  - '#2_in_oss_non-reasoning_models_on_lmarena'
+  - 80%_lower_price_than_previous_generation
+  - apache_2.0_license_(fully_open_source)
+  - available_in_fp8_and_nvfp4_optimized_variants
+  - coding
+  - cost_efficiency
+  - long_context
+  - trained_from_scratch_on_3000_h200_gpus
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - large_inference_requirements
+  - not_a_reasoning_model_(no_extended_thinking)
+mistralai/mistral-large-3/thinking:
+  excels:
+  - '#2_in_oss_non-reasoning_models_on_lmarena'
+  - 80%_lower_price_than_previous_generation
+  - apache_2.0_license_(fully_open_source)
+  - available_in_fp8_and_nvfp4_optimized_variants
+  - coding
+  - cost_efficiency
+  - long_context
+  - trained_from_scratch_on_3000_h200_gpus
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - large_inference_requirements
+  - not_a_reasoning_model_(no_extended_thinking)
+mistralai/mistral-small-3.1-24b-instruct/free:
+  excels:
+  - coding
+  - cost_efficiency
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: free
+  weak_at:
+  - weak_reasoning
+mistralai/mistral-small-3.1-24b-instruct/free/extended:
+  excels:
+  - coding
+  - cost_efficiency
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: free
+  weak_at:
+  - weak_reasoning
+mistralai/mistral-small-3.1-24b-instruct/free/online:
+  excels:
+  - coding
+  - cost_efficiency
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: free
+  weak_at:
+  - weak_reasoning
+mistralai/mistral-small-3.1-24b-instruct/free/thinking:
+  excels:
+  - coding
+  - cost_efficiency
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: free
+  weak_at:
+  - weak_reasoning
+mistralai/pixtral-large:
+  excels:
+  - 50+_elo_points_above_nearest_open_competitor
+  - 69.4%_on_mathvista_(best_for_visual_math_reasoning)
+  - best_open-weights_multimodal_model_(lmsys_vision_leaderboard)
+  - coding
+  - cost_efficiency
+  - frontier_document_and_chart_understanding
+  - multimodal
+  - outperforms_gpt-4o_(august_2024)_on_vision_tasks
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - image_input_only_(no_video/audio)
+  - large_model_size_(124b_parameters)
+mistralai/pixtral-large/extended:
+  excels:
+  - 50+_elo_points_above_nearest_open_competitor
+  - 69.4%_on_mathvista_(best_for_visual_math_reasoning)
+  - best_open-weights_multimodal_model_(lmsys_vision_leaderboard)
+  - coding
+  - cost_efficiency
+  - frontier_document_and_chart_understanding
+  - multimodal
+  - outperforms_gpt-4o_(august_2024)_on_vision_tasks
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - image_input_only_(no_video/audio)
+  - large_model_size_(124b_parameters)
+mistralai/pixtral-large/online:
+  excels:
+  - 50+_elo_points_above_nearest_open_competitor
+  - 69.4%_on_mathvista_(best_for_visual_math_reasoning)
+  - best_open-weights_multimodal_model_(lmsys_vision_leaderboard)
+  - coding
+  - cost_efficiency
+  - frontier_document_and_chart_understanding
+  - multimodal
+  - outperforms_gpt-4o_(august_2024)_on_vision_tasks
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - image_input_only_(no_video/audio)
+  - large_model_size_(124b_parameters)
+mistralai/pixtral-large/thinking:
+  excels:
+  - 50+_elo_points_above_nearest_open_competitor
+  - 69.4%_on_mathvista_(best_for_visual_math_reasoning)
+  - best_open-weights_multimodal_model_(lmsys_vision_leaderboard)
+  - coding
+  - cost_efficiency
+  - frontier_document_and_chart_understanding
+  - multimodal
+  - outperforms_gpt-4o_(august_2024)_on_vision_tasks
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - image_input_only_(no_video/audio)
+  - large_model_size_(124b_parameters)
+moonshotai/kimi-k2-instruct:
+  excels:
+  - apache_2.0_license_(open_weights)
+  - exceptional_agentic_capabilities
+  - long_context
+  - one_of_the_largest_open-weight_models_(1t_parameters)
+  - strong_coding_and_reasoning_performance
+  - trained_with_muon_optimizer
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - large_resource_requirements_for_self-hosting
+  - text-only_(no_multimodal)
+moonshotai/kimi-k2-instruct/extended:
+  excels:
+  - apache_2.0_license_(open_weights)
+  - exceptional_agentic_capabilities
+  - long_context
+  - one_of_the_largest_open-weight_models_(1t_parameters)
+  - strong_coding_and_reasoning_performance
+  - trained_with_muon_optimizer
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - large_resource_requirements_for_self-hosting
+  - text-only_(no_multimodal)
+moonshotai/kimi-k2-instruct/online:
+  excels:
+  - apache_2.0_license_(open_weights)
+  - exceptional_agentic_capabilities
+  - long_context
+  - one_of_the_largest_open-weight_models_(1t_parameters)
+  - strong_coding_and_reasoning_performance
+  - trained_with_muon_optimizer
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - large_resource_requirements_for_self-hosting
+  - text-only_(no_multimodal)
+moonshotai/kimi-k2-instruct/thinking:
+  excels:
+  - apache_2.0_license_(open_weights)
+  - exceptional_agentic_capabilities
+  - long_context
+  - one_of_the_largest_open-weight_models_(1t_parameters)
+  - strong_coding_and_reasoning_performance
+  - trained_with_muon_optimizer
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - large_resource_requirements_for_self-hosting
+  - text-only_(no_multimodal)
+moonshotai/kimi-k2-thinking:
+  excels:
+  - 44.9%_on_humanity's_last_exam_(with_tools)
+  - 60.2%_on_browsecomp
+  - extended_reasoning_chains
+  - long_context
+  - strong_agentic_capabilities
+  - trillion-parameter_knowledge_base
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - higher_latency_(reasoning_overhead)
+  - premium_pricing
+  - text-only
+moonshotai/kimi-linear-48b-a3b-instruct:
+  excels:
+  - 6x_faster_decoding_on_very_long_contexts_vs_standard_attention
+  - efficient_linear_attention_mechanism
+  - handles_1m_token_inputs
+  - long_context
+  - optimized_for_ultra-long_context_tasks
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - smaller_active_parameter_count_limits_complex_reasoning
+  - text-only_(no_multimodal)
+moonshotai/kimi-linear-48b-a3b-instruct/extended:
+  excels:
+  - 6x_faster_decoding_on_very_long_contexts_vs_standard_attention
+  - efficient_linear_attention_mechanism
+  - handles_1m_token_inputs
+  - long_context
+  - optimized_for_ultra-long_context_tasks
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - smaller_active_parameter_count_limits_complex_reasoning
+  - text-only_(no_multimodal)
+moonshotai/kimi-linear-48b-a3b-instruct/online:
+  excels:
+  - 6x_faster_decoding_on_very_long_contexts_vs_standard_attention
+  - efficient_linear_attention_mechanism
+  - handles_1m_token_inputs
+  - long_context
+  - optimized_for_ultra-long_context_tasks
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - smaller_active_parameter_count_limits_complex_reasoning
+  - text-only_(no_multimodal)
+moonshotai/kimi-linear-48b-a3b-instruct/thinking:
+  excels:
+  - 6x_faster_decoding_on_very_long_contexts_vs_standard_attention
+  - efficient_linear_attention_mechanism
+  - handles_1m_token_inputs
+  - long_context
+  - optimized_for_ultra-long_context_tasks
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - smaller_active_parameter_count_limits_complex_reasoning
+  - text-only_(no_multimodal)
+nousresearch/hermes-3-llama-3.1-405b/free:
+  excels:
+  - cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: free
+  weak_at: []
+nousresearch/hermes-3-llama-3.1-405b/free/extended:
+  excels:
+  - cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: free
+  weak_at: []
+nousresearch/hermes-3-llama-3.1-405b/free/online:
+  excels:
+  - cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: free
+  weak_at: []
+nousresearch/hermes-3-llama-3.1-405b/free/thinking:
+  excels:
+  - cost_efficiency
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: free
+  weak_at: []
+nvidia/nemotron-nano-9b-v2:
+  excels:
+  - cost_efficiency
+  - mamba-2_architecture_for_efficiency
+  - open_weights_and_training_recipes
+  - runs_128k_context_on_single_nvidia_a10g_(22gb)
+  - speed
+  - trained_on_20t_tokens_with_fp8_precision
+  - unified_reasoning_and_non-reasoning_in_one_model
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - smaller_than_frontier_models
+  - text-only_(no_multimodal_in_base_version)
+  - weak_reasoning
+nvidia/nemotron-nano-9b-v2/extended:
+  excels:
+  - cost_efficiency
+  - mamba-2_architecture_for_efficiency
+  - open_weights_and_training_recipes
+  - runs_128k_context_on_single_nvidia_a10g_(22gb)
+  - speed
+  - trained_on_20t_tokens_with_fp8_precision
+  - unified_reasoning_and_non-reasoning_in_one_model
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - smaller_than_frontier_models
+  - text-only_(no_multimodal_in_base_version)
+  - weak_reasoning
+nvidia/nemotron-nano-9b-v2/online:
+  excels:
+  - cost_efficiency
+  - mamba-2_architecture_for_efficiency
+  - open_weights_and_training_recipes
+  - runs_128k_context_on_single_nvidia_a10g_(22gb)
+  - speed
+  - trained_on_20t_tokens_with_fp8_precision
+  - unified_reasoning_and_non-reasoning_in_one_model
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - smaller_than_frontier_models
+  - text-only_(no_multimodal_in_base_version)
+  - weak_reasoning
+nvidia/nemotron-nano-9b-v2/thinking:
+  excels:
+  - cost_efficiency
+  - mamba-2_architecture_for_efficiency
+  - open_weights_and_training_recipes
+  - runs_128k_context_on_single_nvidia_a10g_(22gb)
+  - speed
+  - trained_on_20t_tokens_with_fp8_precision
+  - unified_reasoning_and_non-reasoning_in_one_model
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - smaller_than_frontier_models
+  - text-only_(no_multimodal_in_base_version)
+  - weak_reasoning
+openai/chatgpt-4o-latest:
+  excels:
+  - coding
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+openai/chatgpt-4o-latest/extended:
+  excels:
+  - coding
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+openai/chatgpt-4o-latest/online:
+  excels:
+  - coding
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+openai/chatgpt-4o-latest/thinking:
+  excels:
+  - coding
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+openai/gpt-4-turbo:
+  excels:
+  - coding
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+openai/gpt-4-turbo/extended:
+  excels:
+  - coding
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+openai/gpt-4-turbo/online:
+  excels:
+  - coding
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+openai/gpt-4-turbo/thinking:
+  excels:
+  - coding
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+openai/gpt-4.1:
+  excels:
+  - 1m_token_context_window
+  - 61.7%_on_graphwalks_(matches_o1)
+  - coding
+  - improved_attention_for_long_context_retrieval
+  - long_context
+  - major_gains_in_coding_and_instruction_following
+  - outperforms_gpt-4o_across_the_board
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - not_a_reasoning_model_(no_extended_thinking)
+  - performance_degrades_at_full_1m_context_(80%_to_50%_accuracy)
+openai/gpt-4.1-mini:
+  excels:
+  - coding
+  - cost_efficiency
+  - full_1m_token_context_(same_as_flagship_gpt-4.1)
+  - improved_over_gpt-4o_mini
+  - long_context
+  - significantly_lower_cost_than_gpt-4.1
+  - speed
+  - strong_coding_and_instruction_following
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - not_a_reasoning_model
+  - smaller_than_flagship_gpt-4.1
+  - weak_reasoning
+openai/gpt-4.1-mini/extended:
+  excels:
+  - coding
+  - cost_efficiency
+  - full_1m_token_context_(same_as_flagship_gpt-4.1)
+  - improved_over_gpt-4o_mini
+  - long_context
+  - significantly_lower_cost_than_gpt-4.1
+  - speed
+  - strong_coding_and_instruction_following
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - not_a_reasoning_model
+  - smaller_than_flagship_gpt-4.1
+  - weak_reasoning
+openai/gpt-4.1-mini/online:
+  excels:
+  - coding
+  - cost_efficiency
+  - full_1m_token_context_(same_as_flagship_gpt-4.1)
+  - improved_over_gpt-4o_mini
+  - long_context
+  - significantly_lower_cost_than_gpt-4.1
+  - speed
+  - strong_coding_and_instruction_following
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - not_a_reasoning_model
+  - smaller_than_flagship_gpt-4.1
+  - weak_reasoning
+openai/gpt-4.1-mini/thinking:
+  excels:
+  - coding
+  - cost_efficiency
+  - full_1m_token_context_(same_as_flagship_gpt-4.1)
+  - improved_over_gpt-4o_mini
+  - long_context
+  - significantly_lower_cost_than_gpt-4.1
+  - speed
+  - strong_coding_and_instruction_following
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - not_a_reasoning_model
+  - smaller_than_flagship_gpt-4.1
+  - weak_reasoning
+openai/gpt-4.1-nano:
+  excels:
+  - coding
+  - cost_efficiency
+  - extremely_affordable_($0.10/1m_input,_$0.40/1m_output)
+  - fast_inference_speed
+  - full_1m_token_context_window
+  - good_for_high-volume_applications
+  - long_context
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - limited_complex_reasoning
+  - not_suitable_for_frontier_tasks
+  - smallest_capability_in_gpt-4.1_family
+  - weak_reasoning
+openai/gpt-4.1-nano/extended:
+  excels:
+  - coding
+  - cost_efficiency
+  - extremely_affordable_($0.10/1m_input,_$0.40/1m_output)
+  - fast_inference_speed
+  - full_1m_token_context_window
+  - good_for_high-volume_applications
+  - long_context
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - limited_complex_reasoning
+  - not_suitable_for_frontier_tasks
+  - smallest_capability_in_gpt-4.1_family
+  - weak_reasoning
+openai/gpt-4.1-nano/online:
+  excels:
+  - coding
+  - cost_efficiency
+  - extremely_affordable_($0.10/1m_input,_$0.40/1m_output)
+  - fast_inference_speed
+  - full_1m_token_context_window
+  - good_for_high-volume_applications
+  - long_context
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - limited_complex_reasoning
+  - not_suitable_for_frontier_tasks
+  - smallest_capability_in_gpt-4.1_family
+  - weak_reasoning
+openai/gpt-4.1-nano/thinking:
+  excels:
+  - coding
+  - cost_efficiency
+  - extremely_affordable_($0.10/1m_input,_$0.40/1m_output)
+  - fast_inference_speed
+  - full_1m_token_context_window
+  - good_for_high-volume_applications
+  - long_context
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - limited_complex_reasoning
+  - not_suitable_for_frontier_tasks
+  - smallest_capability_in_gpt-4.1_family
+  - weak_reasoning
+openai/gpt-4.1/extended:
+  excels:
+  - 1m_token_context_window
+  - 61.7%_on_graphwalks_(matches_o1)
+  - coding
+  - improved_attention_for_long_context_retrieval
+  - long_context
+  - major_gains_in_coding_and_instruction_following
+  - outperforms_gpt-4o_across_the_board
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - not_a_reasoning_model_(no_extended_thinking)
+  - performance_degrades_at_full_1m_context_(80%_to_50%_accuracy)
+openai/gpt-4.1/online:
+  excels:
+  - 1m_token_context_window
+  - 61.7%_on_graphwalks_(matches_o1)
+  - coding
+  - improved_attention_for_long_context_retrieval
+  - long_context
+  - major_gains_in_coding_and_instruction_following
+  - outperforms_gpt-4o_across_the_board
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - not_a_reasoning_model_(no_extended_thinking)
+  - performance_degrades_at_full_1m_context_(80%_to_50%_accuracy)
+openai/gpt-4.1/thinking:
+  excels:
+  - 1m_token_context_window
+  - 61.7%_on_graphwalks_(matches_o1)
+  - coding
+  - improved_attention_for_long_context_retrieval
+  - long_context
+  - major_gains_in_coding_and_instruction_following
+  - outperforms_gpt-4o_across_the_board
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 1000000.'
+  tier: premium
+  weak_at:
+  - not_a_reasoning_model_(no_extended_thinking)
+  - performance_degrades_at_full_1m_context_(80%_to_50%_accuracy)
+openai/gpt-4o:
+  excels:
+  - coding
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+openai/gpt-4o-mini:
+  excels:
+  - coding
+  - cost_efficiency
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+openai/gpt-4o-mini/extended:
+  excels:
+  - coding
+  - cost_efficiency
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+openai/gpt-4o-mini/online:
+  excels:
+  - coding
+  - cost_efficiency
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+openai/gpt-4o-mini/thinking:
+  excels:
+  - coding
+  - cost_efficiency
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+openai/gpt-4o/extended:
+  excels:
+  - coding
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+openai/gpt-4o/online:
+  excels:
+  - coding
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+openai/gpt-4o/thinking:
+  excels:
+  - coding
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+openai/gpt-5:
+  excels:
+  - adaptive_compute_allocation_to_dedicate_more_processing_cycles_to_complex_reasoning_requests
+  - coding
+  - long_context
+  - optimized_for_complex_tasks_requiring_step-by-step_reasoning_and_instruction_following
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - audio_and_video_are_not_directly_supported
+  - fine-tuning_is_not_supported,_but_distillation_is
+openai/gpt-5-mini:
+  excels:
+  - balancing_performance_for_routine_workflows
+  - coding
+  - cost_efficiency
+  - long_context
+  - speed
+  - speed,_efficiency,_and_cost-effectiveness
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - not_as_powerful_as_the_full_gpt-5_model
+  - weak_reasoning
+openai/gpt-5-mini/extended:
+  excels:
+  - balancing_performance_for_routine_workflows
+  - coding
+  - cost_efficiency
+  - long_context
+  - speed
+  - speed,_efficiency,_and_cost-effectiveness
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - not_as_powerful_as_the_full_gpt-5_model
+  - weak_reasoning
+openai/gpt-5-mini/online:
+  excels:
+  - balancing_performance_for_routine_workflows
+  - coding
+  - cost_efficiency
+  - long_context
+  - speed
+  - speed,_efficiency,_and_cost-effectiveness
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - not_as_powerful_as_the_full_gpt-5_model
+  - weak_reasoning
+openai/gpt-5-mini/thinking:
+  excels:
+  - balancing_performance_for_routine_workflows
+  - coding
+  - cost_efficiency
+  - long_context
+  - speed
+  - speed,_efficiency,_and_cost-effectiveness
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - not_as_powerful_as_the_full_gpt-5_model
+  - weak_reasoning
+openai/gpt-5-nano:
+  excels:
+  - coding
+  - cost_efficiency
+  - fastest_and_most_affordable_per_token_in_the_gpt-5_family
+  - long_context
+  - minimal_latency
+  - speed
+  - structured_output
+  - ultra-fast_processing_with_near-instant_response_times
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - reasoning_depth_is_limited_compared_to_larger_gpt-5_models
+  - weak_reasoning
+openai/gpt-5-nano/extended:
+  excels:
+  - coding
+  - cost_efficiency
+  - fastest_and_most_affordable_per_token_in_the_gpt-5_family
+  - long_context
+  - minimal_latency
+  - speed
+  - structured_output
+  - ultra-fast_processing_with_near-instant_response_times
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - reasoning_depth_is_limited_compared_to_larger_gpt-5_models
+  - weak_reasoning
+openai/gpt-5-nano/online:
+  excels:
+  - coding
+  - cost_efficiency
+  - fastest_and_most_affordable_per_token_in_the_gpt-5_family
+  - long_context
+  - minimal_latency
+  - speed
+  - structured_output
+  - ultra-fast_processing_with_near-instant_response_times
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - reasoning_depth_is_limited_compared_to_larger_gpt-5_models
+  - weak_reasoning
+openai/gpt-5-nano/thinking:
+  excels:
+  - coding
+  - cost_efficiency
+  - fastest_and_most_affordable_per_token_in_the_gpt-5_family
+  - long_context
+  - minimal_latency
+  - speed
+  - structured_output
+  - ultra-fast_processing_with_near-instant_response_times
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - reasoning_depth_is_limited_compared_to_larger_gpt-5_models
+  - weak_reasoning
+openai/gpt-5.1:
+  excels:
+  - coding
+  - dynamically_assesses_query_difficulty_and_adjusts_the_"thinking"_effort
+  - improved_performance_on_medium_reasoning_settings_compared_to_gpt-5
+  - long_context
+  - significant_improvements_for_svg_generation_and_frontend_code
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - not_a_complete_architectural_overhaul_from_gpt-5
+openai/gpt-5.1-codex:
+  excels:
+  - adapts_reasoning_effort_dynamically
+  - coding
+  - long_context
+  - more_steerable_and_adheres_closely_to_developer_instructions_compared_to_gpt-5.1
+  - produces_cleaner,_higher-quality_code_outputs
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - specialized_for_coding_tasks
+openai/gpt-5.1-codex/extended:
+  excels:
+  - adapts_reasoning_effort_dynamically
+  - coding
+  - long_context
+  - more_steerable_and_adheres_closely_to_developer_instructions_compared_to_gpt-5.1
+  - produces_cleaner,_higher-quality_code_outputs
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - specialized_for_coding_tasks
+openai/gpt-5.1-codex/online:
+  excels:
+  - adapts_reasoning_effort_dynamically
+  - coding
+  - long_context
+  - more_steerable_and_adheres_closely_to_developer_instructions_compared_to_gpt-5.1
+  - produces_cleaner,_higher-quality_code_outputs
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - specialized_for_coding_tasks
+openai/gpt-5.1-codex/thinking:
+  excels:
+  - adapts_reasoning_effort_dynamically
+  - coding
+  - long_context
+  - more_steerable_and_adheres_closely_to_developer_instructions_compared_to_gpt-5.1
+  - produces_cleaner,_higher-quality_code_outputs
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - specialized_for_coding_tasks
+openai/gpt-5.1/extended:
+  excels:
+  - coding
+  - dynamically_assesses_query_difficulty_and_adjusts_the_"thinking"_effort
+  - improved_performance_on_medium_reasoning_settings_compared_to_gpt-5
+  - long_context
+  - significant_improvements_for_svg_generation_and_frontend_code
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - not_a_complete_architectural_overhaul_from_gpt-5
+openai/gpt-5.1/online:
+  excels:
+  - coding
+  - dynamically_assesses_query_difficulty_and_adjusts_the_"thinking"_effort
+  - improved_performance_on_medium_reasoning_settings_compared_to_gpt-5
+  - long_context
+  - significant_improvements_for_svg_generation_and_frontend_code
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - not_a_complete_architectural_overhaul_from_gpt-5
+openai/gpt-5.1/thinking:
+  excels:
+  - coding
+  - dynamically_assesses_query_difficulty_and_adjusts_the_"thinking"_effort
+  - improved_performance_on_medium_reasoning_settings_compared_to_gpt-5
+  - long_context
+  - significant_improvements_for_svg_generation_and_frontend_code
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - not_a_complete_architectural_overhaul_from_gpt-5
+openai/gpt-5/extended:
+  excels:
+  - adaptive_compute_allocation_to_dedicate_more_processing_cycles_to_complex_reasoning_requests
+  - coding
+  - long_context
+  - optimized_for_complex_tasks_requiring_step-by-step_reasoning_and_instruction_following
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - audio_and_video_are_not_directly_supported
+  - fine-tuning_is_not_supported,_but_distillation_is
+openai/gpt-5/online:
+  excels:
+  - adaptive_compute_allocation_to_dedicate_more_processing_cycles_to_complex_reasoning_requests
+  - coding
+  - long_context
+  - optimized_for_complex_tasks_requiring_step-by-step_reasoning_and_instruction_following
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - audio_and_video_are_not_directly_supported
+  - fine-tuning_is_not_supported,_but_distillation_is
+openai/gpt-5/thinking:
+  excels:
+  - adaptive_compute_allocation_to_dedicate_more_processing_cycles_to_complex_reasoning_requests
+  - coding
+  - long_context
+  - optimized_for_complex_tasks_requiring_step-by-step_reasoning_and_instruction_following
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 400000.'
+  tier: premium
+  weak_at:
+  - audio_and_video_are_not_directly_supported
+  - fine-tuning_is_not_supported,_but_distillation_is
+openai/gpt-oss-120b:
+  excels:
+  - achieves_near-parity_with_openai's_o4-mini_on_core_reasoning_benchmarks
+  - coding
+  - optimized_to_run_on_a_single_h100_gpu
+  - released_under_the_apache_2.0_license
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 131000.'
+  tier: premium
+  weak_at:
+  - moe_architecture_can_be_complex_to_deploy
+openai/gpt-oss-120b/extended:
+  excels:
+  - achieves_near-parity_with_openai's_o4-mini_on_core_reasoning_benchmarks
+  - coding
+  - optimized_to_run_on_a_single_h100_gpu
+  - released_under_the_apache_2.0_license
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 131000.'
+  tier: premium
+  weak_at:
+  - moe_architecture_can_be_complex_to_deploy
+openai/gpt-oss-120b/online:
+  excels:
+  - achieves_near-parity_with_openai's_o4-mini_on_core_reasoning_benchmarks
+  - coding
+  - optimized_to_run_on_a_single_h100_gpu
+  - released_under_the_apache_2.0_license
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 131000.'
+  tier: premium
+  weak_at:
+  - moe_architecture_can_be_complex_to_deploy
+openai/gpt-oss-120b/thinking:
+  excels:
+  - achieves_near-parity_with_openai's_o4-mini_on_core_reasoning_benchmarks
+  - coding
+  - optimized_to_run_on_a_single_h100_gpu
+  - released_under_the_apache_2.0_license
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 131000.'
+  tier: premium
+  weak_at:
+  - moe_architecture_can_be_complex_to_deploy
+openai/o3-deep-research:
+  excels:
+  - coding
+  - deep_research_capabilities
+  - long_context
+  - structured_output
+  - tackling_complex,_multi-step_research_tasks
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - web_search_is_always_used,_which_adds_additional_cost
+openai/o3-deep-research/extended:
+  excels:
+  - coding
+  - deep_research_capabilities
+  - long_context
+  - structured_output
+  - tackling_complex,_multi-step_research_tasks
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - web_search_is_always_used,_which_adds_additional_cost
+openai/o3-deep-research/online:
+  excels:
+  - coding
+  - deep_research_capabilities
+  - long_context
+  - structured_output
+  - tackling_complex,_multi-step_research_tasks
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - web_search_is_always_used,_which_adds_additional_cost
+openai/o3-deep-research/thinking:
+  excels:
+  - coding
+  - deep_research_capabilities
+  - long_context
+  - structured_output
+  - tackling_complex,_multi-step_research_tasks
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - web_search_is_always_used,_which_adds_additional_cost
+openai/o3-mini:
+  excels:
+  - coding
+  - cost_efficiency
+  - long_context
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+openai/o3-mini/extended:
+  excels:
+  - coding
+  - cost_efficiency
+  - long_context
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+openai/o3-mini/online:
+  excels:
+  - coding
+  - cost_efficiency
+  - long_context
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+openai/o3-mini/thinking:
+  excels:
+  - coding
+  - cost_efficiency
+  - long_context
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+openai/o4-mini:
+  excels:
+  - coding
+  - cost_efficiency
+  - long_context
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+openai/o4-mini/extended:
+  excels:
+  - coding
+  - cost_efficiency
+  - long_context
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+openai/o4-mini/online:
+  excels:
+  - coding
+  - cost_efficiency
+  - long_context
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+openai/o4-mini/thinking:
+  excels:
+  - coding
+  - cost_efficiency
+  - long_context
+  - speed
+  - structured_output
+  notes: 'Derived from provider, model name, and metadata. Context length: 200000.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+perplexity/sonar-pro:
+  excels:
+  - 1200_tokens/second_(cerebras_inference)
+  - 2x_more_citations_than_standard_sonar
+  - best_factuality_(0.858_f-score_on_simpleqa_benchmark)
+  - built_on_llama_3.3_70b_with_additional_training
+  - reasoning
+  - three_search_modes_(high/medium/low)
+  notes: 'Derived from provider, model name, and metadata. Context length: 127072.'
+  tier: premium
+  weak_at:
+  - higher_latency_for_complex_queries
+  - text-only_output
+  - web_search_dependent_(requires_connectivity)
+perplexity/sonar-pro/extended:
+  excels:
+  - 1200_tokens/second_(cerebras_inference)
+  - 2x_more_citations_than_standard_sonar
+  - best_factuality_(0.858_f-score_on_simpleqa_benchmark)
+  - built_on_llama_3.3_70b_with_additional_training
+  - reasoning
+  - three_search_modes_(high/medium/low)
+  notes: 'Derived from provider, model name, and metadata. Context length: 127072.'
+  tier: premium
+  weak_at:
+  - higher_latency_for_complex_queries
+  - text-only_output
+  - web_search_dependent_(requires_connectivity)
+perplexity/sonar-pro/online:
+  excels:
+  - 1200_tokens/second_(cerebras_inference)
+  - 2x_more_citations_than_standard_sonar
+  - best_factuality_(0.858_f-score_on_simpleqa_benchmark)
+  - built_on_llama_3.3_70b_with_additional_training
+  - reasoning
+  - three_search_modes_(high/medium/low)
+  notes: 'Derived from provider, model name, and metadata. Context length: 127072.'
+  tier: premium
+  weak_at:
+  - higher_latency_for_complex_queries
+  - text-only_output
+  - web_search_dependent_(requires_connectivity)
+perplexity/sonar-pro/thinking:
+  excels:
+  - 1200_tokens/second_(cerebras_inference)
+  - 2x_more_citations_than_standard_sonar
+  - best_factuality_(0.858_f-score_on_simpleqa_benchmark)
+  - built_on_llama_3.3_70b_with_additional_training
+  - reasoning
+  - three_search_modes_(high/medium/low)
+  notes: 'Derived from provider, model name, and metadata. Context length: 127072.'
+  tier: premium
+  weak_at:
+  - higher_latency_for_complex_queries
+  - text-only_output
+  - web_search_dependent_(requires_connectivity)
+perplexity/sonar-reasoning-pro:
+  excels:
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+perplexity/sonar-reasoning-pro/extended:
+  excels:
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+perplexity/sonar-reasoning-pro/online:
+  excels:
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+perplexity/sonar-reasoning-pro/thinking:
+  excels:
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at: []
+qwen/qwen3-235b-a22b/free:
+  excels:
+  - cost_efficiency
+  - multilingual
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 32000.'
+  tier: free
+  weak_at: []
+qwen/qwen3-235b-a22b/free/extended:
+  excels:
+  - cost_efficiency
+  - multilingual
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 32000.'
+  tier: free
+  weak_at: []
+qwen/qwen3-235b-a22b/free/online:
+  excels:
+  - cost_efficiency
+  - multilingual
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 32000.'
+  tier: free
+  weak_at: []
+qwen/qwen3-235b-a22b/free/thinking:
+  excels:
+  - cost_efficiency
+  - multilingual
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 32000.'
+  tier: free
+  weak_at: []
+qwen/qwen3-32b-instruct:
+  excels:
+  - 119_languages_and_dialects
+  - apache_2.0_license_(fully_open)
+  - extended_context_via_yarn_(up_to_1m)
+  - multilingual
+  - reasoning
+  - strong_coding_and_math_performance
+  - trained_on_36t_tokens
+  notes: 'Derived from provider, model name, and metadata. Context length: 131072.'
+  tier: premium
+  weak_at:
+  - dense_model_(less_efficient_than_moe_variants)
+  - text-only_(no_multimodal)
+qwen/qwen3-32b-instruct/extended:
+  excels:
+  - 119_languages_and_dialects
+  - apache_2.0_license_(fully_open)
+  - extended_context_via_yarn_(up_to_1m)
+  - multilingual
+  - reasoning
+  - strong_coding_and_math_performance
+  - trained_on_36t_tokens
+  notes: 'Derived from provider, model name, and metadata. Context length: 131072.'
+  tier: premium
+  weak_at:
+  - dense_model_(less_efficient_than_moe_variants)
+  - text-only_(no_multimodal)
+qwen/qwen3-32b-instruct/online:
+  excels:
+  - 119_languages_and_dialects
+  - apache_2.0_license_(fully_open)
+  - extended_context_via_yarn_(up_to_1m)
+  - multilingual
+  - reasoning
+  - strong_coding_and_math_performance
+  - trained_on_36t_tokens
+  notes: 'Derived from provider, model name, and metadata. Context length: 131072.'
+  tier: premium
+  weak_at:
+  - dense_model_(less_efficient_than_moe_variants)
+  - text-only_(no_multimodal)
+qwen/qwen3-32b-instruct/thinking:
+  excels:
+  - 119_languages_and_dialects
+  - apache_2.0_license_(fully_open)
+  - extended_context_via_yarn_(up_to_1m)
+  - multilingual
+  - reasoning
+  - strong_coding_and_math_performance
+  - trained_on_36t_tokens
+  notes: 'Derived from provider, model name, and metadata. Context length: 131072.'
+  tier: premium
+  weak_at:
+  - dense_model_(less_efficient_than_moe_variants)
+  - text-only_(no_multimodal)
+qwen/qwen3-coder:
+  excels:
+  - coding
+  - excels_in_agentic_coding_and_browser_automation
+  - long_context
+  - multilingual
+  - open-source_under_the_apache_2.0_license
+  - reasoning
+  - supports_a_wide_range_of_programming_and_markup_languages
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - moe_architecture_can_be_complex_to_deploy
+qwen/qwen3-coder/extended:
+  excels:
+  - coding
+  - excels_in_agentic_coding_and_browser_automation
+  - long_context
+  - multilingual
+  - open-source_under_the_apache_2.0_license
+  - reasoning
+  - supports_a_wide_range_of_programming_and_markup_languages
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - moe_architecture_can_be_complex_to_deploy
+qwen/qwen3-coder/online:
+  excels:
+  - coding
+  - excels_in_agentic_coding_and_browser_automation
+  - long_context
+  - multilingual
+  - open-source_under_the_apache_2.0_license
+  - reasoning
+  - supports_a_wide_range_of_programming_and_markup_languages
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - moe_architecture_can_be_complex_to_deploy
+qwen/qwen3-coder/thinking:
+  excels:
+  - coding
+  - excels_in_agentic_coding_and_browser_automation
+  - long_context
+  - multilingual
+  - open-source_under_the_apache_2.0_license
+  - reasoning
+  - supports_a_wide_range_of_programming_and_markup_languages
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - moe_architecture_can_be_complex_to_deploy
+qwen/qwq-32b:
+  excels:
+  - multilingual
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at: []
+qwen/qwq-32b/extended:
+  excels:
+  - multilingual
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at: []
+qwen/qwq-32b/online:
+  excels:
+  - multilingual
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at: []
+qwen/qwq-32b/thinking:
+  excels:
+  - multilingual
+  - reasoning
+  notes: 'Derived from provider, model name, and metadata. Context length: 32768.'
+  tier: premium
+  weak_at: []
+reka/reka-core:
+  excels:
+  - '#2_most_preferred_on_blind_human_evaluation'
+  - 32_language_support
+  - 83.2%_mmlu_score
+  - competitive_with_gpt-4v_on_vision_tasks
+  - native_video_and_audio_understanding
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - premium_pricing_tier
+  - text_output_only_(no_image/audio_generation)
+reka/reka-core/extended:
+  excels:
+  - '#2_most_preferred_on_blind_human_evaluation'
+  - 32_language_support
+  - 83.2%_mmlu_score
+  - competitive_with_gpt-4v_on_vision_tasks
+  - native_video_and_audio_understanding
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - premium_pricing_tier
+  - text_output_only_(no_image/audio_generation)
+reka/reka-core/online:
+  excels:
+  - '#2_most_preferred_on_blind_human_evaluation'
+  - 32_language_support
+  - 83.2%_mmlu_score
+  - competitive_with_gpt-4v_on_vision_tasks
+  - native_video_and_audio_understanding
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - premium_pricing_tier
+  - text_output_only_(no_image/audio_generation)
+reka/reka-core/thinking:
+  excels:
+  - '#2_most_preferred_on_blind_human_evaluation'
+  - 32_language_support
+  - 83.2%_mmlu_score
+  - competitive_with_gpt-4v_on_vision_tasks
+  - native_video_and_audio_understanding
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - premium_pricing_tier
+  - text_output_only_(no_image/audio_generation)
+reka/reka-flash-3:
+  excels:
+  - competitive_with_openai_o1-mini_on_reasoning
+  - cost_efficiency
+  - efficient_21b_parameter_size
+  - good_base_for_agentic_fine-tuning
+  - native_multimodal_(text,_image,_video,_audio)
+  - speed
+  - strong_coding_performance_(livecodebench)
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - less_capable_than_reka_core
+  - smaller_than_frontier_models
+reka/reka-flash-3/extended:
+  excels:
+  - competitive_with_openai_o1-mini_on_reasoning
+  - cost_efficiency
+  - efficient_21b_parameter_size
+  - good_base_for_agentic_fine-tuning
+  - native_multimodal_(text,_image,_video,_audio)
+  - speed
+  - strong_coding_performance_(livecodebench)
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - less_capable_than_reka_core
+  - smaller_than_frontier_models
+reka/reka-flash-3/online:
+  excels:
+  - competitive_with_openai_o1-mini_on_reasoning
+  - cost_efficiency
+  - efficient_21b_parameter_size
+  - good_base_for_agentic_fine-tuning
+  - native_multimodal_(text,_image,_video,_audio)
+  - speed
+  - strong_coding_performance_(livecodebench)
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - less_capable_than_reka_core
+  - smaller_than_frontier_models
+reka/reka-flash-3/thinking:
+  excels:
+  - competitive_with_openai_o1-mini_on_reasoning
+  - cost_efficiency
+  - efficient_21b_parameter_size
+  - good_base_for_agentic_fine-tuning
+  - native_multimodal_(text,_image,_video,_audio)
+  - speed
+  - strong_coding_performance_(livecodebench)
+  notes: 'Derived from provider, model name, and metadata. Context length: 128000.'
+  tier: premium
+  weak_at:
+  - less_capable_than_reka_core
+  - smaller_than_frontier_models
+x-ai/grok-3:
+  excels:
+  - creativity
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 131072.'
+  tier: premium
+  weak_at: []
+x-ai/grok-3-mini:
+  excels:
+  - cost_efficiency
+  - creativity
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 131072.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+x-ai/grok-3-mini/extended:
+  excels:
+  - cost_efficiency
+  - creativity
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 131072.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+x-ai/grok-3-mini/online:
+  excels:
+  - cost_efficiency
+  - creativity
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 131072.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+x-ai/grok-3-mini/thinking:
+  excels:
+  - cost_efficiency
+  - creativity
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 131072.'
+  tier: premium
+  weak_at:
+  - weak_reasoning
+x-ai/grok-3/extended:
+  excels:
+  - creativity
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 131072.'
+  tier: premium
+  weak_at: []
+x-ai/grok-3/online:
+  excels:
+  - creativity
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 131072.'
+  tier: premium
+  weak_at: []
+x-ai/grok-3/thinking:
+  excels:
+  - creativity
+  - speed
+  notes: 'Derived from provider, model name, and metadata. Context length: 131072.'
+  tier: premium
+  weak_at: []
+x-ai/grok-4:
+  excels:
+  - 6x_improved_compute_efficiency_via_rl_training
+  - creativity
+  - frontier-level_multimodal_understanding
+  - long_context
+  - native_tool_use_and_web_search
+  - speed
+  - strong_scientific_and_visual_reasoning
+  - trained_on_200,000_gpu_colossus_supercomputer
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - premium_pricing
+  - video_input_coming_soon_(not_yet_available)
+x-ai/grok-4.1-fast:
+  excels:
+  - '#1_overall_in_lmarena_text_arena_(1483_elo)'
+  - 2m_token_context_window
+  - 40%_fewer_thinking_tokens_vs_grok_4_with_same_performance
+  - creativity
+  - long_context
+  - real-time_web_and_x_search_capabilities
+  - speed
+  - unified_architecture_blending_reasoning_modes
+  notes: 'Derived from provider, model name, and metadata. Context length: 2000000.'
+  tier: premium
+  weak_at:
+  - premium_pricing_tier
+  - video_input_not_yet_supported_(coming_soon)
+x-ai/grok-4.1-fast/extended:
+  excels:
+  - '#1_overall_in_lmarena_text_arena_(1483_elo)'
+  - 2m_token_context_window
+  - 40%_fewer_thinking_tokens_vs_grok_4_with_same_performance
+  - creativity
+  - long_context
+  - real-time_web_and_x_search_capabilities
+  - speed
+  - unified_architecture_blending_reasoning_modes
+  notes: 'Derived from provider, model name, and metadata. Context length: 2000000.'
+  tier: premium
+  weak_at:
+  - premium_pricing_tier
+  - video_input_not_yet_supported_(coming_soon)
+x-ai/grok-4.1-fast/online:
+  excels:
+  - '#1_overall_in_lmarena_text_arena_(1483_elo)'
+  - 2m_token_context_window
+  - 40%_fewer_thinking_tokens_vs_grok_4_with_same_performance
+  - creativity
+  - long_context
+  - real-time_web_and_x_search_capabilities
+  - speed
+  - unified_architecture_blending_reasoning_modes
+  notes: 'Derived from provider, model name, and metadata. Context length: 2000000.'
+  tier: premium
+  weak_at:
+  - premium_pricing_tier
+  - video_input_not_yet_supported_(coming_soon)
+x-ai/grok-4.1-fast/thinking:
+  excels:
+  - '#1_overall_in_lmarena_text_arena_(1483_elo)'
+  - 2m_token_context_window
+  - 40%_fewer_thinking_tokens_vs_grok_4_with_same_performance
+  - creativity
+  - long_context
+  - real-time_web_and_x_search_capabilities
+  - speed
+  - unified_architecture_blending_reasoning_modes
+  notes: 'Derived from provider, model name, and metadata. Context length: 2000000.'
+  tier: premium
+  weak_at:
+  - premium_pricing_tier
+  - video_input_not_yet_supported_(coming_soon)
+x-ai/grok-4/extended:
+  excels:
+  - 6x_improved_compute_efficiency_via_rl_training
+  - creativity
+  - frontier-level_multimodal_understanding
+  - long_context
+  - native_tool_use_and_web_search
+  - speed
+  - strong_scientific_and_visual_reasoning
+  - trained_on_200,000_gpu_colossus_supercomputer
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - premium_pricing
+  - video_input_coming_soon_(not_yet_available)
+x-ai/grok-4/online:
+  excels:
+  - 6x_improved_compute_efficiency_via_rl_training
+  - creativity
+  - frontier-level_multimodal_understanding
+  - long_context
+  - native_tool_use_and_web_search
+  - speed
+  - strong_scientific_and_visual_reasoning
+  - trained_on_200,000_gpu_colossus_supercomputer
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - premium_pricing
+  - video_input_coming_soon_(not_yet_available)
+x-ai/grok-4/thinking:
+  excels:
+  - 6x_improved_compute_efficiency_via_rl_training
+  - creativity
+  - frontier-level_multimodal_understanding
+  - long_context
+  - native_tool_use_and_web_search
+  - speed
+  - strong_scientific_and_visual_reasoning
+  - trained_on_200,000_gpu_colossus_supercomputer
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - premium_pricing
+  - video_input_coming_soon_(not_yet_available)
+x-ai/grok-code-fast-1:
+  excels:
+  - adept_at_typescript,_python,_java,_rust,_c++,_and_go
+  - creativity
+  - excels_at_agentic_coding
+  - long_context
+  - speed
+  - very_fast_and_economical
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - specialized_for_coding_tasks
+x-ai/grok-code-fast-1/extended:
+  excels:
+  - adept_at_typescript,_python,_java,_rust,_c++,_and_go
+  - creativity
+  - excels_at_agentic_coding
+  - long_context
+  - speed
+  - very_fast_and_economical
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - specialized_for_coding_tasks
+x-ai/grok-code-fast-1/online:
+  excels:
+  - adept_at_typescript,_python,_java,_rust,_c++,_and_go
+  - creativity
+  - excels_at_agentic_coding
+  - long_context
+  - speed
+  - very_fast_and_economical
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - specialized_for_coding_tasks
+x-ai/grok-code-fast-1/thinking:
+  excels:
+  - adept_at_typescript,_python,_java,_rust,_c++,_and_go
+  - creativity
+  - excels_at_agentic_coding
+  - long_context
+  - speed
+  - very_fast_and_economical
+  notes: 'Derived from provider, model name, and metadata. Context length: 256000.'
+  tier: premium
+  weak_at:
+  - specialized_for_coding_tasks

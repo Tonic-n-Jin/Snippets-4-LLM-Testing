@@ -1,0 +1,47 @@
+# Amazon Nova Premier
+# Model defaults for amazon/nova-premier
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Nova Premier"
+description: "Amazon's most capable multimodal model with 1M context for complex tasks and model distillation"
+context_length: 1000000
+output_length: 32768
+
+# Recommended defaults for this model
+temperature: 0.7
+max_tokens: 4096
+top_p: 0.9
+
+# Model capabilities
+capabilities:
+  - multimodal (text, image, video)
+  - ultra-long context (1M tokens)
+  - model distillation (teacher model)
+  - RAG
+  - function calling
+  - agentic workflows
+
+# Strengths
+strengths:
+  - 1M token context (400+ pages, 90+ min video)
+  - 87.4% MMLU, 82.0% Math500
+  - Best for distilling smaller Nova models
+  - End-to-end action capabilities
+  - Strong chart understanding (84.6% CharXiv)
+
+# Limitations
+limitations:
+  - Not a reasoning model (no extended thinking)
+  - AWS Bedrock only (limited regions)
+
+# Pricing reference
+pricing_input: "$2.50/1M tokens"
+pricing_output: "$12.50/1M tokens"
+
+# Prompting notes
+notes: |
+  Nova Premier excels at complex multimodal tasks and
+  serves as a distillation teacher for smaller models.
+  Best for long document/video analysis and agentic
+  workflows requiring comprehensive understanding.

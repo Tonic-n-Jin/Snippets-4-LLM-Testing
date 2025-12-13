@@ -1,0 +1,46 @@
+# Minimax minimax-m2
+# Model defaults for minimax/minimax-m2
+#
+# Merge priority: CLI > step-level config > this file > global defaults
+
+display_name: "Minimax M2"
+description: "A compact, high-efficiency large language model specifically optimized for end-to-end coding and agentic workflows."
+context_length: 256000
+output_length: 16384
+
+# Recommended runtime defaults
+temperature: 0.7
+max_tokens: 4096
+top_p: 1.0
+
+# Capabilities
+capabilities:
+  - end-to-end coding
+  - agentic workflows
+  - general reasoning
+  - tool use
+  - multi-step task execution
+  - code generation
+  - multi-file editing
+  - compile-run-fix loops
+  - test-validated repair
+
+training_data_cutoff: "2025-01"
+
+# Strengths
+strengths:
+  - Delivers near-frontier intelligence in a compact model
+  - Low latency and deployment efficiency
+  - Strong on benchmarks like SWE-Bench Verified, Multi-SWE-Bench, and Terminal-Bench
+
+# Limitations
+limitations:
+  - Requires preserving reasoning between turns to avoid degrading performance
+
+# Pricing reference (optional)
+pricing_input: "$0.20/1M tokens"
+pricing_output: "$1.50/1M tokens"
+
+# Prompting notes
+notes: |
+  Well-suited for large-scale agents, developer assistants, and reasoning-driven applications that require responsiveness and cost efficiency. MiniMax highly recommends preserving reasoning between turns to avoid degrading the model's performance.

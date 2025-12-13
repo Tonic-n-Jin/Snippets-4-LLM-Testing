@@ -1,0 +1,43 @@
+# 01.AI Yi-Lightning
+# Model defaults for 01-ai/yi-lightning
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Yi-Lightning"
+description: "01.AI's flagship MoE model with 200K context and hybrid attention architecture"
+context_length: 200000
+output_length: 16384
+
+# Recommended defaults for this model
+temperature: 0.7
+max_tokens: 4096
+top_p: 0.9
+
+# Model capabilities
+capabilities:
+  - mixture-of-experts
+  - ultra-long context (200K tokens)
+  - hybrid attention (sliding + full)
+  - multilingual (100K+ vocabulary)
+  - code generation
+  - math reasoning
+
+# Strengths
+strengths:
+  - "#6 overall on Chatbot Arena"
+  - "#2-4 in Chinese, Math, Coding, Hard Prompts"
+  - 82.8% memory reduction on long sequences
+  - Cross-layer KV cache reuse
+  - Cost-effective (0.99 yuan/M tokens)
+
+# Limitations
+limitations:
+  - Text-only (no multimodal)
+  - Primarily optimized for Chinese and English
+
+# Prompting notes
+notes: |
+  Yi-Lightning uses hybrid attention combining sliding window
+  and full attention layers. Excellent for Chinese language
+  tasks, math, and coding challenges. Memory-efficient for
+  long context through KV cache optimization.

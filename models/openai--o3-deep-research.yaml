@@ -1,0 +1,43 @@
+# OpenAI o3-deep-research
+# Model defaults for openai/o3-deep-research
+#
+# Merge priority: CLI > step-level config > this file > global defaults
+
+display_name: "o3-deep-research"
+description: "An advanced AI model from OpenAI, designed for complex, multi-step research tasks."
+context_length: 200000
+output_length: 16384
+
+# Recommended runtime defaults
+temperature: 0.7
+max_tokens: 4096
+top_p: 1.0
+
+# Capabilities
+capabilities:
+  - deep research
+  - multi-step research
+  - function calling
+  - reasoning
+  - JSON mode
+  - vision
+  - web search
+
+training_data_cutoff: "2025-12"
+
+# Strengths
+strengths:
+  - Tackling complex, multi-step research tasks
+  - Deep research capabilities
+
+# Limitations
+limitations:
+  - Web search is always used, which adds additional cost
+
+# Pricing reference (optional)
+pricing_input: "$10.00/1M tokens"
+pricing_output: "$40.00/1M tokens"
+
+# Prompting notes
+notes: |
+  This model is designed for deep research. It always uses web search.

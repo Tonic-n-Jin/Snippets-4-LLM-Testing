@@ -1,0 +1,18 @@
+# DeepSeek Chat V3.1
+# Model defaults for deepseek/deepseek-chat-v3.1
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "DeepSeek Chat V3.1"
+description: "Latest DeepSeek chat model with improved capabilities"
+context_length: 64000
+
+# Standard settings for chat
+temperature: 0.7
+max_tokens: 8192
+top_p: 1.0
+
+presence_penalty: 0.0
+frequency_penalty: 0.0
+
+notes: "Strong general-purpose model with excellent coding abilities"

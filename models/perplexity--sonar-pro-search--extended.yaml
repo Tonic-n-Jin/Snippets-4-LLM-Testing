@@ -1,0 +1,35 @@
+capabilities:
+- real-time web search
+- multi-step research
+- citation generation
+- factual grounding
+- search domain filtering
+- dedicated search capabilities
+- extended_context
+context_length: 127072
+description: Advanced web-connected search model for real-time, in-depth research with superior factuality
+display_name: Sonar Pro Search (Extended)
+limitations:
+- Web search dependent (requires connectivity)
+- Higher latency for complex queries
+- Text-only output
+max_tokens: 4096
+notes: 'Sonar Pro Search is highly optimized for research requiring real-time
+
+  information and in-depth multi-step queries. Best for fact-checking,
+
+  current events, and queries requiring extensive web searches.
+
+  Use High mode for maximum depth, Low mode for speed.
+
+  '
+output_length: 8192
+strengths:
+- Best factuality (0.858 F-score on SimpleQA benchmark)
+- 2x more citations than standard Sonar
+- 1200 tokens/second (Cerebras inference)
+- Built on Llama 3.3 70B with additional training
+- Three search modes (High/Medium/Low)
+- Optimized for complex search queries
+temperature: 0.2
+top_p: 0.9

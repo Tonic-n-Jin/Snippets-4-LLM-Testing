@@ -1,0 +1,40 @@
+# Google gemini-2.5-flash-lite-preview-09-2025
+# Model defaults for google/gemini-2.5-flash-lite-preview-09-2025
+#
+# Merge priority: CLI > step-level config > this file > global defaults
+
+display_name: "Gemini 2.5 Flash Lite Preview 09-2025"
+description: "A lightweight reasoning model from the Gemini 2.5 family, optimized for ultra-low latency and cost efficiency."
+context_length: 1000000
+output_length: 64000
+
+# Recommended runtime defaults
+temperature: 0.7
+max_tokens: 4096
+top_p: 1.0
+
+# Capabilities
+capabilities:
+  - text, images, video, audio, and PDF input
+  - multi-pass reasoning
+  - improved throughput
+  - faster token generation
+
+training_data_cutoff: "2025-01"
+
+# Strengths
+strengths:
+  - Ultra-low latency and cost efficiency
+  - 2x improvement in token efficiency
+
+# Limitations
+limitations:
+  - Multi-pass reasoning is disabled by default for speed
+
+# Pricing reference (optional)
+pricing_input: "$0.10/1M tokens"
+pricing_output: "$0.40/1M tokens"
+
+# Prompting notes
+notes: |
+  Multi-pass reasoning, or "thinking," is disabled by default for speed but can be enabled via an API parameter.

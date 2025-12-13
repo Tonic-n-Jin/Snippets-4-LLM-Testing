@@ -1,0 +1,42 @@
+# Reka Core
+# Model defaults for reka/reka-core
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Reka Core"
+description: "Reka's flagship multimodal model competitive with GPT-4V"
+context_length: 128000
+output_length: 8192
+
+# Recommended defaults for this model
+temperature: 0.7
+max_tokens: 4096
+top_p: 0.9
+
+# Model capabilities
+capabilities:
+  - multimodal (text, image, video, audio)
+  - advanced reasoning
+  - code generation
+  - multilingual (32 languages)
+  - visual question answering
+
+# Strengths
+strengths:
+  - 83.2% MMLU score
+  - Competitive with GPT-4V on vision tasks
+  - "#2 most preferred on blind human evaluation"
+  - Native video and audio understanding
+  - 32 language support
+
+# Limitations
+limitations:
+  - Text output only (no image/audio generation)
+  - Premium pricing tier
+
+# Prompting notes
+notes: |
+  Reka Core is a powerful multimodal model with native
+  video and audio understanding. Best for complex
+  visual reasoning, document analysis, and multilingual
+  tasks. Uses Noam/PaLM-style architecture.

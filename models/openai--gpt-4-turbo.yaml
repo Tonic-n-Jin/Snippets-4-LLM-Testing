@@ -1,0 +1,18 @@
+# OpenAI GPT-4 Turbo
+# Model defaults for openai/gpt-4-turbo
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "GPT-4 Turbo"
+description: "Fast, capable GPT-4 variant with vision support"
+context_length: 128000
+
+# Standard settings for balanced performance
+temperature: 0.7
+max_tokens: 4096
+top_p: 1.0
+
+presence_penalty: 0.0
+frequency_penalty: 0.0
+
+notes: "Good balance of speed and capability - supports images"

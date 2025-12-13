@@ -1,0 +1,15 @@
+# Google Gemini 2.0 Flash Exp (Free)
+# Model defaults for google/gemini-2.0-flash-exp:free
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Gemini 2.0 Flash Exp (free)"
+description: "Free experimental Gemini Flash model"
+context_length: 1048576
+
+# Standard settings for balanced performance
+temperature: 0.7
+max_tokens: 8192
+top_p: 1.0
+
+notes: "Free tier - experimental features and long context"

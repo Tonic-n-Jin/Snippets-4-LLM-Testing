@@ -1,0 +1,34 @@
+capabilities:
+- ultra-long context (2M tokens)
+- tool-calling (best-in-class)
+- web search integration
+- X/Twitter search
+- reasoning and non-reasoning modes
+- multimodal (text, image)
+- extended_context
+- reasoning
+- web_search
+context_length: 2000000
+description: xAI's best tool-calling model with 2M context window, optimized for speed
+  and enterprise applications
+display_name: Grok 4.1 Fast (Online)
+limitations:
+- Video input not yet supported (coming soon)
+- Premium pricing tier
+max_tokens: 8192
+notes: 'Grok 4.1 Fast excels at enterprise tool-calling and agentic workflows.
+
+  Use for tasks requiring real-time information retrieval or complex
+
+  function orchestration. Supports both reasoning and non-reasoning modes.
+
+  '
+output_length: 32768
+strengths:
+- '#1 overall in LMArena Text Arena (1483 Elo)'
+- 2M token context window
+- 40% fewer thinking tokens vs Grok 4 with same performance
+- Unified architecture blending reasoning modes
+- Real-time web and X search capabilities
+temperature: 0.7
+top_p: 1.0

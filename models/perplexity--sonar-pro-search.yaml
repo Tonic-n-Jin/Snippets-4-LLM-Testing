@@ -1,0 +1,45 @@
+# Perplexity Sonar Pro Search
+# Model defaults for perplexity/sonar-pro-search
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Sonar Pro Search"
+description: "Advanced web-connected search model for real-time, in-depth research with superior factuality"
+context_length: 127072
+output_length: 8192
+
+# Recommended defaults for this model
+temperature: 0.2
+max_tokens: 4096
+top_p: 0.9
+
+# Model capabilities
+capabilities:
+  - real-time web search
+  - multi-step research
+  - citation generation
+  - factual grounding
+  - search domain filtering
+  - dedicated search capabilities
+
+# Strengths
+strengths:
+  - Best factuality (0.858 F-score on SimpleQA benchmark)
+  - 2x more citations than standard Sonar
+  - 1200 tokens/second (Cerebras inference)
+  - Built on Llama 3.3 70B with additional training
+  - Three search modes (High/Medium/Low)
+  - Optimized for complex search queries
+
+# Limitations
+limitations:
+  - Web search dependent (requires connectivity)
+  - Higher latency for complex queries
+  - Text-only output
+
+# Prompting notes
+notes: |
+  Sonar Pro Search is highly optimized for research requiring real-time
+  information and in-depth multi-step queries. Best for fact-checking,
+  current events, and queries requiring extensive web searches.
+  Use High mode for maximum depth, Low mode for speed.

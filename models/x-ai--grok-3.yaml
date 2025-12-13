@@ -1,0 +1,18 @@
+# X.AI Grok 3
+# Model defaults for x-ai/grok-3
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Grok 3"
+description: "xAI flagship model with real-time knowledge"
+context_length: 131072
+
+# Grok works well with moderate temperature
+temperature: 0.7
+max_tokens: 8192
+top_p: 1.0
+
+presence_penalty: 0.0
+frequency_penalty: 0.0
+
+notes: "xAI flagship - strong reasoning and up-to-date knowledge"

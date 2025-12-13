@@ -1,0 +1,45 @@
+# NVIDIA Nemotron Nano 9B v2
+# Model defaults for nvidia/nemotron-nano-9b-v2
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Nemotron Nano 9B v2"
+description: "NVIDIA's hybrid Mamba-Transformer model for efficient reasoning on edge devices"
+context_length: 128000
+output_length: 8192
+
+# Recommended defaults for this model
+temperature: 0.6
+max_tokens: 4096
+top_p: 0.95
+
+# Model capabilities
+capabilities:
+  - hybrid Mamba-Transformer architecture
+  - long context (128K tokens)
+  - reasoning with trace generation
+  - efficient edge inference
+  - single GPU deployment (A10G)
+
+# Model specifications
+parameters_total: 9000000000
+
+# Strengths
+strengths:
+  - Unified reasoning and non-reasoning in one model
+  - Runs 128K context on single NVIDIA A10G (22GB)
+  - Open weights and training recipes
+  - Trained on 20T tokens with FP8 precision
+  - Mamba-2 architecture for efficiency
+
+# Limitations
+limitations:
+  - Smaller than frontier models
+  - Text-only (no multimodal in base version)
+
+# Prompting notes
+notes: |
+  Nemotron Nano generates reasoning traces before conclusions.
+  Best for tasks requiring explainable reasoning on resource-
+  constrained hardware. Use for agentic AI and specialized
+  enterprise deployments.

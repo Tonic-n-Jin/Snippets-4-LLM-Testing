@@ -1,0 +1,47 @@
+# OpenAI gpt-5-nano
+# Model defaults for openai/gpt-5-nano
+#
+# Merge priority: CLI > step-level config > this file > global defaults
+
+display_name: "GPT-5 Nano"
+description: "Designed for maximum speed, efficiency, and cost-effectiveness, making it ideal for high-volume applications like chatbots, customer support, and automated systems requiring quick responses."
+context_length: 400000
+output_length: 128000
+
+# Recommended runtime defaults
+temperature: 0.7
+max_tokens: 4096
+top_p: 1.0
+
+# Capabilities
+capabilities:
+  - text and image input
+  - vision
+  - multipart messages
+  - built-in image generation
+  - function calling
+  - reasoning
+  - JSON mode
+  - web search
+  - prompt caching
+
+training_data_cutoff: "2024-05"
+
+# Strengths
+strengths:
+  - Ultra-fast processing with near-instant response times
+  - Minimal latency
+  - Fastest and most affordable per token in the GPT-5 family
+
+# Limitations
+limitations:
+  - Reasoning depth is limited compared to larger GPT-5 models
+
+# Pricing reference (optional)
+pricing_input: "$0.05/1M tokens"
+pricing_output: "$0.40/1M tokens"
+
+# Prompting notes
+notes: |
+  Optimized for high-throughput tasks, simple instruction-following, and classification.
+  Basic multimodal understanding and micro-tool calling.

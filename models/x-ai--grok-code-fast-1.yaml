@@ -1,0 +1,42 @@
+# xAI grok-code-fast-1
+# Model defaults for x-ai/grok-code-fast-1
+#
+# Merge priority: CLI > step-level config > this file > global defaults
+
+display_name: "Grok Code Fast 1"
+description: "A speedy and economical reasoning model developed by xAI, specifically designed for agentic coding."
+context_length: 256000
+output_length: 16384
+
+# Recommended runtime defaults
+temperature: 0.7
+max_tokens: 4096
+top_p: 1.0
+
+# Capabilities
+capabilities:
+  - agentic coding
+  - reasoning traces in responses
+  - structured outputs
+  - tool use
+
+training_data_cutoff: "2025-08"
+
+# Strengths
+strengths:
+  - Excels at agentic coding
+  - Very fast and economical
+  - Adept at TypeScript, Python, Java, Rust, C++, and Go
+
+# Limitations
+limitations:
+  - Specialized for coding tasks
+
+# Pricing reference (optional)
+pricing_input: "$0.20/1M tokens"
+pricing_output: "$1.50/1M tokens"
+
+# Prompting notes
+notes: |
+  Provides reasoning traces in its responses to help developers steer workflows for high-quality results.
+  Mastered the use of common tools like `grep`, terminal, and file editing.

@@ -1,0 +1,43 @@
+# AI21 Labs Jamba 1.5 Large
+# Model defaults for ai21/jamba-1.5-large
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Jamba 1.5 Large"
+description: "AI21's hybrid Mamba-Transformer model with 256K context for enterprise long-form tasks"
+context_length: 256000
+output_length: 16384
+
+# Recommended defaults for this model
+temperature: 0.7
+max_tokens: 4096
+top_p: 0.9
+
+# Model capabilities
+capabilities:
+  - hybrid Mamba-Transformer architecture
+  - ultra-long context (256K tokens)
+  - function calling
+  - structured output (JSON)
+  - grounded generation
+  - enterprise security
+
+# Strengths
+strengths:
+  - Longest verified context among open models (RULER benchmark)
+  - Maintains quality across entire 256K span
+  - Fastest processing via hybrid architecture
+  - Lower memory footprint than competitors
+  - Secure enterprise deployment options
+
+# Limitations
+limitations:
+  - Text-only (no multimodal)
+  - Enterprise-focused pricing
+
+# Prompting notes
+notes: |
+  Jamba 1.5 Large excels at processing long documents
+  (800+ pages). Best for financial records, contracts,
+  and knowledge base search. Use structured output mode
+  for consistent JSON responses.

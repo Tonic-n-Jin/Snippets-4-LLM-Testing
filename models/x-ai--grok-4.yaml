@@ -1,0 +1,43 @@
+# xAI Grok 4
+# Model defaults for x-ai/grok-4
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Grok 4"
+description: "xAI's flagship reasoning model with multimodal capabilities and 256K context window"
+context_length: 256000
+output_length: 32768
+
+# Recommended defaults for this model
+temperature: 0.7
+max_tokens: 8192
+top_p: 1.0
+
+# Model capabilities
+capabilities:
+  - multimodal (text, image)
+  - advanced reasoning
+  - real-time web search
+  - X/Twitter integration
+  - tool-calling
+  - code generation
+
+# Strengths
+strengths:
+  - Frontier-level multimodal understanding
+  - Trained on 200,000 GPU Colossus supercomputer
+  - 6x improved compute efficiency via RL training
+  - Strong scientific and visual reasoning
+  - Native tool use and web search
+
+# Limitations
+limitations:
+  - Video input coming soon (not yet available)
+  - Premium pricing
+
+# Prompting notes
+notes: |
+  Grok 4 is xAI's most capable reasoning model. Built for complex
+  multi-step tasks requiring deep understanding. Integrates real-time
+  information from web and X. Best for research, analysis, and
+  agentic applications.

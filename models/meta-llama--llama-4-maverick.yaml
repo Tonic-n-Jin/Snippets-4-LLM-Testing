@@ -1,0 +1,48 @@
+# Meta Llama 4 Maverick
+# Model defaults for meta-llama/llama-4-maverick
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Llama 4 Maverick"
+description: "Meta's flagship multimodal MoE model with 400B total / 17B active parameters and 512K context"
+context_length: 512000
+output_length: 16384
+
+# Recommended defaults for this model
+temperature: 0.7
+max_tokens: 4096
+top_p: 0.9
+
+# Model capabilities
+capabilities:
+  - multimodal (text + image input)
+  - mixture-of-experts (128 experts)
+  - long context (512K, extendable to 10M)
+  - multilingual (12 languages)
+  - code generation
+  - reasoning
+
+# Model specifications
+parameters_total: 400000000000
+parameters_active: 17000000000
+experts: 128
+training_data_cutoff: "2024-08"
+
+# Strengths
+strengths:
+  - Best multimodal model in its class
+  - Beats GPT-4o and Gemini 2.0 Flash on coding and reasoning
+  - Open weights under Meta license
+  - Runs on single NVIDIA H100 DGX host
+  - Trained on 22T tokens of multimodal data
+
+# Limitations
+limitations:
+  - Requires license for >700M MAU services
+  - Image input only (no video/audio)
+
+# Prompting notes
+notes: |
+  Llama 4 Maverick excels at multimodal reasoning, coding, and complex
+  analysis tasks. Use MoE efficiency for cost-effective inference.
+  Supports 12 languages including Arabic, Hindi, and Thai.

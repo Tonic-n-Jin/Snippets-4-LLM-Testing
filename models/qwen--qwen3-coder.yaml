@@ -1,0 +1,50 @@
+# Qwen qwen3-coder
+# Model defaults for qwen/qwen3-coder
+#
+# Merge priority: CLI > step-level config > this file > global defaults
+
+display_name: "Qwen3 Coder"
+description: "An advanced agentic AI coding model developed by Alibaba, designed for high-performance software development and autonomous coding workflows."
+context_length: 256000
+output_length: 16384
+
+# Recommended runtime defaults
+temperature: 0.7
+max_tokens: 4096
+top_p: 1.0
+
+# Capabilities
+capabilities:
+  - agentic coding
+  - browser automation
+  - tool usage
+  - code generation
+  - managing complex multi-turn programming workflows
+  - debugging entire codebases
+  - comprehensive repository analysis
+  - cross-file reasoning
+  - automated pull request workflows
+  - ZDR
+  - Function Calling
+  - Reasoning
+  - JSON Mode
+
+training_data_cutoff: "2025-01"
+
+# Strengths
+strengths:
+  - Excels in agentic coding and browser automation
+  - Supports a wide range of programming and markup languages
+  - Open-source under the Apache 2.0 license
+
+# Limitations
+limitations:
+  - MoE architecture can be complex to deploy
+
+# Pricing reference (optional)
+pricing_input: "$1.00/1M tokens"
+pricing_output: "$4.00/1M tokens"
+
+# Prompting notes
+notes: |
+  The model natively supports a context window of 256K tokens, and can be extended up to 1 million tokens using extrapolation techniques like YaRN. Post-training incorporates long-horizon reinforcement learning (Agent RL) for complex problem-solving through multi-step interactions with external tools.

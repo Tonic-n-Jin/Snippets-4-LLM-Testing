@@ -1,0 +1,36 @@
+capabilities:
+- multimodal (text, image)
+- advanced reasoning
+- real-time web search
+- X/Twitter integration
+- tool-calling
+- code generation
+- extended_context
+- reasoning
+- web_search
+context_length: 256000
+description: xAI's flagship reasoning model with multimodal capabilities and 256K
+  context window
+display_name: Grok 4 (Online)
+limitations:
+- Video input coming soon (not yet available)
+- Premium pricing
+max_tokens: 8192
+notes: 'Grok 4 is xAI''s most capable reasoning model. Built for complex
+
+  multi-step tasks requiring deep understanding. Integrates real-time
+
+  information from web and X. Best for research, analysis, and
+
+  agentic applications.
+
+  '
+output_length: 32768
+strengths:
+- Frontier-level multimodal understanding
+- Trained on 200,000 GPU Colossus supercomputer
+- 6x improved compute efficiency via RL training
+- Strong scientific and visual reasoning
+- Native tool use and web search
+temperature: 0.7
+top_p: 1.0

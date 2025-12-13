@@ -1,0 +1,21 @@
+capabilities: []
+context_length: 32767
+description: "An instruction-tuned, hybrid-reasoning Mixture-of-Experts model built\
+  \ on Llama-4-Scout-17B-16E. Cogito v2 can answer directly or engage an extended\
+  \ \u201Cthinking\u201D phase, with alignment guided by Iterated Distillation & Amplification\
+  \ (IDA). It targets coding, STEM, instruction following, and general helpfulness,\
+  \ with stronger multilingual, tool-calling, and reasoning performance than size-equivalent\
+  \ baselines. The model supports long-context use (up to 10M tokens) and standard\
+  \ Transformers workflows. Users can control the reasoning behaviour with the `reasoning`\
+  \ `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
+display_name: Cogito V2 Preview Llama 109B
+limitations: []
+max_tokens: null
+notes: ''
+output_length: null
+pricing_input: '0.00000018'
+pricing_output: '0.00000059'
+strengths: []
+temperature: 1.0
+top_p: 1.0
+training_data_cutoff: null

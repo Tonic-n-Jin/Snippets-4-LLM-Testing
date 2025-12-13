@@ -1,0 +1,15 @@
+# Google Gemini 2.5 Flash
+# Model defaults for google/gemini-2.5-flash
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Gemini 2.5 Flash"
+description: "Fast, efficient Gemini model with million-token context"
+context_length: 1048576
+
+# Standard settings for balanced performance
+temperature: 0.7
+max_tokens: 8192
+top_p: 1.0
+
+notes: "1M token context - fast responses with multimodal support"

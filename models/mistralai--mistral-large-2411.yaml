@@ -1,0 +1,18 @@
+# Mistral Large 2411
+# Model defaults for mistralai/mistral-large-2411
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Mistral Large"
+description: "Mistral flagship model with strong multilingual support"
+context_length: 128000
+
+# Mistral works well with moderate temperature
+temperature: 0.7
+max_tokens: 8192
+top_p: 1.0
+
+presence_penalty: 0.0
+frequency_penalty: 0.0
+
+notes: "Strong multilingual capabilities - excellent for complex tasks"

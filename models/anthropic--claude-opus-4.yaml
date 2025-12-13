@@ -1,0 +1,18 @@
+# Anthropic Claude Opus 4
+# Model defaults for anthropic/claude-opus-4
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Claude Opus 4"
+description: "Previous generation premium Claude with excellent reasoning"
+context_length: 200000
+
+# Opus works well with moderate temperature
+temperature: 0.7
+max_tokens: 16384
+top_p: 1.0
+
+presence_penalty: 0.0
+frequency_penalty: 0.0
+
+notes: "Strong reasoning model - excellent for complex multi-step tasks"

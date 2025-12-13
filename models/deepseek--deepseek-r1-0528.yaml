@@ -1,0 +1,18 @@
+# DeepSeek R1 0528
+# Model defaults for deepseek/deepseek-r1-0528
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "DeepSeek R1 0528"
+description: "Latest reasoning model with improved chain-of-thought"
+context_length: 64000
+
+# Reasoning models work better with lower temperature
+temperature: 0.3
+max_tokens: 16384
+top_p: 1.0
+
+presence_penalty: 0.0
+frequency_penalty: 0.0
+
+notes: "Enhanced reasoning - best for complex problem solving"

@@ -1,0 +1,42 @@
+# OpenAI GPT-4.1 Mini
+# Model defaults for openai/gpt-4.1-mini
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "GPT-4.1 Mini"
+description: "Cost-efficient version of GPT-4.1 with full 1M context window support"
+context_length: 1000000
+output_length: 32768
+
+# Recommended defaults for this model
+temperature: 0.7
+max_tokens: 4096
+top_p: 1.0
+
+# Model capabilities
+capabilities:
+  - ultra-long context (1M tokens)
+  - code generation
+  - instruction following
+  - cost-efficient inference
+
+# Knowledge cutoff
+training_data_cutoff: "2024-06"
+
+# Strengths
+strengths:
+  - Full 1M token context (same as flagship GPT-4.1)
+  - Significantly lower cost than GPT-4.1
+  - Strong coding and instruction following
+  - Improved over GPT-4o mini
+
+# Limitations
+limitations:
+  - Smaller than flagship GPT-4.1
+  - Not a reasoning model
+
+# Prompting notes
+notes: |
+  GPT-4.1 Mini offers the same 1M context window as the
+  flagship at lower cost. Best for high-volume applications
+  requiring long context but not maximum capability.

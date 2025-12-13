@@ -1,0 +1,17 @@
+# OpenAI ChatGPT-4o Latest
+# Model defaults for openai/chatgpt-4o-latest
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "ChatGPT-4o Latest"
+description: "Latest GPT-4o model with best overall capabilities"
+context_length: 128000
+
+# Recommended defaults for this model
+temperature: 0.7
+max_tokens: 4096
+top_p: 1.0
+
+# Optional: OpenAI-specific parameters
+# presence_penalty: 0.0
+# frequency_penalty: 0.0

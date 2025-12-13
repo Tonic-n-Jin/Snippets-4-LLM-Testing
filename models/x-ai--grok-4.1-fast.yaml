@@ -1,0 +1,42 @@
+# xAI Grok 4.1 Fast
+# Model defaults for x-ai/grok-4.1-fast
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Grok 4.1 Fast"
+description: "xAI's best tool-calling model with 2M context window, optimized for speed and enterprise applications"
+context_length: 2000000
+output_length: 32768
+
+# Recommended defaults for this model
+temperature: 0.7
+max_tokens: 8192
+top_p: 1.0
+
+# Model capabilities
+capabilities:
+  - ultra-long context (2M tokens)
+  - tool-calling (best-in-class)
+  - web search integration
+  - X/Twitter search
+  - reasoning and non-reasoning modes
+  - multimodal (text, image)
+
+# Strengths
+strengths:
+  - "#1 overall in LMArena Text Arena (1483 Elo)"
+  - 2M token context window
+  - 40% fewer thinking tokens vs Grok 4 with same performance
+  - Unified architecture blending reasoning modes
+  - Real-time web and X search capabilities
+
+# Limitations
+limitations:
+  - Video input not yet supported (coming soon)
+  - Premium pricing tier
+
+# Prompting notes
+notes: |
+  Grok 4.1 Fast excels at enterprise tool-calling and agentic workflows.
+  Use for tasks requiring real-time information retrieval or complex
+  function orchestration. Supports both reasoning and non-reasoning modes.

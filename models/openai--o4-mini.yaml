@@ -1,0 +1,18 @@
+# OpenAI o4-mini
+# Model defaults for openai/o4-mini
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "OpenAI o4-mini"
+description: "Latest generation reasoning model with improved efficiency"
+context_length: 200000
+
+# Reasoning models work better with lower temperature
+temperature: 0.3
+max_tokens: 16384
+top_p: 1.0
+
+presence_penalty: 0.0
+frequency_penalty: 0.0
+
+notes: "Advanced reasoning with extended thinking capabilities"

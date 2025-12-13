@@ -1,0 +1,44 @@
+# OpenAI GPT-4.1 Nano
+# Model defaults for openai/gpt-4.1-nano
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "GPT-4.1 Nano"
+description: "OpenAI's smallest and most affordable 1M context model"
+context_length: 1000000
+output_length: 16384
+
+# Recommended defaults for this model
+temperature: 0.7
+max_tokens: 2048
+top_p: 1.0
+
+# Model capabilities
+capabilities:
+  - ultra-long context (1M tokens)
+  - fast inference
+  - cost-efficient
+  - instruction following
+
+# Knowledge cutoff
+training_data_cutoff: "2024-06"
+
+# Strengths
+strengths:
+  - Extremely affordable ($0.10/1M input, $0.40/1M output)
+  - Full 1M token context window
+  - Fast inference speed
+  - Good for high-volume applications
+
+# Limitations
+limitations:
+  - Smallest capability in GPT-4.1 family
+  - Limited complex reasoning
+  - Not suitable for frontier tasks
+
+# Prompting notes
+notes: |
+  GPT-4.1 Nano is designed for maximum cost efficiency.
+  Best for simple tasks at scale, classification, and
+  applications where cost matters more than capability.
+  Still supports full 1M context window.

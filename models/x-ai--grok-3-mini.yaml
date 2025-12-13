@@ -1,0 +1,18 @@
+# X.AI Grok 3 Mini
+# Model defaults for x-ai/grok-3-mini
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Grok 3 Mini"
+description: "Fast, efficient Grok model"
+context_length: 131072
+
+# Standard settings for fast responses
+temperature: 0.7
+max_tokens: 4096
+top_p: 1.0
+
+presence_penalty: 0.0
+frequency_penalty: 0.0
+
+notes: "Faster, more efficient Grok variant"

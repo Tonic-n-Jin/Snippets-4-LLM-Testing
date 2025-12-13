@@ -1,0 +1,48 @@
+# Databricks DBRX Instruct
+# Model defaults for databricks/dbrx-instruct
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "DBRX Instruct"
+description: "Databricks' fine-grained MoE model with 132B total / 36B active parameters"
+context_length: 32768
+output_length: 8192
+
+# Recommended defaults for this model
+temperature: 0.7
+max_tokens: 4096
+top_p: 0.9
+
+# Model capabilities
+capabilities:
+  - fine-grained mixture-of-experts (16 experts, 4 active)
+  - code generation
+  - text generation
+  - instruction following
+
+# Model specifications
+parameters_total: 132000000000
+parameters_active: 36000000000
+experts: 16
+experts_active: 4
+
+# Strengths
+strengths:
+  - Outperformed all open models at launch (March 2024)
+  - Fine-grained MoE (more experts, smaller each)
+  - Pretrained on 12T curated tokens
+  - Open weights (Databricks license)
+  - Uses GPT-4 tokenizer
+
+# Limitations
+limitations:
+  - Requires 4x 80GB GPUs for 16-bit inference
+  - Smaller context than newer models (32K)
+  - Text-only
+
+# Prompting notes
+notes: |
+  DBRX uses fine-grained MoE with 16 small experts
+  (vs 8 large in Mixtral). Best for code and text
+  generation where quality matters. Use with
+  TensorRT-LLM or vLLM for optimized inference.

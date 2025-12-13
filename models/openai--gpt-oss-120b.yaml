@@ -1,0 +1,46 @@
+# OpenAI gpt-oss-120b
+# Model defaults for openai/gpt-oss-120b
+#
+# Merge priority: CLI > step-level config > this file > global defaults
+
+display_name: "GPT-OSS 120B"
+description: "An open-weight, 117-billion-parameter Mixture-of-Experts (MoE) language model developed by OpenAI. It is designed for high-reasoning, agentic, and general-purpose production use cases."
+context_length: 131000
+output_length: 16384
+
+# Recommended runtime defaults
+temperature: 0.7
+max_tokens: 4096
+top_p: 1.0
+
+# Capabilities
+capabilities:
+  - high-reasoning
+  - agentic tasks
+  - general-purpose production use
+  - configurable reasoning depth
+  - full chain-of-thought access
+  - native tool use
+  - function calling
+  - browsing
+  - structured output generation
+
+training_data_cutoff: "2025-01"
+
+# Strengths
+strengths:
+  - Optimized to run on a single H100 GPU
+  - Achieves near-parity with OpenAI's o4-mini on core reasoning benchmarks
+  - Released under the Apache 2.0 license
+
+# Limitations
+limitations:
+  - MoE architecture can be complex to deploy
+
+# Pricing reference (optional)
+pricing_input: "$0.03/1M tokens"
+pricing_output: "$0.14/1M tokens"
+
+# Prompting notes
+notes: |
+  The model supports a maximum token (input + output) context length of 131K. The weights are freely available for download on Hugging Face.

@@ -1,0 +1,44 @@
+# OpenAI gpt-5
+# Model defaults for openai/gpt-5
+#
+# Merge priority: CLI > step-level config > this file > global defaults
+
+display_name: "GPT-5"
+description: "A unified system designed for advanced reasoning, coding, and agentic tasks."
+context_length: 400000
+output_length: 128000
+
+# Recommended runtime defaults
+temperature: 0.7
+max_tokens: 4096
+top_p: 1.0
+
+# Capabilities
+capabilities:
+  - text and image input
+  - streaming
+  - function calling
+  - structured outputs
+  - advanced reasoning
+  - coding
+  - agentic tasks
+
+training_data_cutoff: "2024-09-30"
+
+# Strengths
+strengths:
+  - Optimized for complex tasks requiring step-by-step reasoning and instruction following
+  - Adaptive compute allocation to dedicate more processing cycles to complex reasoning requests
+
+# Limitations
+limitations:
+  - Audio and video are not directly supported
+  - Fine-tuning is not supported, but distillation is
+
+# Pricing reference (optional)
+pricing_input: "$2.50/1M tokens"
+pricing_output: "$2.00/1M tokens"
+
+# Prompting notes
+notes: |
+  Models can be run at four reasoning levels: minimal, low, medium, or high.

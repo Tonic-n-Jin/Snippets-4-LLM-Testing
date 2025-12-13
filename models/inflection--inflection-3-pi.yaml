@@ -1,0 +1,48 @@
+# Inflection AI Inflection 3 Pi
+# Model defaults for inflection/inflection-3-pi
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Inflection 3 Pi"
+description: "Inflection's emotionally intelligent model with personality and conversational expertise"
+context_length: 8192
+output_length: 4096
+
+# Recommended defaults for this model
+temperature: 0.8
+max_tokens: 2048
+top_p: 0.9
+
+# Model capabilities
+capabilities:
+  - emotional intelligence
+  - conversational AI
+  - tone/style mirroring
+  - customer support
+  - roleplay
+  - recent news access
+
+# Strengths
+strengths:
+  - Trained for personality and empathy (RLHF)
+  - Mirrors user tone and style
+  - Excellent for customer support chatbots
+  - Built-in safety features
+  - Fine-tunable for enterprise needs
+
+# Limitations
+limitations:
+  - Smaller context window (8K)
+  - Not optimized for technical/coding tasks
+  - Text-only
+
+# Pricing reference
+pricing_input: "$2.5/1M tokens"
+pricing_output: "$10/1M tokens"
+
+# Prompting notes
+notes: |
+  Inflection 3 Pi is designed for human-like conversation
+  with emotional intelligence. Best for customer service,
+  personal assistants, and applications requiring empathy.
+  Use higher temperature for more natural responses.

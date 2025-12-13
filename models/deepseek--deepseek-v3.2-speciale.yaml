@@ -1,0 +1,34 @@
+capabilities:
+- maximum_reasoning
+- agentic_performance
+- efficient_long-context_processing
+- coding
+- tool-use
+- strong_compliance_and_generalization
+context_length: 163840
+description: DeepSeek-V3.2-Speciale is a high-compute variant of DeepSeek-V3.2 optimized
+  for maximum reasoning and agentic performance. It builds on DeepSeek Sparse Attention
+  (DSA) for efficient long-context processing, then scales post-training reinforcement
+  learning to push capability beyond the base model. Reported evaluations place Speciale
+  ahead of GPT-5 on difficult reasoning workloads, with proficiency comparable to
+  Gemini-3.0-Pro, while retaining strong coding and tool-use reliability. Like V3.2,
+  it benefits from a large-scale agentic task synthesis pipeline that improves compliance
+  and generalization in interactive environments.
+display_name: 'DeepSeek: DeepSeek V3.2 Speciale'
+limitations:
+- high_compute_variant
+max_tokens: 65536
+notes: |
+  Optimized for maximum reasoning and agentic performance, excelling in difficult reasoning workloads.
+  Proficiency comparable to Gemini-3.0-Pro with strong coding and tool-use reliability.
+output_length: 65536
+pricing_input: '0.00000027'
+pricing_output: '0.00000041'
+strengths:
+- ahead_of_gpt-5_on_difficult_reasoning_workloads
+- proficiency_comparable_to_gemini-3.0-pro
+- strong_coding_and_tool-use_reliability
+- large-scale_agentic_task_synthesis_pipeline
+temperature: 1.0
+top_p: 1.0
+training_data_cutoff: null

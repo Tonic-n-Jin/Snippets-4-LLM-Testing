@@ -1,0 +1,49 @@
+# OpenAI GPT-4.1
+# Model defaults for openai/gpt-4.1
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "GPT-4.1"
+description: "OpenAI's general-purpose model with 1M context window, optimized for coding and long-form content"
+context_length: 1000000
+output_length: 32768
+
+# Recommended defaults for this model
+temperature: 0.7
+max_tokens: 8192
+top_p: 1.0
+
+# Model capabilities
+capabilities:
+  - ultra-long context (1M tokens)
+  - code generation (major improvement)
+  - instruction following
+  - long-form analysis
+  - improved attention mechanisms
+
+# Knowledge cutoff
+training_data_cutoff: "2024-06"
+
+# Strengths
+strengths:
+  - Major gains in coding and instruction following
+  - 1M token context window
+  - 61.7% on Graphwalks (matches o1)
+  - Improved attention for long context retrieval
+  - Outperforms GPT-4o across the board
+
+# Limitations
+limitations:
+  - Performance degrades at full 1M context (80% to 50% accuracy)
+  - Not a reasoning model (no extended thinking)
+
+# Pricing reference
+pricing_input: "$2/1M tokens"
+pricing_output: "$8/1M tokens"
+
+# Prompting notes
+notes: |
+  GPT-4.1 is optimized for coding and long-form tasks.
+  Excellent for analyzing large codebases and documents.
+  Use for agentic workflows requiring long context but
+  not extended reasoning capabilities.

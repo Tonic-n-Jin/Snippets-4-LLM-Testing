@@ -1,0 +1,15 @@
+# Meta Llama 3.3 70B Instruct (Free Tier)
+# Model defaults for meta-llama/llama-3.3-70b-instruct:free
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Llama 3.3 70B Instruct (free)"
+description: "Large open-source model with strong general capabilities"
+context_length: 128000
+
+# Recommended defaults for this model
+temperature: 0.7
+max_tokens: 4096
+top_p: 1.0
+
+notes: "High-quality free option from Meta"

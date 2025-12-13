@@ -1,0 +1,18 @@
+# Nous Research Hermes 3 Llama 405B (Free)
+# Model defaults for nousresearch/hermes-3-llama-3.1-405b:free
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Hermes 3 Llama 405B (free)"
+description: "Free access to Hermes-tuned 405B parameter model"
+context_length: 128000
+
+# Standard settings for general use
+temperature: 0.7
+max_tokens: 8192
+top_p: 1.0
+
+presence_penalty: 0.0
+frequency_penalty: 0.0
+
+notes: "Free tier - excellent capability at no cost"

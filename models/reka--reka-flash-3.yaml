@@ -1,0 +1,45 @@
+# Reka Flash 3
+# Model defaults for reka/reka-flash-3
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Reka Flash 3"
+description: "Reka's compact 21B reasoning model competitive with o1-mini"
+context_length: 128000
+output_length: 8192
+
+# Recommended defaults for this model
+temperature: 0.7
+max_tokens: 4096
+top_p: 0.9
+
+# Model capabilities
+capabilities:
+  - multimodal (text, image, video, audio)
+  - reasoning
+  - code generation
+  - function calling
+  - agentic planning
+
+# Model specifications
+parameters_total: 21000000000
+
+# Strengths
+strengths:
+  - Competitive with OpenAI o1-mini on reasoning
+  - Native multimodal (text, image, video, audio)
+  - Strong coding performance (LiveCodeBench)
+  - Efficient 21B parameter size
+  - Good base for agentic fine-tuning
+
+# Limitations
+limitations:
+  - Smaller than frontier models
+  - Less capable than Reka Core
+
+# Prompting notes
+notes: |
+  Reka Flash 3 is a compact reasoning model with native
+  multimodal support. Best for applications needing
+  reasoning capabilities without large model overhead.
+  Strong for coding and agentic task planning.

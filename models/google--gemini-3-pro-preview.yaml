@@ -1,0 +1,42 @@
+# Google Gemini 3 Pro Preview
+# Model defaults for google/gemini-3-pro-preview
+#
+# Merge priority: CLI > per-step config > this file > global defaults
+
+display_name: "Gemini 3 Pro Preview"
+description: "Google's flagship frontier model for high-precision multimodal reasoning with 1M token context window"
+context_length: 1000000
+output_length: 65536
+
+# Recommended defaults for this model
+# IMPORTANT: Gemini models perform best at temperature 1.0
+temperature: 1.0
+max_tokens: 8192
+top_p: 1.0
+
+# Model capabilities
+capabilities:
+  - multimodal (text, image, video, audio, PDF)
+  - long-context (1M tokens)
+  - code generation
+  - agentic workflows
+  - tool-calling
+  - zero-shot generation
+
+# Strengths
+strengths:
+  - State-of-the-art benchmark performance (LMArena, GPQA Diamond, MathArena)
+  - Exceptional long-context understanding across entire codebases
+  - Long-horizon planning stability for complex agentic tasks
+  - Multimodal reasoning across text, images, video, and audio
+
+# Limitations
+limitations:
+  - Preview status - may have breaking changes
+  - High cost for long-context usage
+
+# Prompting notes
+notes: |
+  Gemini 3 Pro handles complex, long-horizon coding tasks requiring deep context
+  understanding. Keep temperature at 1.0 for optimal performance. Request
+  detailed responses explicitly as default outputs are concise.
