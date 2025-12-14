@@ -2,6 +2,9 @@
 
 > **A curated collection of production-ready code snippets designed for testing and training Large Language Models (LLMs)**
 
+As far as I can tell - geniune curiousity with determinism: use pca, to demonstrate vector db functionality to predict motor.
+
+
 ## Purpose
 
 This repository provides a **large code sample** representing real-world data and ML infrastructure patterns. It's designed to:
