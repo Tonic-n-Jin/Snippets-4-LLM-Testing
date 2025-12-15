@@ -2,9 +2,6 @@
 
 > **A curated collection of production-ready code snippets designed for testing and training Large Language Models (LLMs)**
 
-As far as I can tell - geniune curiousity with determinism: use pca, to demonstrate vector db functionality to predict motor.
-* Unsupervised learning - so no right or wrong answer helped, just maybe this?
-
 
 ## Purpose
 
