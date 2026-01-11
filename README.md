@@ -67,7 +67,7 @@ Production-ready workflow automation templates for AI-powered systems:
 ## Repository Structure
 
 ```
-Snippets-4-LLM-Testing/
+Principal-Data-Engineering/
 ├── README.md                  # This file - repository overview
 ├── CLAUDE.md                  # Comprehensive AI assistant guide
 │
